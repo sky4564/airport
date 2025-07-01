@@ -1,6 +1,11 @@
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 const Footer = () => {
+  const [year, setYear] = useState<number | null>(null);
+  useEffect(() => {
+    setYear(new Date().getFullYear());
+  }, []);
   return (
     <footer className="bg-gray-800 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -41,7 +46,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-gray-700 text-center text-gray-300">
-          <p>&copy; {new Date().getFullYear()} 인천공항 렌트카. All rights reserved.</p>
+          <p>&copy; {year ? year : ''} 인천공항 렌트카. All rights reserved.</p>
         </div>
       </div>
     </footer>

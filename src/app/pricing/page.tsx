@@ -13,7 +13,7 @@ const carTypes = [
     description: '연비가 좋고 경제적인 차량',
     price: '50,000원/일',
     features: ['5인승', '자동변속기', '에어컨', '블루투스'],
-    image: '/images/cars/economy.jpg',
+    image: '/images/cars/모닝블랙.png',
   },
   {
     id: 'compact',
@@ -21,7 +21,7 @@ const carTypes = [
     description: '편안한 승차감과 적절한 크기',
     price: '70,000원/일',
     features: ['5인승', '자동변속기', '에어컨', '블루투스', '후방센서'],
-    image: '/images/cars/compact.jpg',
+    image: '/images/cars/avante ad.png',
   },
   {
     id: 'midsize',
@@ -29,7 +29,7 @@ const carTypes = [
     description: '넓은 실내 공간과 안락한 승차감',
     price: '90,000원/일',
     features: ['5인승', '자동변속기', '에어컨', '블루투스', '후방센서', '스마트키'],
-    image: '/images/cars/midsize.jpg',
+    image: '/images/cars/그랜저 gn7 배경.png',
   },
   {
     id: 'suv',
@@ -37,7 +37,7 @@ const carTypes = [
     description: '넓은 적재공간과 강력한 주행성능',
     price: '120,000원/일',
     features: ['7인승', '자동변속기', '에어컨', '블루투스', '후방센서', '스마트키', '파노라마 선루프'],
-    image: '/images/cars/suv.jpg',
+    image: '/images/cars/소렌토 전면.png',
   },
   {
     id: 'luxury',
@@ -45,7 +45,7 @@ const carTypes = [
     description: '최상의 편안함과 안전성',
     price: '150,000원/일',
     features: ['5인승', '자동변속기', '에어컨', '블루투스', '후방센서', '스마트키', '파노라마 선루프', '전동시트'],
-    image: '/images/cars/luxury.jpg',
+    image: '/images/cars/벤츠e클 익스.png',
   },
 ];
 
