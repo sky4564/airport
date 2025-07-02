@@ -19,16 +19,16 @@ export default function Home() {
         </div>
         {/* 배경 이미지 오버레이 */}
         {/* <div className="absolute inset-0 bg-gray-900 bg-opacity-10" /> */}
-        <div className="relative z-10 text-center text-white px-4">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+        <div className="relative z-10 text-center px-4">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
             인천공항 렌트카
           </h1>
-          <p className="text-xl md:text-2xl mb-8">
+          <p className="text-xl md:text-2xl mb-8 text-white">
             안전하고 편안한 여행을 위한 최고의 선택
           </p>
           <Link
             href="/reservation"
-            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg transition-colors"
+            className="bg-blue-600 hover:bg-blue-700 !text-white font-bold py-3 px-8 rounded-full text-lg transition-colors"
           >
             예약 문의하기
           </Link>

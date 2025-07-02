@@ -53,7 +53,7 @@ export default function PricingPage() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <h1 className="text-3xl font-bold text-center mb-8">요금/차종</h1>
-      <p className="text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+      <p className="text-gray-800 text-center mb-12 max-w-3xl mx-auto">
         다양한 차종과 합리적인 요금으로 고객님의 여행을 더욱 편안하게 만들어 드립니다.
         모든 차량은 정기 점검을 통해 최상의 상태를 유지하고 있습니다.
       </p>
@@ -71,7 +71,7 @@ export default function PricingPage() {
             </div>
             <div className="p-6">
               <h3 className="text-xl font-semibold mb-2">{car.name}</h3>
-              <p className="text-gray-600 mb-4">{car.description}</p>
+              <p className="text-gray-800 mb-4">{car.description}</p>
               <p className="text-2xl font-bold text-blue-600 mb-4">{car.price}</p>
               <ul className="space-y-2 mb-6">
                 {car.features.map((feature, index) => (
@@ -96,7 +96,7 @@ export default function PricingPage() {
 
       <div className="mt-12 bg-gray-50 rounded-lg p-6">
         <h2 className="text-xl font-semibold mb-4">요금 안내</h2>
-        <ul className="space-y-2 text-gray-600">
+        <ul className="space-y-2 text-gray-800">
           <li>• 기본 요금은 24시간 기준입니다.</li>
           <li>• 장기 렌트의 경우 별도 문의해 주세요.</li>
           <li>• 보험료는 요금에 포함되어 있습니다.</li>

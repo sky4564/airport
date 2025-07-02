@@ -9,7 +9,7 @@ export default function ContactPage() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <h1 className="text-3xl font-bold text-center mb-8">연락처/찾아오기</h1>
-      <p className="text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+      <p className="text-gray-800 text-center mb-12 max-w-3xl mx-auto">
         언제든지 편리하게 연락주세요. 24시간 문의 가능합니다.
       </p>
 
@@ -20,20 +20,20 @@ export default function ContactPage() {
           <div className="space-y-4">
             <div>
               <h3 className="text-lg font-medium mb-2">전화번호</h3>
-              <p className="text-gray-600">02-1234-5678</p>
-              <p className="text-sm text-gray-500">24시간 운영</p>
+              <p className="text-gray-800">02-1234-5678</p>
+              <p className="text-sm text-gray-700">24시간 운영</p>
             </div>
             <div>
               <h3 className="text-lg font-medium mb-2">이메일</h3>
-              <p className="text-gray-600">info@incheon-rentcar.com</p>
+              <p className="text-gray-800">info@incheon-rentcar.com</p>
             </div>
             <div>
               <h3 className="text-lg font-medium mb-2">운영시간</h3>
-              <p className="text-gray-600">24시간 운영</p>
+              <p className="text-gray-800">24시간 운영</p>
             </div>
             <div>
               <h3 className="text-lg font-medium mb-2">주소</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-800">
                 인천광역시 중구 공항로 272<br />
                 인천국제공항 제1터미널 1층
               </p>
@@ -55,7 +55,7 @@ export default function ContactPage() {
           <div className="space-y-4">
             <div>
               <h3 className="text-lg font-medium mb-2">대중교통 이용시</h3>
-              <ul className="list-disc list-inside text-gray-600 space-y-1">
+              <ul className="list-disc list-inside text-gray-800 space-y-1">
                 <li>공항철도 인천공항역 하차</li>
                 <li>제1터미널 1층 4번 출구로 나오기</li>
                 <li>4번 출구 앞에서 저희 직원이 기다리고 있습니다</li>
@@ -63,7 +63,7 @@ export default function ContactPage() {
             </div>
             <div>
               <h3 className="text-lg font-medium mb-2">자가용 이용시</h3>
-              <ul className="list-disc list-inside text-gray-600 space-y-1">
+              <ul className="list-disc list-inside text-gray-800 space-y-1">
                 <li>인천국제공항 제1터미널 주차장 이용</li>
                 <li>주차장에서 제1터미널 1층 4번 출구로 이동</li>
                 <li>4번 출구 앞에서 저희 직원이 기다리고 있습니다</li>
