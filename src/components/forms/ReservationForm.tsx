@@ -18,7 +18,7 @@ const reservationSchema = z.object({
 type ReservationFormData = z.infer<typeof reservationSchema>;
 
 const carTypes = [
-  { id: 'economy', name: '경제형' },
+  { id: 'economy', name: '경차' },
   { id: 'compact', name: '준중형' },
   { id: 'midsize', name: '중형' },
   { id: 'suv', name: 'SUV' },
