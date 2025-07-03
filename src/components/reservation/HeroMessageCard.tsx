@@ -11,7 +11,7 @@ export default function HeroMessageCard() {
         </div>
       </div>
       <div className="flex justify-end items-end mt-4">
-        <Image src="/images/hero-bg.jpg" alt="대체 일러스트" width={120} height={80} className="object-contain rounded-md" />
+        <Image src="/images/hero-bg.jpg" alt="대체 일러스트" width={360} height={300} className="object-contain rounded-md" />
       </div>
     </div>
   );
