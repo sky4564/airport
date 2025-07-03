@@ -2,7 +2,7 @@ import ReservationForm from '@/components/forms/ReservationForm';
 import HeroSection from '@/components/reservation/HeroSection';
 import TabSelector from '@/components/reservation/TabSelector';
 import InfoCards from '@/components/reservation/InfoCards';
-import SocialButtons from '@/components/reservation/SocialButtons';
+import SocialButtonBn from '@/components/reservation/SocialButtonBn';
 import FooterText from '@/components/reservation/FooterText';
 import VehicleJsonLd from '@/components/reservation/VehicleJsonLd';
 
@@ -29,7 +29,7 @@ export default function ReservationPage() {
         {/* 하단 안내카드 */}
         <InfoCards />
         {/* 하단 SNS/블로그/카카오/톡톡 버튼 */}
-        <SocialButtons />
+        <SocialButtonBn />
         <FooterText />
       </div>
     </>

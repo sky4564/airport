@@ -6,14 +6,6 @@ import { useState } from 'react';
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const menuItems = [
-    { href: '/', label: '홈' },
-    { href: '/pricing', label: '요금/차종' },
-    { href: '/pickup', label: '픽업 안내' },
-    { href: '/reservation', label: '예약 문의' },
-    { href: '/contact', label: '연락처/찾아오기' },
-  ];
-
   return (
     <nav className="bg-white shadow-lg fixed w-full z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -26,15 +18,12 @@ const Navigation = () => {
 
           {/* Desktop menu */}
           <div className="hidden md:flex items-center space-x-4">
-            {menuItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="text-gray-800 hover:text-blue-700 px-3 py-2 rounded-md text-sm font-semibold transition-colors duration-200"
-              >
-                {item.label}
-              </Link>
-            ))}
+            <Link href="/" className="text-gray-800 hover:text-blue-700 px-3 py-2 rounded-md text-sm font-semibold transition-colors duration-200">홈</Link>
+            <Link href="/about" className="text-gray-800 hover:text-blue-700 px-3 py-2 rounded-md text-sm font-semibold transition-colors duration-200">회사소개</Link>
+            <Link href="/pickup" className="text-gray-800 hover:text-blue-700 px-3 py-2 rounded-md text-sm font-semibold transition-colors duration-200">공항픽업</Link>
+            <Link href="/pricing" className="text-gray-800 hover:text-blue-700 px-3 py-2 rounded-md text-sm font-semibold transition-colors duration-200">요금안내</Link>
+            <Link href="/reservation" className="text-gray-800 hover:text-blue-700 px-3 py-2 rounded-md text-sm font-semibold transition-colors duration-200">예약문의</Link>
+            <Link href="/contact" className="text-gray-800 hover:text-blue-700 px-3 py-2 rounded-md text-sm font-semibold transition-colors duration-200">문의하기</Link>
           </div>
 
           {/* Mobile menu button */}
@@ -62,16 +51,12 @@ const Navigation = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-white shadow-lg">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            {menuItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="text-gray-800 hover:text-blue-700 block px-3 py-2 rounded-md text-base font-semibold transition-colors duration-200"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item.label}
-              </Link>
-            ))}
+            <Link href="/" className="text-gray-800 hover:text-blue-700 block px-3 py-2 rounded-md text-base font-semibold transition-colors duration-200" onClick={() => setIsMenuOpen(false)}>홈</Link>
+            <Link href="/about" className="text-gray-800 hover:text-blue-700 block px-3 py-2 rounded-md text-base font-semibold transition-colors duration-200" onClick={() => setIsMenuOpen(false)}>회사소개</Link>
+            <Link href="/pickup" className="text-gray-800 hover:text-blue-700 block px-3 py-2 rounded-md text-base font-semibold transition-colors duration-200" onClick={() => setIsMenuOpen(false)}>공항픽업</Link>
+            <Link href="/pricing" className="text-gray-800 hover:text-blue-700 block px-3 py-2 rounded-md text-base font-semibold transition-colors duration-200" onClick={() => setIsMenuOpen(false)}>요금안내</Link>
+            <Link href="/reservation" className="text-gray-800 hover:text-blue-700 block px-3 py-2 rounded-md text-base font-semibold transition-colors duration-200" onClick={() => setIsMenuOpen(false)}>예약문의</Link>
+            <Link href="/contact" className="text-gray-800 hover:text-blue-700 block px-3 py-2 rounded-md text-base font-semibold transition-colors duration-200" onClick={() => setIsMenuOpen(false)}>문의하기</Link>
           </div>
         </div>
       )}
