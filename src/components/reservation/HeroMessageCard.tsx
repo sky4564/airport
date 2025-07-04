@@ -4,7 +4,7 @@ export default function HeroMessageCard() {
   return (
     <div className="bg-blue-100 rounded-lg p-6 flex-1 flex flex-col justify-between min-h-[220px]">
       <div>
-        <div className="text-sm text-gray-700 mb-3 font-medium">여행의 시작과 끝을 함께하는 차렌터카</div>
+        <div className="text-sm text-gray-800 mb-3 font-medium">여행의 시작과 끝을 함께하는 차렌터카</div>
         <div className="text-2xl md:text-3xl font-bold leading-tight mb-3 text-gray-900">
           고객감동을 위해 <br />
           <span className="text-blue-700">오늘도 달립니다.</span>

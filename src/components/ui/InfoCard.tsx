@@ -13,7 +13,7 @@ function InfoCard({ icon, title, description }: InfoCardProps) {
         {icon}
       </div>
       <h3 className="text-xl font-semibold mb-2 text-blue-600">{title}</h3>
-      <p className="text-gray-600">{description}</p>
+      <p className="text-gray-800">{description}</p>
     </div>
   );
 }

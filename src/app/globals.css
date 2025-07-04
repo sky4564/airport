@@ -127,6 +127,22 @@ textarea::placeholder {
   opacity: 1;
 }
 
+/* 회색 텍스트 가독성 개선 */
+.text-gray-600 {
+  color: #374151 !important;
+  font-weight: 500;
+}
+
+.text-gray-700 {
+  color: #1f2937 !important;
+  font-weight: 500;
+}
+
+.text-gray-800 {
+  color: #111827 !important;
+  font-weight: 500;
+}
+
 /* 모바일에서 더 나은 가독성 */
 @media (max-width: 768px) {
   body {

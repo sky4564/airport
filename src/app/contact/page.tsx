@@ -1,4 +1,4 @@
-import Image from 'next/image';
+
 
 export const metadata = {
   title: '연락처/찾아오기 | 인천공항 렌트카',
@@ -21,7 +21,7 @@ export default function ContactPage() {
             <div>
               <h3 className="text-lg font-medium mb-2">전화번호</h3>
               <p className="text-gray-800">02-1234-5678</p>
-              <p className="text-sm text-gray-700">24시간 운영</p>
+              <p className="text-sm text-gray-800">24시간 운영</p>
             </div>
             <div>
               <h3 className="text-lg font-medium mb-2">이메일</h3>
@@ -34,8 +34,8 @@ export default function ContactPage() {
             <div>
               <h3 className="text-lg font-medium mb-2">주소</h3>
               <p className="text-gray-800">
-                인천광역시 중구 공항로 272<br />
-                인천국제공항 제1터미널 1층
+                인천 중구 신도시남로141번길 7<br />
+                605호
               </p>
             </div>
           </div>
@@ -44,13 +44,23 @@ export default function ContactPage() {
         {/* 오시는 길 */}
         <div className="bg-white rounded-lg shadow-lg p-6">
           <h2 className="text-2xl font-semibold mb-6">오시는 길</h2>
-          <div className="relative h-64 mb-6">
-            <Image
-              src="/images/map.jpg"
-              alt="오시는 길 지도"
-              fill
-              className="object-cover rounded-lg"
-            />
+          <div className="relative h-64 mb-6 bg-gray-100 rounded-lg flex items-center justify-center">
+            <div className="text-center">
+              <div className="text-gray-600 mb-4">
+                <svg className="w-12 h-12 mx-auto mb-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                </svg>
+                <p className="text-sm">지도를 보려면 클릭하세요</p>
+              </div>
+              <a
+                href="https://www.google.com/maps/search/인천+중구+신도시남로141번길+7+605호"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-blue-600 text-black px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                구글 지도 보기
+              </a>
+            </div>
           </div>
           <div className="space-y-4">
             <div>

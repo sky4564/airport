@@ -72,7 +72,7 @@ export default function PricingPage() {
             </div>
             <div className="p-6 flex flex-col flex-grow">
               <h3 className="text-xl font-extrabold mb-2 text-gray-900">{car.name}</h3>
-              <p className="mb-4 text-gray-700 font-medium">{car.description}</p>
+              <p className="mb-4 text-gray-800 font-medium">{car.description}</p>
               <p className="text-2xl font-extrabold text-blue-800 mb-4">{car.price}</p>
               <ul className="space-y-2 mb-6">
                 {car.features.map((feature, index) => (

@@ -76,6 +76,7 @@ export default function ReservationForm() {
         <input
           type="text"
           id="name"
+          autoComplete="name"
           {...register('name')}
           className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-600 focus:ring-blue-600 placeholder-gray-500 text-base py-2 px-3"
           placeholder="이름을 입력해주세요"
@@ -92,6 +93,7 @@ export default function ReservationForm() {
         <input
           type="tel"
           id="phone"
+          autoComplete="tel"
           {...register('phone')}
           className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-600 focus:ring-blue-600 placeholder-gray-500 text-base py-2 px-3"
           placeholder="010-0000-0000"
@@ -108,6 +110,7 @@ export default function ReservationForm() {
         <input
           type="email"
           id="email"
+          autoComplete="email"
           {...register('email')}
           className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-600 focus:ring-blue-600 placeholder-gray-500 text-base py-2 px-3"
           placeholder="example@email.com"
@@ -125,6 +128,7 @@ export default function ReservationForm() {
           <input
             type="date"
             id="pickupDate"
+            autoComplete="off"
             {...register('pickupDate')}
             className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-600 focus:ring-blue-600 placeholder-gray-500 text-base py-2 px-3"
           />
@@ -140,6 +144,7 @@ export default function ReservationForm() {
           <input
             type="time"
             id="pickupTime"
+            autoComplete="off"
             {...register('pickupTime')}
             className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-600 focus:ring-blue-600 placeholder-gray-500 text-base py-2 px-3"
           />
@@ -155,6 +160,7 @@ export default function ReservationForm() {
         </label>
         <select
           id="carType"
+          autoComplete="off"
           {...register('carType')}
           className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-600 focus:ring-blue-600 placeholder-gray-500 text-base py-2 px-3"
         >
@@ -177,6 +183,7 @@ export default function ReservationForm() {
         <textarea
           id="message"
           rows={4}
+          autoComplete="off"
           {...register('message')}
           className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-600 focus:ring-blue-600 placeholder-gray-500 text-base py-2 px-3"
           placeholder="추가 요청사항이 있으시면 입력해주세요"
@@ -187,7 +194,7 @@ export default function ReservationForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full bg-blue-600 text-white py-3 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed font-bold text-lg transition-colors duration-200"
+          className="w-full bg-blue-600 text-white py-3 px-4 rounded-md hover:bg-blue-700 focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed font-bold text-lg transition-colors duration-200"
         >
           {isSubmitting ? '처리중...' : '문의하기'}
         </button>
