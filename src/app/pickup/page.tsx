@@ -36,7 +36,7 @@ export default function PickupPage() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <h1 className="text-3xl font-bold text-center mb-8">픽업 안내</h1>
-      <p className="text-gray-800 text-center mb-12 max-w-3xl mx-auto">
+      <p className="text-white text-center mb-12 max-w-3xl mx-auto">
         인천공항 터미널별 픽업 위치와 절차를 안내해 드립니다.
         편리한 공항 픽업 서비스로 여행을 시작하세요.
       </p>
@@ -53,17 +53,17 @@ export default function PickupPage() {
               />
             </div>
             <div className="p-6">
-              <h2 className="text-2xl font-semibold mb-4">{terminal.name}</h2>
-              <p className="text-gray-800 mb-4">{terminal.description}</p>
+              <h2 className="text-2xl font-semibold mb-4 text-blue-600">{terminal.name}</h2>
+              <p className="text-black mb-4">{terminal.description}</p>
               <div className="mb-6">
-                <h3 className="text-lg font-medium mb-2">픽업 위치</h3>
-                <p className="text-gray-800">{terminal.location}</p>
+                <h3 className="text-lg text-blue-600 font-medium mb-2">픽업 위치</h3>
+                <p className="text-black">{terminal.location}</p>
               </div>
               <div>
-                <h3 className="text-lg font-medium mb-2">픽업 절차</h3>
+                <h3 className="text-lg  text-blue-600 font-medium mb-2">픽업 절차</h3>
                 <ol className="space-y-2">
                   {terminal.steps.map((step, index) => (
-                    <li key={index} className="flex items-start text-gray-800">
+                    <li key={index} className="flex items-start text-black">
                       <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mr-2">
                         {index + 1}
                       </span>
@@ -78,8 +78,8 @@ export default function PickupPage() {
       </div>
 
       <div className="mt-12 bg-blue-50 rounded-lg p-6">
-        <h2 className="text-xl font-semibold mb-4">픽업 서비스 안내</h2>
-        <ul className="space-y-2 text-gray-800">
+        <h2 className="text-xl  text-blue-600 font-semibold mb-4">픽업 서비스 안내</h2>
+        <ul className="space-y-2 text-black">
           <li>• 픽업 서비스는 24시간 운영됩니다.</li>
           <li>• 비행기 도착 시간에 맞춰 픽업 서비스를 제공합니다.</li>
           <li>• 픽업 장소에서 저희 직원이 명확한 안내판을 들고 기다리고 있습니다.</li>
