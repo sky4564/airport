@@ -26,7 +26,6 @@ const Footer = () => {
               <li><Link href="/pickup" className="text-gray-200 hover:text-blue-300 font-semibold transition-colors duration-200">공항픽업</Link></li>
               <li><Link href="/pricing" className="text-gray-200 hover:text-blue-300 font-semibold transition-colors duration-200">요금안내</Link></li>
               <li><Link href="/reservation" className="text-gray-200 hover:text-blue-300 font-semibold transition-colors duration-200">예약문의</Link></li>
-              <li><Link href="/contact" className="text-gray-200 hover:text-blue-300 font-semibold transition-colors duration-200">문의하기</Link></li>
             </ul>
           </div>
           <div>

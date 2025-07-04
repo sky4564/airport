@@ -23,7 +23,6 @@ const Navigation = () => {
             <Link href="/pickup" className="text-gray-900 hover:text-blue-700 px-3 py-2 rounded-md text-sm font-semibold transition-colors duration-200">공항픽업</Link>
             <Link href="/pricing" className="text-gray-900 hover:text-blue-700 px-3 py-2 rounded-md text-sm font-semibold transition-colors duration-200">요금안내</Link>
             <Link href="/reservation" className="text-gray-900 hover:text-blue-700 px-3 py-2 rounded-md text-sm font-semibold transition-colors duration-200">예약문의</Link>
-            <Link href="/contact" className="text-gray-900 hover:text-blue-700 px-3 py-2 rounded-md text-sm font-semibold transition-colors duration-200">문의하기</Link>
           </div>
 
           {/* Mobile menu button */}
@@ -56,7 +55,6 @@ const Navigation = () => {
             <Link href="/pickup" className="text-gray-900 hover:text-blue-700 block px-3 py-2 rounded-md text-base font-semibold transition-colors duration-200" onClick={() => setIsMenuOpen(false)}>공항픽업</Link>
             <Link href="/pricing" className="text-gray-900 hover:text-blue-700 block px-3 py-2 rounded-md text-base font-semibold transition-colors duration-200" onClick={() => setIsMenuOpen(false)}>요금안내</Link>
             <Link href="/reservation" className="text-gray-900 hover:text-blue-700 block px-3 py-2 rounded-md text-base font-semibold transition-colors duration-200" onClick={() => setIsMenuOpen(false)}>예약문의</Link>
-            <Link href="/contact" className="text-gray-900 hover:text-blue-700 block px-3 py-2 rounded-md text-base font-semibold transition-colors duration-200" onClick={() => setIsMenuOpen(false)}>문의하기</Link>
           </div>
         </div>
       )}
