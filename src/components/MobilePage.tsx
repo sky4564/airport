@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Navigation from '@/components/layout/Navigation';
 import ReservationForm from './forms/ReservationForm';
+import VehicleGallery from './ui/VehicleGallery';
 
 export default function MobilePage() {
   return (
@@ -105,33 +106,7 @@ export default function MobilePage() {
       </section>
 
       {/* 모바일 차량 이미지 갤러리 */}
-      <section className="py-8 bg-gray-50">
-        <div className="max-w-md mx-auto px-4">
-          <h2 className="text-xl font-bold text-center mb-6 text-gray-800">보유 차량</h2>
-          <div className="grid grid-cols-2 gap-4">
-            <div className="bg-white rounded-lg p-4 shadow-sm">
-              <div className="aspect-w-16 aspect-h-9 bg-gray-200 rounded-lg mb-3"></div>
-              <h3 className="font-bold text-sm text-gray-800 mb-1">경차</h3>
-              <p className="text-xs text-gray-600">일 3만원부터</p>
-            </div>
-            <div className="bg-white rounded-lg p-4 shadow-sm">
-              <div className="aspect-w-16 aspect-h-9 bg-gray-200 rounded-lg mb-3"></div>
-              <h3 className="font-bold text-sm text-gray-800 mb-1">준중형</h3>
-              <p className="text-xs text-gray-600">일 4만원부터</p>
-            </div>
-            <div className="bg-white rounded-lg p-4 shadow-sm">
-              <div className="aspect-w-16 aspect-h-9 bg-gray-200 rounded-lg mb-3"></div>
-              <h3 className="font-bold text-sm text-gray-800 mb-1">중형</h3>
-              <p className="text-xs text-gray-600">일 5만원부터</p>
-            </div>
-            <div className="bg-white rounded-lg p-4 shadow-sm">
-              <div className="aspect-w-16 aspect-h-9 bg-gray-200 rounded-lg mb-3"></div>
-              <h3 className="font-bold text-sm text-gray-800 mb-1">SUV</h3>
-              <p className="text-xs text-gray-600">일 6만원부터</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <VehicleGallery />
 
       {/* 빠른 연락 섹션 */}
       <section className="py-8 bg-blue-600 text-white">
