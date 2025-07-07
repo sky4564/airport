@@ -60,7 +60,7 @@ export const metadata: Metadata = {
   },
   other: {
     "naver-site-verification": "1d254abc76002dff39643953fd1a731278ed2ecb",
-    "google-site-verification": "YOUR_GOOGLE_VERIFICATION_CODE", // 실제 구글 인증 코드로 교체
+    "google-site-verification": "8REgZkeqz7avfv1LHjaxohwUGShEgbh5ENGo5suoBGY",
   },
 };
 
