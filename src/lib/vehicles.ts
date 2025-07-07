@@ -82,7 +82,7 @@ export const VEHICLES: Vehicle[] = [
     name: '벤츠 S350',
     category: '대형',
     price: '일 50만원',
-    image: '/images/cars/benz_s350_large.jpg',
+    image: '/images/cars/benz_s350_large.png',
     features: ['최고급', '럭셔리', 'VIP', '최첨단 기술']
   },
   {
@@ -164,7 +164,7 @@ export const VEHICLES: Vehicle[] = [
     name: '팰리세이드 2026',
     category: 'SUV',
     price: '일 17만원',
-    image: '/images/cars/palisade_2026_suv.jpg',
+    image: '/images/cars/palisade_2026_suv.png',
     features: ['8인승', '최신형', '프리미엄', '첨단 기술']
   },
   {
@@ -224,7 +224,7 @@ export const VEHICLES: Vehicle[] = [
     name: 'K5 DL3 2026',
     category: '중형',
     price: '일 11만원',
-    image: '/images/cars/k5_dl3_2026_fullsize.jpg',
+    image: '/images/cars/k5_dl3_2026_fullsize.png',
     features: ['최신형', '세련된 디자인', '첨단 기술', '연비']
   },
   {
@@ -240,7 +240,7 @@ export const VEHICLES: Vehicle[] = [
     name: '소나타 The Edge 2026',
     category: '중형',
     price: '일 11만원',
-    image: '/images/cars/sonata_edge_2026_fullsize.jpg',
+    image: '/images/cars/sonata_edge_2026_fullsize.png',
     features: ['최신형', '스포티', '첨단 기술', '성능']
   },
   {
