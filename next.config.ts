@@ -7,10 +7,7 @@ const nextConfig: NextConfig = {
     formats: ['image/avif', 'image/webp'],
   },
 
-  // SEO를 위한 설정
-  experimental: {
-    optimizeCss: true,
-  },
+  // SEO를 위한 설정 (빌드 안정성을 위해 experimental 기능 비활성화)
 
   // 메타데이터 설정
   async headers() {
