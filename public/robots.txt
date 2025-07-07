@@ -1,0 +1,37 @@
+# Robots.txt for Airport Transportation Service
+
+# Allow all crawlers to access the site
+User-agent: *
+Allow: /
+
+# Important pages for SEO
+Allow: /vehicles
+Allow: /pricing
+Allow: /about
+Allow: /pickup
+
+# Disallow private/internal pages
+Disallow: /api/
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /_next/
+Disallow: /reservation/confirmation/
+
+# Allow crawling of vehicle images for better SEO
+Allow: /images/cars/
+Allow: /images/terminals/
+
+# Disallow temporary or test files
+Disallow: /*?test*
+Disallow: /*?debug*
+Disallow: /tmp/
+Disallow: /temp/
+
+# Mobile page (allow crawling)
+Allow: /mobile
+
+# Sitemap location
+Sitemap: https://byungmin.me/sitemap.xml
+
+# Crawl delay (optional - set to 1 second)
+Crawl-delay: 1 
