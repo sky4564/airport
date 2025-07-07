@@ -1,12 +1,7 @@
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
 
 const Footer = () => {
-  const [year, setYear] = useState<number | null>(null);
-
-  useEffect(() => {
-    setYear(new Date().getFullYear());
-  }, []);
+  const currentYear = new Date().getFullYear();
 
   return (
     <footer className="bg-gray-900 text-white">
@@ -23,6 +18,8 @@ const Footer = () => {
             <ul className="space-y-3">
               <li><Link href="/" className="text-gray-200 hover:text-blue-300 font-semibold transition-colors duration-200">홈</Link></li>
               <li><Link href="/about" className="text-gray-200 hover:text-blue-300 font-semibold transition-colors duration-200">회사소개</Link></li>
+              <li><Link href="/vehicles" className="text-gray-200 hover:text-blue-300 font-semibold transition-colors duration-200">차량안내</Link></li>
+              <li><Link href="/search" className="text-gray-200 hover:text-blue-300 font-semibold transition-colors duration-200">차량찾기</Link></li>
               <li><Link href="/pickup" className="text-gray-200 hover:text-blue-300 font-semibold transition-colors duration-200">공항픽업</Link></li>
               <li><Link href="/pricing" className="text-gray-200 hover:text-blue-300 font-semibold transition-colors duration-200">요금안내</Link></li>
               <li><Link href="/reservation" className="text-gray-200 hover:text-blue-300 font-semibold transition-colors duration-200">예약문의</Link></li>
@@ -38,7 +35,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-gray-700 text-center">
-          <p className="text-gray-300 font-medium">&copy; {year ? year : ''} 인천공항 렌트카. All rights reserved.</p>
+          <p className="text-gray-300 font-medium">&copy; {currentYear} 인천공항 렌트카. All rights reserved.</p>
         </div>
       </div>
     </footer>

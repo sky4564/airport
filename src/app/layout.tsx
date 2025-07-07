@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
+import Navigation from '@/components/layout/Navigation';
+import Footer from '@/components/layout/Footer';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -75,7 +77,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <Navigation />
+        <main className="pt-16">
+          {children}
+        </main>
+        <Footer />
         {/* 채널톡 위젯: pluginKey에 본인 키를 입력하세요 */}
         <Script
           id="channel-talk"

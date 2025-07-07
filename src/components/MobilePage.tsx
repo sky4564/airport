@@ -33,6 +33,19 @@ export default function MobilePage() {
                 </svg>
                 바로 전화
               </a>
+              <Link
+                href="/search"
+                className="flex-1 bg-white bg-opacity-20 hover:bg-opacity-30 text-white font-bold py-3 px-4 rounded-lg text-sm transition-colors flex items-center justify-center gap-2"
+              >
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd" />
+                </svg>
+                차량 찾기
+              </Link>
+            </div>
+
+            {/* 폼 작성 버튼 */}
+            <div className="mb-4">
               <button
                 onClick={() => {
                   const formElement = document.getElementById('mobile-reservation-form');
@@ -40,12 +53,12 @@ export default function MobilePage() {
                     formElement.scrollIntoView({ behavior: 'smooth' });
                   }
                 }}
-                className="flex-1 bg-white bg-opacity-20 hover:bg-opacity-30 text-white font-bold py-3 px-4 rounded-lg text-sm transition-colors flex items-center justify-center gap-2"
+                className="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-lg text-sm transition-colors flex items-center justify-center gap-2"
               >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                폼 작성
+                예약 폼 작성
               </button>
             </div>
           </div>

@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import Navigation from '@/components/layout/Navigation';
 import InfoCard from "./ui/InfoCard";
 import HomeJsonLd from './seo/HomeJsonLd';
 
@@ -11,7 +10,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       <HomeJsonLd />
-      <Navigation />
+      {/* Navigation is now handled by layout.tsx */}
       {/* Hero Section */}
       <section className="relative h-[600px] flex items-center justify-center">
         <div className="absolute inset-0 z-0">
@@ -70,12 +69,20 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">지금 바로 예약하세요</h2>
           <p className="text-xl mb-8">최고의 서비스로 여러분의 여행을 더욱 특별하게 만들어 드립니다.</p>
-          <Link
-            href="/reservation"
-            className="bg-white text-blue-600 hover:bg-gray-100 font-bold py-3 px-8 rounded-full text-lg transition-colors inline-block"
-          >
-            예약 문의하기
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Link
+              href="/search"
+              className="bg-white text-blue-600 hover:bg-gray-100 font-bold py-3 px-8 rounded-full text-lg transition-colors inline-block"
+            >
+              🔍 차량 찾아보기
+            </Link>
+            <Link
+              href="/reservation"
+              className="bg-blue-500 text-white hover:bg-blue-400 font-bold py-3 px-8 rounded-full text-lg transition-colors inline-block border-2 border-blue-400"
+            >
+              📞 예약 문의하기
+            </Link>
+          </div>
         </div>
       </section>
     </div>
