@@ -61,7 +61,7 @@ export const VEHICLES: Vehicle[] = [
   },
   {
     id: '7',
-    name: '카니발12',
+    name: '카니발',
     category: '승합차',
     price: '일 13만원',
     image: '/images/cars/carnival_van.png',

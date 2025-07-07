@@ -3,15 +3,15 @@ export default function HomeJsonLd() {
   const localBusiness = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "@id": "https://yourwebsite.com/#business",
+    "@id": "https://byungmin.me/#business",
     "name": "블루윙카 인천공항점",
     "alternateName": "블루윙카",
     "description": "블루윙카 인천공항점에서 24시간 공항 픽업 렌터카 서비스를 제공합니다. 다양한 차종과 합리적 요금으로 안전하고 편안한 여행을 시작하세요.",
     "url": "https://byungmin.me",
-    "logo": "https://yourwebsite.com/logo.png",
+    "logo": "https://byungmin.me/favicon.ico",
     "image": [
-      "https://yourwebsite.com/images/hero-bg.jpg",
-      "https://yourwebsite.com/images/airport-bg.jpg"
+      "https://byungmin.me/images/hero-bg.jpg",
+      "https://byungmin.me/images/airport-bg.jpg"
     ],
     "telephone": "+82-10-1234-5678",
     "email": "info@airportrentcar.com",
@@ -131,7 +131,7 @@ export default function HomeJsonLd() {
     "name": "블루윙카 인천공항점",
     "alternateName": "블루윙카",
     "url": "https://byungmin.me",
-    "logo": "https://yourwebsite.com/logo.png",
+    "logo": "https://byungmin.me/favicon.ico",
     "contactPoint": [
       {
         "@type": "ContactPoint",
@@ -163,7 +163,7 @@ export default function HomeJsonLd() {
     "url": "https://byungmin.me",
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://yourwebsite.com/vehicles?search={search_term_string}",
+      "target": "https://byungmin.me/vehicles?search={search_term_string}",
       "query-input": "required name=search_term_string"
     }
   };

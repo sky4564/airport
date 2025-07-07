@@ -1,7 +1,53 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // 이미지 최적화 설정
+  images: {
+    domains: ['byungmin.me'],
+    formats: ['image/avif', 'image/webp'],
+  },
+
+  // SEO를 위한 설정
+  experimental: {
+    optimizeCss: true,
+  },
+
+  // 메타데이터 설정
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Robots-Tag',
+            value: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          {
+            key: 'X-XSS-Protection',
+            value: '1; mode=block',
+          },
+        ],
+      },
+    ];
+  },
+
+  // 네이버 검색등록을 위한 정적 파일 설정
+  async rewrites() {
+    return [
+      {
+        source: '/robots.txt',
+        destination: '/api/robots',
+      },
+    ];
+  },
 };
 
 export default nextConfig;
