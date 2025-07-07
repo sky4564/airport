@@ -17,7 +17,7 @@ export default function Home() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/airport-bg.jpg"
-            alt="차렌트카"
+            alt="블루윙카 인천공항 렌터카 서비스"
             fill
             className="object-cover"
             priority
@@ -27,10 +27,10 @@ export default function Home() {
         {/* <div className="absolute inset-0 bg-gray-900 bg-opacity-10" /> */}
         <div className="relative z-10 text-center px-4">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
-            차렌터카_인천공항점
+            블루윙카 인천공항점
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-white">
-            안전하고 편안한 여행을 위한 최고의 선택
+            24시간 공항 픽업 서비스로 안전하고 편안한 여행을 시작하세요
           </p>
           <Link
             href="/reservation"

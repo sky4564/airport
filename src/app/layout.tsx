@@ -14,8 +14,23 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "차렌터카-인천공항점",
-  description: "차렌터카-인천공항점",
+  title: "블루윙카 | 인천공항 렌터카 전문 서비스",
+  description: "블루윙카 인천공항점에서 제공하는 24시간 공항 픽업 렌터카 서비스. 다양한 차종, 합리적 요금, 보험 포함으로 안전하고 편안한 여행을 시작하세요.",
+  keywords: "블루윙카, 인천공항 렌터카, 공항 픽업 서비스, 24시간 렌터카, 인천공항 차량 대여",
+  openGraph: {
+    title: "블루윙카 | 인천공항 렌터카 전문 서비스",
+    description: "24시간 공항 픽업 서비스와 다양한 차종을 제공하는 블루윙카 인천공항점",
+    type: "website",
+    locale: "ko_KR",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
   icons: {
     icon: "/favicon.ico",
   },

@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Home from "../components/Home";
 
+
 export default function Page() {
   const router = useRouter();
 
@@ -31,5 +32,9 @@ export default function Page() {
     }
   }, [router]);
 
-  return <Home />;
+  return (
+    <>
+      <Home />
+    </>
+  );
 }

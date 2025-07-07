@@ -4,10 +4,10 @@ export default function HomeJsonLd() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "@id": "https://yourwebsite.com/#business",
-    "name": "차렌터카_인천공항점",
-    "alternateName": "차렌터카 인천공항점",
-    "description": "인천공항에서 다양한 차종의 렌터카 서비스를 제공합니다. 24시간 예약 상담 가능하며 공항 픽업 서비스도 무료로 제공합니다.",
-    "url": "https://yourwebsite.com",
+    "name": "블루윙카 인천공항점",
+    "alternateName": "블루윙카",
+    "description": "블루윙카 인천공항점에서 24시간 공항 픽업 렌터카 서비스를 제공합니다. 다양한 차종과 합리적 요금으로 안전하고 편안한 여행을 시작하세요.",
+    "url": "https://byungmin.me",
     "logo": "https://yourwebsite.com/logo.png",
     "image": [
       "https://yourwebsite.com/images/hero-bg.jpg",
@@ -128,9 +128,9 @@ export default function HomeJsonLd() {
   const organization = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "차렌터카_인천공항점",
-    "alternateName": "차렌터카 인천공항점",
-    "url": "https://yourwebsite.com",
+    "name": "블루윙카 인천공항점",
+    "alternateName": "블루윙카",
+    "url": "https://byungmin.me",
     "logo": "https://yourwebsite.com/logo.png",
     "contactPoint": [
       {
@@ -159,8 +159,8 @@ export default function HomeJsonLd() {
   const website = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "차렌터카_인천공항점",
-    "url": "https://yourwebsite.com",
+    "name": "블루윙카 인천공항점",
+    "url": "https://byungmin.me",
     "potentialAction": {
       "@type": "SearchAction",
       "target": "https://yourwebsite.com/vehicles?search={search_term_string}",
