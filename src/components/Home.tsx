@@ -1,7 +1,10 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
 import Navigation from '@/components/layout/Navigation';
 import InfoCard from "./ui/InfoCard";
+
 
 export default function Home() {
   return (
