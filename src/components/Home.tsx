@@ -1,11 +1,16 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
 import Navigation from '@/components/layout/Navigation';
 import InfoCard from "./ui/InfoCard";
+import HomeJsonLd from './seo/HomeJsonLd';
+
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
+      <HomeJsonLd />
       <Navigation />
       {/* Hero Section */}
       <section className="relative h-[600px] flex items-center justify-center">
@@ -22,7 +27,7 @@ export default function Home() {
         {/* <div className="absolute inset-0 bg-gray-900 bg-opacity-10" /> */}
         <div className="relative z-10 text-center px-4">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
-            인천공항 렌트카
+            차렌터카_인천공항점
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-white">
             안전하고 편안한 여행을 위한 최고의 선택

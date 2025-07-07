@@ -12,7 +12,7 @@ const Navigation = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0 flex items-center">
-              <span className="text-xl font-bold text-blue-700 tracking-tight">인천공항 렌트카</span>
+              <span className="text-xl font-bold text-blue-700 tracking-tight">차렌터카_인천공항점</span>
             </Link>
           </div>
 
@@ -20,6 +20,7 @@ const Navigation = () => {
           <div className="hidden md:flex items-center space-x-4">
             <Link href="/" className="text-gray-900 hover:text-blue-700 px-3 py-2 rounded-md text-sm font-semibold transition-colors duration-200">홈</Link>
             <Link href="/about" className="text-gray-900 hover:text-blue-700 px-3 py-2 rounded-md text-sm font-semibold transition-colors duration-200">회사소개</Link>
+            <Link href="/vehicles" className="text-gray-900 hover:text-blue-700 px-3 py-2 rounded-md text-sm font-semibold transition-colors duration-200">차량안내</Link>
             <Link href="/pickup" className="text-gray-900 hover:text-blue-700 px-3 py-2 rounded-md text-sm font-semibold transition-colors duration-200">공항픽업</Link>
             <Link href="/pricing" className="text-gray-900 hover:text-blue-700 px-3 py-2 rounded-md text-sm font-semibold transition-colors duration-200">요금안내</Link>
             <Link href="/reservation" className="text-gray-900 hover:text-blue-700 px-3 py-2 rounded-md text-sm font-semibold transition-colors duration-200">예약문의</Link>
@@ -52,6 +53,7 @@ const Navigation = () => {
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <Link href="/" className="text-gray-900 hover:text-blue-700 block px-3 py-2 rounded-md text-base font-semibold transition-colors duration-200" onClick={() => setIsMenuOpen(false)}>홈</Link>
             <Link href="/about" className="text-gray-900 hover:text-blue-700 block px-3 py-2 rounded-md text-base font-semibold transition-colors duration-200" onClick={() => setIsMenuOpen(false)}>회사소개</Link>
+            <Link href="/vehicles" className="text-gray-900 hover:text-blue-700 block px-3 py-2 rounded-md text-base font-semibold transition-colors duration-200" onClick={() => setIsMenuOpen(false)}>차량안내</Link>
             <Link href="/pickup" className="text-gray-900 hover:text-blue-700 block px-3 py-2 rounded-md text-base font-semibold transition-colors duration-200" onClick={() => setIsMenuOpen(false)}>공항픽업</Link>
             <Link href="/pricing" className="text-gray-900 hover:text-blue-700 block px-3 py-2 rounded-md text-base font-semibold transition-colors duration-200" onClick={() => setIsMenuOpen(false)}>요금안내</Link>
             <Link href="/reservation" className="text-gray-900 hover:text-blue-700 block px-3 py-2 rounded-md text-base font-semibold transition-colors duration-200" onClick={() => setIsMenuOpen(false)}>예약문의</Link>
