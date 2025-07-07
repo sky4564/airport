@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { VEHICLES, Vehicle, VEHICLE_CATEGORIES } from '@/lib/vehicles';
+import { VEHICLES, VEHICLE_CATEGORIES } from '@/lib/vehicles';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -147,8 +147,8 @@ export default function CarSearchPage() {
                   key={category}
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${selectedCategory === category
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-gray-100 text-gray-700 hover:bg-blue-50'
+                    ? 'bg-blue-600 text-white'
+                    : 'bg-gray-100 text-gray-700 hover:bg-blue-50'
                     }`}
                 >
                   {category}
@@ -166,8 +166,8 @@ export default function CarSearchPage() {
                   key={option.value}
                   onClick={() => setSelectedSeating(option.value)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${selectedSeating === option.value
-                      ? 'bg-green-600 text-white'
-                      : 'bg-gray-100 text-gray-700 hover:bg-green-50'
+                    ? 'bg-green-600 text-white'
+                    : 'bg-gray-100 text-gray-700 hover:bg-green-50'
                     }`}
                 >
                   {option.label}
@@ -185,8 +185,8 @@ export default function CarSearchPage() {
                   key={range.value}
                   onClick={() => setSelectedPriceRange(range.value)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${selectedPriceRange === range.value
-                      ? 'bg-purple-600 text-white'
-                      : 'bg-gray-100 text-gray-700 hover:bg-purple-50'
+                    ? 'bg-purple-600 text-white'
+                    : 'bg-gray-100 text-gray-700 hover:bg-purple-50'
                     }`}
                 >
                   {range.label}
@@ -205,8 +205,8 @@ export default function CarSearchPage() {
                 key={feature.value}
                 onClick={() => handleFeatureToggle(feature.value)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${selectedFeatures.includes(feature.value)
-                    ? 'bg-orange-600 text-white'
-                    : 'bg-gray-100 text-gray-700 hover:bg-orange-50'
+                  ? 'bg-orange-600 text-white'
+                  : 'bg-gray-100 text-gray-700 hover:bg-orange-50'
                   }`}
               >
                 {feature.label}
@@ -308,6 +308,7 @@ export default function CarSearchPage() {
                     <Link
                       href={`/reservation?vehicle=${vehicle.id}`}
                       className="w-full bg-blue-600 text-white text-center py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold block"
+                      style={{ color: 'white' }}
                     >
                       이 차량 예약하기
                     </Link>
