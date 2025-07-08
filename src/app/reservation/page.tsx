@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, Suspense } from 'react';
 import Head from 'next/head';
 import ReservationForm from '@/components/forms/ReservationForm';
 import HeroSection from '@/components/reservation/HeroSection';
@@ -9,6 +9,14 @@ import InfoCards from '@/components/reservation/InfoCards';
 import SocialButtonBn from '@/components/reservation/SocialButtonBn';
 import FooterText from '@/components/reservation/FooterText';
 import VehicleJsonLd from '@/components/reservation/VehicleJsonLd';
+
+function ReservationFormWrapper() {
+  return (
+    <Suspense fallback={<div className="animate-pulse bg-gray-200 rounded-lg h-96"></div>}>
+      <ReservationForm />
+    </Suspense>
+  );
+}
 
 export default function ReservationPage() {
   useEffect(() => {
@@ -34,7 +42,7 @@ export default function ReservationPage() {
           {/* 우측: 폼+탭 */}
           <div className="bg-white rounded-lg shadow-lg p-6 md:p-8">
             <TabSelector />
-            <ReservationForm />
+            <ReservationFormWrapper />
           </div>
         </div>
         {/* 하단 안내카드 */}
