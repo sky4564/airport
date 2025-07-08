@@ -3,9 +3,12 @@
 import { useForm, Controller } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+import { getVehicleById, VEHICLE_CATEGORIES } from '@/lib/vehicles';
+import Image from 'next/image';
 
 const reservationSchema = z.object({
   name: z.string().min(2, '이름을 입력해주세요'),
@@ -21,19 +24,14 @@ const reservationSchema = z.object({
 
 type ReservationFormData = z.infer<typeof reservationSchema>;
 
-const carTypes = [
-  { id: 'economy', name: '경차' },
-  { id: 'compact', name: '준중형' },
-  { id: 'midsize', name: '중형' },
-  { id: 'suv', name: 'SUV' },
-  { id: 'luxury', name: '고급형' },
-];
-
 export default function ReservationForm({ simplified = false }: { simplified?: boolean }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const timePickerRef = useRef<DatePicker>(null);
   const returnTimePickerRef = useRef<DatePicker>(null);
+  const searchParams = useSearchParams();
+  const selectedVehicleId = searchParams.get('vehicle');
+  const selectedVehicle = selectedVehicleId ? getVehicleById(selectedVehicleId) : null;
 
   const {
     register,
@@ -41,10 +39,19 @@ export default function ReservationForm({ simplified = false }: { simplified?: b
     reset,
     control,
     watch,
+    setValue,
     formState: { errors },
   } = useForm<ReservationFormData>({
     resolver: zodResolver(reservationSchema),
   });
+
+  // URL에서 차량이 선택된 경우 해당 차량을 선택
+  useEffect(() => {
+    if (selectedVehicle) {
+      setValue('carType', selectedVehicle.category);
+      setValue('message', `선택한 차량: ${selectedVehicle.name} (${selectedVehicle.price})\n\n추가 요청사항이 있으시면 위 내용 아래에 작성해주세요.`);
+    }
+  }, [selectedVehicle, setValue]);
 
   const pickupDate = watch('pickupDate');
 
@@ -79,6 +86,39 @@ export default function ReservationForm({ simplified = false }: { simplified?: b
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={`space-y-${simplified ? '4' : '6'}`}>
+      {/* 선택된 차량 정보 표시 */}
+      {selectedVehicle && (
+        <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
+          <h3 className="text-lg font-semibold text-blue-900 mb-3">선택된 차량</h3>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <div className="w-full sm:w-32 h-24 bg-white rounded-lg overflow-hidden">
+              <Image
+                src={selectedVehicle.image}
+                alt={selectedVehicle.name}
+                width={128}
+                height={96}
+                className="w-full h-full object-contain"
+                style={{ padding: '4px' }}
+              />
+            </div>
+            <div className="flex-1">
+              <h4 className="font-bold text-gray-900 text-base mb-1">{selectedVehicle.name}</h4>
+              <p className="text-blue-600 font-semibold text-sm mb-2">{selectedVehicle.price}</p>
+              <div className="flex flex-wrap gap-1">
+                {selectedVehicle.features.slice(0, 3).map((feature, index) => (
+                  <span
+                    key={index}
+                    className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full"
+                  >
+                    {feature}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
       <div className={simplified ? 'grid grid-cols-1 gap-4' : ''}>
         <div>
           <label htmlFor="name" className={`block ${simplified ? 'text-sm' : 'text-base'} font-bold text-gray-800 mb-2`}>
@@ -276,22 +316,29 @@ export default function ReservationForm({ simplified = false }: { simplified?: b
 
       <div>
         <label htmlFor="carType" className={`block ${simplified ? 'text-sm' : 'text-base'} font-bold text-gray-800 mb-2`}>
-          차종 *
+          {selectedVehicle ? '선택된 차량' : '희망 차종 *'}
         </label>
-        <select
-          id="carType"
-          autoComplete="off"
-          {...register('carType')}
-          className={`mt-1 block w-full rounded-md border border-gray-400 shadow-sm focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50 text-gray-900 ${simplified ? 'text-sm py-2 px-3' : 'text-base py-3 px-4'} bg-white`}
-        >
-          <option value="" className="text-gray-500">차종을 선택해주세요</option>
-          {carTypes.map((type) => (
-            <option key={type.id} value={type.id} className="text-gray-900">
-              {type.name}
-            </option>
-          ))}
-        </select>
-        {errors.carType && (
+        {selectedVehicle ? (
+          <div className="mt-1 block w-full rounded-md border border-blue-400 bg-blue-50 p-3">
+            <div className="text-blue-800 font-semibold">{selectedVehicle.name} ({selectedVehicle.category})</div>
+            <div className="text-blue-600 text-sm">{selectedVehicle.price}</div>
+          </div>
+        ) : (
+          <select
+            id="carType"
+            autoComplete="off"
+            {...register('carType')}
+            className={`mt-1 block w-full rounded-md border border-gray-400 shadow-sm focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50 text-gray-900 ${simplified ? 'text-sm py-2 px-3' : 'text-base py-3 px-4'} bg-white`}
+          >
+            <option value="" className="text-gray-500">차종을 선택해주세요</option>
+            {VEHICLE_CATEGORIES.filter(cat => cat !== '전체').map((category) => (
+              <option key={category} value={category} className="text-gray-900">
+                {category}
+              </option>
+            ))}
+          </select>
+        )}
+        {errors.carType && !selectedVehicle && (
           <p className="mt-2 text-sm text-red-600 font-medium">{errors.carType.message}</p>
         )}
       </div>
