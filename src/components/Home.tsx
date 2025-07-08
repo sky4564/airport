@@ -16,7 +16,7 @@ export default function Home() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/airport-bg.jpg"
-            alt="블루윙카 인천공항 렌터카 서비스"
+            alt="공항렌트24 인천공항 렌터카 서비스"
             fill
             className="object-cover"
             priority
@@ -26,10 +26,16 @@ export default function Home() {
         {/* <div className="absolute inset-0 bg-gray-900 bg-opacity-10" /> */}
         <div className="relative z-10 text-center px-4">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
-            블루윙카 인천공항점
+            공항렌트24
           </h1>
-          <p className="text-xl md:text-2xl mb-8 text-white">
-            24시간 공항 픽업 서비스로 안전하고 편안한 여행을 시작하세요
+          <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-white">
+            Airport Rent 24
+          </h2>
+          <p className="text-xl md:text-2xl mb-4 text-white">
+            24시간 인천공항 픽업 서비스로 안전하고 편안한 여행을 시작하세요
+          </p>
+          <p className="text-lg md:text-xl mb-8 text-white opacity-90">
+            24-hour Incheon Airport pickup service for safe and comfortable travel
           </p>
           <Link
             href="/reservation"
@@ -43,7 +49,8 @@ export default function Home() {
       {/* Features Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12 text-blue-600">주요 서비스</h2>
+          <h2 className="text-3xl font-bold text-center mb-4 text-blue-600">주요 서비스</h2>
+          <h3 className="text-xl font-semibold text-center mb-12 text-gray-600">Main Services</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <InfoCard
               icon={<svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>}
@@ -60,6 +67,24 @@ export default function Home() {
               title="다양한 차종 선택"
               description="경차부터 대형, SUV, 수입차까지 다양한 차종을 보유. 원하는 차량을 선택하세요."
             />
+          </div>
+
+          {/* English Service Description */}
+          <div className="mt-12 pt-8 border-t border-gray-200">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+              <div className="text-gray-600">
+                <h4 className="font-semibold text-blue-600 mb-2">24/7 Airport Pickup</h4>
+                <p className="text-sm">Convenient pickup and drop-off service available 24 hours to match your flight schedule</p>
+              </div>
+              <div className="text-gray-600">
+                <h4 className="font-semibold text-blue-600 mb-2">Insurance Included</h4>
+                <p className="text-sm">All vehicles include basic insurance coverage with competitive rates and no hidden fees</p>
+              </div>
+              <div className="text-gray-600">
+                <h4 className="font-semibold text-blue-600 mb-2">Various Vehicle Types</h4>
+                <p className="text-sm">Choose from compact cars to luxury vehicles, SUVs, and imported cars to suit your needs</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

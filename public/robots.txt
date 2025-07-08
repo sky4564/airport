@@ -4,11 +4,9 @@
 User-agent: Yeti
 Allow: /
 Allow: /vehicles
-Allow: /pricing
 Allow: /about
 Allow: /pickup
 Allow: /reservation
-Allow: /mobile
 Allow: /images/cars/
 Allow: /images/terminals/
 Allow: /favicon.ico
@@ -30,11 +28,9 @@ Disallow: /_next/
 User-agent: *
 Allow: /
 Allow: /vehicles
-Allow: /pricing
 Allow: /about
 Allow: /pickup
 Allow: /reservation
-Allow: /mobile
 Allow: /images/cars/
 Allow: /images/terminals/
 Allow: /favicon.ico
