@@ -38,10 +38,10 @@ export default function Home() {
             24-hour Incheon Airport pickup service for safe and comfortable travel
           </p>
           <Link
-            href="/reservation"
+            href="/search"
             className="bg-blue-600 hover:bg-blue-700 !text-white font-bold py-3 px-8 rounded-full text-lg transition-colors"
           >
-            예약 문의하기
+            🔍 빠르게 원하는 차량 찾기
           </Link>
         </div>
       </section>
