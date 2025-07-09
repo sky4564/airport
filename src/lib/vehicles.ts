@@ -33,7 +33,7 @@ export const VEHICLES: Vehicle[] = [
     category: '승합차',
     price: '일 17만원',
     image: '/images/cars/staria_van.png',
-    features: ['11인승', '프리미엄', '편안함', '최신 디자인']
+    features: ['11인승', '프리미엄', '편안함', '최신 디자인', '열선시트', '네비게이션', '후방카메라', '스마트키']
   },
   {
     id: '4',
@@ -41,7 +41,7 @@ export const VEHICLES: Vehicle[] = [
     category: '승합차',
     price: '일 13만원',
     image: '/images/cars/starex_van.png',
-    features: ['12인승', '실용성', '경제적', '안정성']
+    features: ['12인승', '실용성', '경제적', '안정성', '네비게이션', '후방카메라']
   },
   {
     id: '5',
@@ -49,7 +49,7 @@ export const VEHICLES: Vehicle[] = [
     category: '승합차',
     price: '일 15만원',
     image: '/images/cars/carnival_gen4_van.png',
-    features: ['11인승', '최신형', '편의사양', '가족형']
+    features: ['11인승', '최신형', '편의사양', '가족형', '열선시트', '네비게이션', '후방카메라', '스마트키', '자동등화']
   },
   {
     id: '6',
@@ -83,7 +83,7 @@ export const VEHICLES: Vehicle[] = [
     category: '대형',
     price: '일 50만원',
     image: '/images/cars/benz_s350_large.png',
-    features: ['최고급', '럭셔리', 'VIP', '최첨단 기술']
+    features: ['최고급', '럭셔리', 'VIP', '최첨단 기술', '통풍시트', '열선핸들', '선루프', '프리미엄오디오', '무선충전', '사각지대감지']
   },
   {
     id: '10',
@@ -91,7 +91,7 @@ export const VEHICLES: Vehicle[] = [
     category: '대형',
     price: '일 25만원',
     image: '/images/cars/benz_avantgarde_large.png',
-    features: ['프리미엄', '스포티', '럭셔리', '고성능']
+    features: ['프리미엄', '스포티', '럭셔리', '고성능', '열선시트', '네비게이션', '후방카메라', '자동등화']
   },
   {
     id: '11',
@@ -99,7 +99,7 @@ export const VEHICLES: Vehicle[] = [
     category: '대형',
     price: '일 25만원',
     image: '/images/cars/genesis_g90_large.png',
-    features: ['국산 프리미엄', '럭셔리', '편안함', '최신 기술']
+    features: ['국산 프리미엄', '럭셔리', '편안함', '최신 기술', '통풍시트', '열선핸들', '선루프', '스마트키', '주차보조']
   },
   {
     id: '12',
@@ -107,7 +107,7 @@ export const VEHICLES: Vehicle[] = [
     category: '대형',
     price: '일 20만원',
     image: '/images/cars/genesis_g80_large.png',
-    features: ['국산 프리미엄', '세련된 디자인', '고급감', '안전성']
+    features: ['국산 프리미엄', '세련된 디자인', '고급감', '안전성', '열선시트', '네비게이션', '후방카메라', '크루즈컨트롤']
   },
 
   // SUV
@@ -165,7 +165,7 @@ export const VEHICLES: Vehicle[] = [
     category: 'SUV',
     price: '일 17만원',
     image: '/images/cars/palisade_2026_suv.png',
-    features: ['8인승', '최신형', '프리미엄', '첨단 기술']
+    features: ['8인승', '최신형', '프리미엄', '첨단 기술', '통풍시트', '열선핸들', '선루프', '네비게이션', '주차보조', '후방카메라', '사각지대감지']
   },
   {
     id: '20',
@@ -173,7 +173,7 @@ export const VEHICLES: Vehicle[] = [
     category: 'SUV',
     price: '일 15만원',
     image: '/images/cars/mohave_master_suv.png',
-    features: ['7인승', '고급감', '오프로드', '강력한 성능']
+    features: ['7인승', '고급감', '오프로드', '강력한 성능', '열선시트', '네비게이션', '후방카메라', '크루즈컨트롤']
   },
   {
     id: '21',
@@ -181,7 +181,7 @@ export const VEHICLES: Vehicle[] = [
     category: 'SUV',
     price: '일 25만원',
     image: '/images/cars/gv80_suv.png',
-    features: ['프리미엄', '럭셔리', '고급 SUV', '최신 기술']
+    features: ['프리미엄', '럭셔리', '고급 SUV', '최신 기술', '통풍시트', '열선핸들', '선루프', '스마트키', '주차보조', '프리미엄오디오', '무선충전']
   },
   {
     id: '22',
@@ -207,7 +207,7 @@ export const VEHICLES: Vehicle[] = [
     category: '준대형',
     price: '일 15만원',
     image: '/images/cars/grandeur_gn7_midlarge.png',
-    features: ['최신형', '프리미엄', '넓은 실내', '첨단 기술']
+    features: ['최신형', '프리미엄', '넓은 실내', '첨단 기술', '통풍시트', '열선핸들', '선루프', '네비게이션', '후방카메라', '스마트키', '주차보조']
   },
 
   // 중형
@@ -217,7 +217,7 @@ export const VEHICLES: Vehicle[] = [
     category: '중형',
     price: '일 10만원',
     image: '/images/cars/k5_dl3_fullsize.png',
-    features: ['세련된 디자인', '연비', '안전성', '실용성']
+    features: ['세련된 디자인', '연비', '안전성', '실용성', '열선시트', '네비게이션', '후방카메라']
   },
   {
     id: '26',
@@ -225,7 +225,7 @@ export const VEHICLES: Vehicle[] = [
     category: '중형',
     price: '일 11만원',
     image: '/images/cars/k5_dl3_2026_fullsize.png',
-    features: ['최신형', '세련된 디자인', '첨단 기술', '연비']
+    features: ['최신형', '세련된 디자인', '첨단 기술', '연비', '열선시트', '네비게이션', '후방카메라', '스마트키', '자동등화', '빗방울감지']
   },
   {
     id: '27',
@@ -233,7 +233,7 @@ export const VEHICLES: Vehicle[] = [
     category: '중형',
     price: '일 10만원',
     image: '/images/cars/sonata_dn8_fullsize.png',
-    features: ['세련된 디자인', '연비', '안전성', '편안함']
+    features: ['세련된 디자인', '연비', '안전성', '편안함', '열선시트', '네비게이션', '후방카메라']
   },
   {
     id: '28',
@@ -241,7 +241,7 @@ export const VEHICLES: Vehicle[] = [
     category: '중형',
     price: '일 11만원',
     image: '/images/cars/sonata_edge_2026_fullsize.png',
-    features: ['최신형', '스포티', '첨단 기술', '성능']
+    features: ['최신형', '스포티', '첨단 기술', '성능', '열선시트', '네비게이션', '후방카메라', '스마트키', '크루즈컨트롤', '자동등화']
   },
   {
     id: '29',

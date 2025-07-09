@@ -23,10 +23,24 @@ const PRICE_RANGES = [
 
 // 특별 기능 옵션
 const SPECIAL_FEATURES = [
-  { value: 'hybrid', label: '하이브리드' },
-  { value: 'luxury', label: '럭셔리' },
-  { value: 'new', label: '최신형' },
-  { value: 'spacious', label: '넓은 공간' },
+  { value: 'hybrid', label: '🌱 하이브리드' },
+  { value: 'luxury', label: '✨ 럭셔리' },
+  { value: 'new', label: '🆕 최신형' },
+  { value: 'spacious', label: '🏠 넓은 공간' },
+  { value: 'ventilated_seats', label: '❄️ 통풍시트' },
+  { value: 'heated_steering', label: '🔥 열선핸들' },
+  { value: 'heated_seats', label: '🔥 열선시트' },
+  { value: 'sunroof', label: '🌞 선루프' },
+  { value: 'navigation', label: '🗺️ 네비게이션' },
+  { value: 'parking_assist', label: '🅿️ 주차보조' },
+  { value: 'cruise_control', label: '🚗 크루즈컨트롤' },
+  { value: 'smart_key', label: '🔑 스마트키' },
+  { value: 'backup_camera', label: '📹 후방카메라' },
+  { value: 'blind_spot', label: '👁️ 사각지대감지' },
+  { value: 'premium_audio', label: '🎵 프리미엄오디오' },
+  { value: 'wireless_charging', label: '🔌 무선충전' },
+  { value: 'auto_lights', label: '💡 자동등화' },
+  { value: 'rain_sensor', label: '🌧️ 빗방울감지' },
 ];
 
 export default function CarSearchPage() {
@@ -35,6 +49,14 @@ export default function CarSearchPage() {
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
   const [selectedFeatures, setSelectedFeatures] = useState<string[]>([]);
   const [showCount, setShowCount] = useState<number>(12);
+  const [currentStep, setCurrentStep] = useState<number>(0);
+
+  const filterSteps = [
+    { id: 'category', title: '차종 선택', subtitle: '원하는 차종을 선택해주세요' },
+    { id: 'seating', title: '승차인원', subtitle: '필요한 승차인원을 선택해주세요' },
+    { id: 'price', title: '가격대', subtitle: '예산에 맞는 가격대를 선택해주세요' },
+    { id: 'features', title: '특별 기능', subtitle: '원하는 기능을 선택해주세요 (복수선택 가능)' }
+  ];
 
   // 차량 필터링 로직
   const filteredVehicles = useMemo(() => {
@@ -93,6 +115,34 @@ export default function CarSearchPage() {
               return vehicle.features.some(f => f.includes('최신형') || f.includes('2026'));
             case 'spacious':
               return vehicle.features.some(f => f.includes('넓은') || f.includes('공간'));
+            case 'ventilated_seats':
+              return vehicle.features.some(f => f.includes('통풍시트') || f.includes('벤틸레이션'));
+            case 'heated_steering':
+              return vehicle.features.some(f => f.includes('열선핸들') || f.includes('핸들히터'));
+            case 'heated_seats':
+              return vehicle.features.some(f => f.includes('열선시트') || f.includes('시트히터'));
+            case 'sunroof':
+              return vehicle.features.some(f => f.includes('선루프') || f.includes('썬루프') || f.includes('파노라마'));
+            case 'navigation':
+              return vehicle.features.some(f => f.includes('네비게이션') || f.includes('내비') || f.includes('GPS'));
+            case 'parking_assist':
+              return vehicle.features.some(f => f.includes('주차보조') || f.includes('주차지원') || f.includes('오토파킹'));
+            case 'cruise_control':
+              return vehicle.features.some(f => f.includes('크루즈컨트롤') || f.includes('정속주행'));
+            case 'smart_key':
+              return vehicle.features.some(f => f.includes('스마트키') || f.includes('키리스') || f.includes('원터치'));
+            case 'backup_camera':
+              return vehicle.features.some(f => f.includes('후방카메라') || f.includes('백카메라') || f.includes('후방모니터'));
+            case 'blind_spot':
+              return vehicle.features.some(f => f.includes('사각지대') || f.includes('BSD') || f.includes('측면감지'));
+            case 'premium_audio':
+              return vehicle.features.some(f => f.includes('프리미엄오디오') || f.includes('고급사운드') || f.includes('음향시스템'));
+            case 'wireless_charging':
+              return vehicle.features.some(f => f.includes('무선충전') || f.includes('와이어리스') || f.includes('충전패드'));
+            case 'auto_lights':
+              return vehicle.features.some(f => f.includes('자동등화') || f.includes('오토라이트') || f.includes('자동헤드라이트'));
+            case 'rain_sensor':
+              return vehicle.features.some(f => f.includes('빗방울감지') || f.includes('레인센서') || f.includes('자동와이퍼'));
             default:
               return false;
           }
@@ -121,6 +171,162 @@ export default function CarSearchPage() {
     setSelectedPriceRange('all');
     setSelectedFeatures([]);
     setShowCount(12);
+    setCurrentStep(0);
+  };
+
+  const nextStep = () => {
+    if (currentStep < filterSteps.length - 1) {
+      setCurrentStep(currentStep + 1);
+    }
+  };
+
+  const prevStep = () => {
+    if (currentStep > 0) {
+      setCurrentStep(currentStep - 1);
+    }
+  };
+
+  const goToStep = (step: number) => {
+    setCurrentStep(step);
+  };
+
+  // 자동으로 다음 단계로 넘어가는 함수
+  const autoNextStep = () => {
+    // 특별 기능 단계(3)에서는 자동으로 넘어가지 않음 (다중 선택 가능하므로)
+    if (currentStep < filterSteps.length - 1 && currentStep !== 3) {
+      setTimeout(() => {
+        setCurrentStep(currentStep + 1);
+      }, 300); // 0.3초 후 자동 이동
+    }
+  };
+
+  const renderCurrentStep = () => {
+    switch (currentStep) {
+      case 0: // 차종 선택
+        return (
+          <div className="space-y-6">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              {VEHICLE_CATEGORIES.map((category) => (
+                <button
+                  key={category}
+                  onClick={() => {
+                    setSelectedCategory(category);
+                    autoNextStep();
+                  }}
+                  className={`p-4 rounded-2xl text-center transition-all duration-300 border-2 ${selectedCategory === category
+                    ? 'bg-blue-600 text-white border-blue-600 shadow-lg transform scale-105'
+                    : 'bg-white text-gray-700 border-gray-200 hover:border-blue-300 hover:shadow-md'
+                    }`}
+                >
+                  <div className="text-2xl mb-2">
+                    {category === '전체' ? '🚗' :
+                      category === '승합차' ? '🚐' :
+                        category === '대형' ? '🏰' :
+                          category === 'SUV' ? '🚙' :
+                            category === '준대형' ? '🚘' :
+                              category === '중형' ? '🚗' :
+                                category === '준중형' ? '🚓' : '🚕'}
+                  </div>
+                  <div className="font-semibold">{category}</div>
+                </button>
+              ))}
+            </div>
+            <div className="text-center text-sm text-blue-500">
+              💡 선택하면 자동으로 다음 단계로 이동합니다
+            </div>
+          </div>
+        );
+
+      case 1: // 승차인원
+        return (
+          <div className="space-y-6">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {SEATING_OPTIONS.map((option) => (
+                <button
+                  key={option.value}
+                  onClick={() => {
+                    setSelectedSeating(option.value);
+                    autoNextStep();
+                  }}
+                  className={`p-4 rounded-2xl text-center transition-all duration-300 border-2 ${selectedSeating === option.value
+                    ? 'bg-green-600 text-white border-green-600 shadow-lg transform scale-105'
+                    : 'bg-white text-gray-700 border-gray-200 hover:border-green-300 hover:shadow-md'
+                    }`}
+                >
+                  <div className="text-2xl mb-2">
+                    {option.value === 'all' ? '👥' :
+                      option.value === '5' ? '👨‍👩‍👧‍👦' :
+                        option.value === '7' ? '👨‍👩‍👧‍👦👶👶' :
+                          '🚌'}
+                  </div>
+                  <div className="font-semibold">{option.label}</div>
+                </button>
+              ))}
+            </div>
+            <div className="text-center text-sm text-green-500">
+              💡 선택하면 자동으로 다음 단계로 이동합니다
+            </div>
+          </div>
+        );
+
+      case 2: // 가격대
+        return (
+          <div className="space-y-6">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {PRICE_RANGES.map((range) => (
+                <button
+                  key={range.value}
+                  onClick={() => {
+                    setSelectedPriceRange(range.value);
+                    autoNextStep();
+                  }}
+                  className={`p-4 rounded-2xl text-center transition-all duration-300 border-2 ${selectedPriceRange === range.value
+                    ? 'bg-purple-600 text-white border-purple-600 shadow-lg transform scale-105'
+                    : 'bg-white text-gray-700 border-gray-200 hover:border-purple-300 hover:shadow-md'
+                    }`}
+                >
+                  <div className="text-2xl mb-2">
+                    {range.value === 'all' ? '💰' :
+                      range.value === 'budget' ? '🪙' :
+                        range.value === 'mid' ? '💵' :
+                          '💎'}
+                  </div>
+                  <div className="font-semibold">{range.label}</div>
+                </button>
+              ))}
+            </div>
+            <div className="text-center text-sm text-purple-500">
+              💡 선택하면 자동으로 다음 단계로 이동합니다
+            </div>
+          </div>
+        );
+
+      case 3: // 특별 기능
+        return (
+          <div className="space-y-6">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
+              {SPECIAL_FEATURES.map((feature) => (
+                <button
+                  key={feature.value}
+                  onClick={() => handleFeatureToggle(feature.value)}
+                  className={`p-3 rounded-xl text-center transition-all duration-300 border-2 text-sm ${selectedFeatures.includes(feature.value)
+                    ? 'bg-orange-600 text-white border-orange-600 shadow-lg transform scale-105'
+                    : 'bg-white text-gray-700 border-gray-200 hover:border-orange-300 hover:shadow-md'
+                    }`}
+                >
+                  <div className="font-medium">{feature.label}</div>
+                </button>
+              ))}
+            </div>
+            <div className="text-center text-sm text-orange-500">
+              💡 여러 기능을 선택할 수 있습니다. 완료되면 아래 결과를 확인하세요!
+            </div>
+          </div>
+        );
+
+      default:
+        return null;
+    }
   };
 
   return (
@@ -131,106 +337,136 @@ export default function CarSearchPage() {
           원하는 차량을 찾아보세요
         </h1>
         <p className="text-lg text-gray-600 mb-6">
-          다양한 조건으로 필터링하여 최적의 차량을 찾으실 수 있습니다
+          단계별로 조건을 선택하여 최적의 차량을 찾으실 수 있습니다
         </p>
       </section>
 
-      {/* 필터 섹션 */}
-      <section className="bg-white rounded-lg shadow-lg p-6 mb-8">
-        <div className="flex flex-col lg:flex-row gap-6">
-          {/* 차종 필터 */}
-          <div className="flex-1">
-            <h3 className="text-lg font-semibold text-gray-900 mb-3">차종</h3>
-            <div className="flex flex-wrap gap-2">
-              {VEHICLE_CATEGORIES.map((category) => (
-                <button
-                  key={category}
-                  onClick={() => setSelectedCategory(category)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${selectedCategory === category
-                    ? 'bg-blue-600 text-white'
-                    : 'bg-gray-100 text-gray-700 hover:bg-blue-50'
-                    }`}
-                >
-                  {category}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          {/* 승차인원 필터 */}
-          <div className="flex-1">
-            <h3 className="text-lg font-semibold text-gray-900 mb-3">승차인원</h3>
-            <div className="flex flex-wrap gap-2">
-              {SEATING_OPTIONS.map((option) => (
-                <button
-                  key={option.value}
-                  onClick={() => setSelectedSeating(option.value)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${selectedSeating === option.value
-                    ? 'bg-green-600 text-white'
-                    : 'bg-gray-100 text-gray-700 hover:bg-green-50'
-                    }`}
-                >
-                  {option.label}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          {/* 가격대 필터 */}
-          <div className="flex-1">
-            <h3 className="text-lg font-semibold text-gray-900 mb-3">가격대</h3>
-            <div className="flex flex-wrap gap-2">
-              {PRICE_RANGES.map((range) => (
-                <button
-                  key={range.value}
-                  onClick={() => setSelectedPriceRange(range.value)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${selectedPriceRange === range.value
-                    ? 'bg-purple-600 text-white'
-                    : 'bg-gray-100 text-gray-700 hover:bg-purple-50'
-                    }`}
-                >
-                  {range.label}
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* 특별 기능 필터 */}
-        <div className="mt-6 pt-6 border-t border-gray-200">
-          <h3 className="text-lg font-semibold text-gray-900 mb-3">특별 기능</h3>
-          <div className="flex flex-wrap gap-2">
-            {SPECIAL_FEATURES.map((feature) => (
+      {/* 슬라이드 필터 섹션 */}
+      <section className="bg-white rounded-2xl shadow-xl p-8 mb-8">
+        {/* 진행 상황 표시 */}
+        <div className="mb-8">
+          <div className="flex justify-between items-center mb-4">
+            {filterSteps.map((step, index) => (
               <button
-                key={feature.value}
-                onClick={() => handleFeatureToggle(feature.value)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${selectedFeatures.includes(feature.value)
-                  ? 'bg-orange-600 text-white'
-                  : 'bg-gray-100 text-gray-700 hover:bg-orange-50'
+                key={step.id}
+                onClick={() => goToStep(index)}
+                className={`flex-1 text-center p-2 rounded-lg transition-all duration-300 ${index === currentStep
+                  ? 'bg-blue-100 text-blue-600 font-semibold'
+                  : index < currentStep
+                    ? 'bg-green-100 text-green-600'
+                    : 'bg-gray-100 text-gray-500'
                   }`}
               >
-                {feature.label}
+                <div className="text-xs mb-1">Step {index + 1}</div>
+                <div className="text-sm">{step.title}</div>
               </button>
             ))}
           </div>
+          <div className="w-full bg-gray-200 rounded-full h-2">
+            <div
+              className="bg-blue-600 h-2 rounded-full transition-all duration-500"
+              style={{ width: `${((currentStep + 1) / filterSteps.length) * 100}%` }}
+            ></div>
+          </div>
         </div>
 
-        {/* 필터 초기화 및 결과 */}
-        <div className="mt-6 pt-6 border-t border-gray-200 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <div className="text-gray-600">
-            총 <span className="font-bold text-blue-600">{filteredVehicles.length}대</span>의 차량이 검색되었습니다
-          </div>
+        {/* 현재 단계 제목 */}
+        <div className="text-center mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            {filterSteps[currentStep].title}
+          </h2>
+          <p className="text-gray-600">
+            {filterSteps[currentStep].subtitle}
+          </p>
+        </div>
+
+        {/* 현재 단계 내용 */}
+        <div className="mb-8">
+          {renderCurrentStep()}
+        </div>
+
+        {/* 네비게이션 버튼 */}
+        <div className="flex justify-between items-center">
           <button
-            onClick={resetFilters}
-            className="px-6 py-2 bg-gray-500 text-white rounded-full hover:bg-gray-600 transition-colors"
+            onClick={prevStep}
+            disabled={currentStep === 0}
+            className={`w-12 h-12 rounded-full font-semibold transition-all duration-300 text-2xl ${currentStep === 0
+              ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
+              : 'bg-gray-500 text-white hover:bg-gray-600 hover:scale-110'
+              }`}
           >
-            필터 초기화
+            ⬅️
           </button>
+
+          <div className="flex space-x-2">
+            <button
+              onClick={resetFilters}
+              className="w-12 h-12 bg-red-500 text-white rounded-full hover:bg-red-600 transition-all duration-300 text-2xl hover:scale-110"
+            >
+              🔄
+            </button>
+
+            {currentStep === filterSteps.length - 1 && (
+              <button
+                onClick={() => {
+                  // 검색 결과 섹션으로 스크롤
+                  const searchResults = document.querySelector('#search-results');
+                  searchResults?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="px-6 py-3 bg-green-600 text-white rounded-full hover:bg-green-700 transition-all duration-300 hover:scale-105"
+              >
+                ✅ 검색 완료
+              </button>
+            )}
+          </div>
+
+          {currentStep < filterSteps.length - 1 ? (
+            <button
+              onClick={nextStep}
+              className="w-12 h-12 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-all duration-300 text-2xl hover:scale-110"
+            >
+              ➡️
+            </button>
+          ) : (
+            <div className="w-12 h-12"></div>
+          )}
+        </div>
+
+        {/* 선택된 필터 요약 */}
+        <div className="mt-8 pt-6 border-t border-gray-200">
+          <h3 className="text-lg font-semibold text-gray-900 mb-4">선택한 조건</h3>
+          <div className="flex flex-wrap gap-2">
+            {selectedCategory !== '전체' && (
+              <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">
+                차종: {selectedCategory}
+              </span>
+            )}
+            {selectedSeating !== 'all' && (
+              <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">
+                승차인원: {SEATING_OPTIONS.find(opt => opt.value === selectedSeating)?.label}
+              </span>
+            )}
+            {selectedPriceRange !== 'all' && (
+              <span className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm">
+                가격대: {PRICE_RANGES.find(range => range.value === selectedPriceRange)?.label}
+              </span>
+            )}
+            {selectedFeatures.map(feature => (
+              <span key={feature} className="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-sm">
+                {SPECIAL_FEATURES.find(f => f.value === feature)?.label}
+              </span>
+            ))}
+          </div>
+          <div className="mt-4 text-center">
+            <span className="text-lg font-semibold text-blue-600">
+              총 {filteredVehicles.length}대의 차량이 검색되었습니다
+            </span>
+          </div>
         </div>
       </section>
 
       {/* 검색 결과 */}
-      <section>
+      <section id="search-results">
         {filteredVehicles.length === 0 ? (
           <div className="text-center py-16">
             <div className="text-gray-400 mb-4">
