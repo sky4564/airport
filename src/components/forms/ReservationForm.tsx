@@ -58,12 +58,26 @@ export default function ReservationForm({ simplified = false }: { simplified?: b
   const onSubmit = async (data: ReservationFormData) => {
     setIsSubmitting(true);
     try {
-      // TODO: Implement email sending logic here
-      console.log('Form submitted:', data);
+      // 이메일 전송 API 호출
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error('이메일 전송에 실패했습니다.');
+      }
+
+      const result = await response.json();
+      console.log('이메일 전송 성공:', result);
       setSubmitSuccess(true);
       reset();
     } catch (error) {
       console.error('Error submitting form:', error);
+      alert('문의 전송에 실패했습니다. 다시 시도해주세요.');
     } finally {
       setIsSubmitting(false);
     }
