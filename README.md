@@ -20,6 +20,30 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Admin Access Control
+
+Admin routes (`/admin/*`) are automatically blocked in production environment for security.
+
+### Configuration
+
+- **Production**: Admin access is automatically disabled when `NODE_ENV=production`
+- **Development**: You can manually disable admin access by setting `DISABLE_ADMIN=true` in your environment variables
+
+### Environment Variables
+
+Create a `.env.local` file in the root directory:
+
+```bash
+# Admin 페이지 접근 제어
+DISABLE_ADMIN=false  # Set to true to disable admin access even in development
+
+# 이메일 설정 (필요시)
+EMAIL_USER=your-email@gmail.com
+EMAIL_PASS=your-app-password
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+```
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

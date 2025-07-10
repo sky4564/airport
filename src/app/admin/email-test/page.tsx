@@ -53,18 +53,19 @@ export default function EmailTestPage() {
             이메일 테스트 페이지
           </h1>
 
-          <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-8">
+          <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-8">
             <div className="flex">
               <div className="flex-shrink-0">
-                <span className="text-yellow-600 text-xl">⚠️</span>
+                <span className="text-red-600 text-xl">🔒</span>
               </div>
               <div className="ml-3">
-                <h3 className="text-sm font-medium text-yellow-800">
-                  테스트용 페이지
+                <h3 className="text-sm font-medium text-red-800">
+                  관리자 전용 페이지
                 </h3>
-                <div className="mt-2 text-sm text-yellow-700">
+                <div className="mt-2 text-sm text-red-700">
                   <p>이 페이지는 개발/테스트 목적으로만 사용됩니다.</p>
-                  <p>실제 운영 환경에서는 접근을 제한해야 합니다.</p>
+                  <p><strong>운영 환경(production)에서는 자동으로 접근이 차단됩니다.</strong></p>
+                  <p>현재 환경: <span className="font-semibold">{process.env.NODE_ENV || 'development'}</span></p>
                 </div>
               </div>
             </div>
