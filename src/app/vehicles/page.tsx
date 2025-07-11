@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import VehicleGallery from '@/components/ui/VehicleGallery'
+import VehicleShowcaseSection from '@/components/ui/VehicleShowcaseSection'
 import VehicleListingJsonLd from '@/components/seo/VehicleListingJsonLd'
 
 export const metadata: Metadata = {
@@ -47,7 +47,7 @@ export default function VehiclesPage() {
       {/* Vehicle Gallery */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <VehicleGallery />
+          <VehicleShowcaseSection />
         </div>
       </section>
 
