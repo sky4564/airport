@@ -18,7 +18,19 @@
 - **ID**: 2546533
 - **규칙**: VehicleGallery 컴포넌트에서는 배경이 없는 차량 이미지만 사용
 
-### 3. CarSearchPage UI/UX 패턴
+### 3. 컴포넌트 명명 규칙 (Page-Section-Grid-Item)
+
+- **규칙**: 컴포넌트는 계층 구조에 따라 명명
+  - **Page**: Next.js 페이지 파일 (`src/app/*/page.tsx`)
+    - 메타데이터, 레이아웃 설정 등 페이지 수준 로직
+  - **Section**: 페이지 내 큰 영역 (`*Section.tsx`)
+    - 예: `CarSearchSection`, `VehicleShowcaseSection`, `CTASection`
+  - **Grid**: 그리드 레이아웃 컴포넌트 (`*Grid.tsx`)
+    - 예: `VehicleGrid`
+  - **Item/Card**: 개별 아이템 컴포넌트 (`*Item.tsx`, `*Card.tsx`)
+    - 예: `VehicleCard`, `InfoCard`
+
+### 4. CarSearchSection UI/UX 패턴
 
 - **ID**: 2708220
 - **규칙**:
@@ -56,7 +68,32 @@
 
 ### 컴포넌트 패턴
 
-#### 1. 버튼 컨테이너
+#### 1. 재사용 가능한 공통 컴포넌트
+
+```tsx
+// 페이지 헤더
+<PageHeader
+  title="페이지 제목"
+  description="페이지 설명"
+  centered={true}
+/>
+
+// 섹션 제목
+<SectionTitle
+  title="섹션 제목"
+  subtitle="부제목"
+  size="md" // sm, md, lg
+/>
+
+// CTA 섹션
+<CTASection
+  title="지금 바로 예약하세요"
+  subtitle="최고의 서비스를 제공합니다"
+  variant="gradient" // default, gradient
+/>
+```
+
+#### 2. 버튼 컨테이너
 
 ```tsx
 <div className="flex justify-center">
@@ -66,13 +103,13 @@
 </div>
 ```
 
-#### 2. 구분선
+#### 3. 구분선
 
 ```tsx
 <div className="w-px h-12 bg-gray-300 mx-2"></div>
 ```
 
-#### 3. 아이콘 버튼
+#### 4. 아이콘 버튼
 
 ```tsx
 <button className="p-4 text-{color}-600 hover:text-{color}-800 transition-all duration-300 text-3xl">
@@ -80,12 +117,30 @@
 </button>
 ```
 
-#### 4. 고정 높이 콘텐츠 영역
+#### 5. 고정 높이 콘텐츠 영역
 
 ```tsx
 <div className="mb-8 min-h-[280px] flex items-start">
   <div className="w-full">{/* 콘텐츠 */}</div>
 </div>
+```
+
+#### 6. 차량 표시 컴포넌트
+
+```tsx
+// 차량 그리드
+<VehicleGrid
+  vehicles={vehicles}
+  compact={true} // VehicleShowcaseSection용
+  showReservationButton={true} // 검색 결과용
+/>
+
+// 개별 차량 카드
+<VehicleCard
+  vehicle={vehicle}
+  compact={false}
+  showReservationButton={true}
+/>
 ```
 
 ## 📐 레이아웃 규칙

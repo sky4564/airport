@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import VehicleShowcaseSection from '@/components/ui/VehicleShowcaseSection'
 import VehicleListingJsonLd from '@/components/seo/VehicleListingJsonLd'
+import CTASection from '@/components/ui/CTASection'
 
 export const metadata: Metadata = {
   title: '차량안내 - 차렌터카_인천공항점',
@@ -103,31 +104,11 @@ export default function VehiclesPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            지금 바로 예약하세요
-          </h2>
-          <p className="text-xl mb-8 text-blue-100">
-            원하는 차량을 선택하고 간편하게 예약하실 수 있습니다
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:010-1234-5678"
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200"
-            >
-              📞 전화 예약
-            </a>
-            <a
-              href="/reservation"
-              className="bg-blue-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 transition-colors duration-200 border-2 border-blue-400"
-            >
-              💻 온라인 예약
-            </a>
-          </div>
-        </div>
-      </section>
+      <CTASection
+        title="지금 바로 예약하세요"
+        subtitle="원하는 차량을 선택하고 간편하게 예약하실 수 있습니다"
+        variant="gradient"
+      />
     </div>
   )
 } 

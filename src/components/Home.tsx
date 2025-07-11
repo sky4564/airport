@@ -4,6 +4,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import InfoCard from "./ui/InfoCard";
 import HomeJsonLd from './seo/HomeJsonLd';
+import CTASection from './ui/CTASection';
+import SectionTitle from './ui/SectionTitle';
 
 
 export default function Home() {
@@ -49,8 +51,11 @@ export default function Home() {
       {/* Features Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-4 text-blue-600">주요 서비스</h2>
-          <h3 className="text-xl font-semibold text-center mb-12 text-gray-600">Main Services</h3>
+          <SectionTitle
+            title="주요 서비스"
+            subtitle="Main Services"
+            className="mb-12"
+          />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <InfoCard
               icon={<svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>}
@@ -89,27 +94,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="bg-blue-600 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">지금 바로 예약하세요</h2>
-          <p className="text-xl mb-8">최고의 서비스로 여러분의 여행을 더욱 특별하게 만들어 드립니다.</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link
-              href="/search"
-              className="bg-white text-blue-600 hover:bg-gray-100 font-bold py-3 px-8 rounded-full text-lg transition-colors inline-block"
-            >
-              🔍 차량 찾아보기
-            </Link>
-            <Link
-              href="/reservation"
-              className="bg-blue-500 text-white hover:bg-blue-400 font-bold py-3 px-8 rounded-full text-lg transition-colors inline-block border-2 border-blue-400"
-            >
-              📞 예약 문의하기
-            </Link>
-          </div>
-        </div>
-      </section>
+      <CTASection
+        phoneText="🔍 차량 찾아보기"
+        reservationText="📞 예약 문의하기"
+        reservationLink="/search"
+      />
     </div>
   );
 } 

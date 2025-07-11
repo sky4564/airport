@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import PageHeader from '@/components/ui/PageHeader';
 
 export const metadata = {
   title: '픽업 안내 | 인천공항 렌트카',
@@ -35,11 +36,10 @@ const terminals = [
 export default function PickupPage() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <h1 className="text-3xl font-bold text-center mb-8">픽업 안내</h1>
-      <p className="text-white text-center mb-12 max-w-3xl mx-auto">
-        인천공항 터미널별 픽업 위치와 절차를 안내해 드립니다.
-        편리한 공항 픽업 서비스로 여행을 시작하세요.
-      </p>
+      <PageHeader
+        title="픽업 안내"
+        description="인천공항 터미널별 픽업 위치와 절차를 안내해 드립니다. 편리한 공항 픽업 서비스로 여행을 시작하세요."
+      />
 
       <div className="space-y-12">
         {terminals.map((terminal) => (

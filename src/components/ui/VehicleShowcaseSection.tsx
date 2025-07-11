@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { VEHICLE_CATEGORIES, getVehiclesByCategory } from '@/lib/vehicles';
 import VehicleGrid from './VehicleGrid';
+import SectionTitle from './SectionTitle';
 
 export default function VehicleShowcaseSection() {
   const [selectedCategory, setSelectedCategory] = useState<string>('전체');
@@ -15,7 +16,7 @@ export default function VehicleShowcaseSection() {
   return (
     <section className="py-8">
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">보유 차량 안내</h2>
+        <SectionTitle title="보유 차량 안내" />
 
         {/* 필터 버튼들 */}
         <div className="flex flex-wrap gap-3 mb-8 justify-center">

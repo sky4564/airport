@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import CarSearchPage from '@/components/search/CarSearchPage'
+import CarSearchSection from '@/components/search/CarSearchSection'
 
 export const metadata: Metadata = {
   title: '차량 찾아보기 - 차렌터카_인천공항점',
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function SearchPage() {
   return (
     <div className="min-h-screen bg-gray-50">
-      <CarSearchPage />
+      <CarSearchSection />
     </div>
   )
 } 

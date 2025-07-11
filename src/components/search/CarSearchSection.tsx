@@ -4,8 +4,9 @@ import { useState, useMemo } from 'react';
 import { VEHICLES } from '@/lib/vehicles';
 import SearchFilter from './SearchFilter';
 import SearchResults from './SearchResults';
+import PageHeader from '../ui/PageHeader';
 
-export default function CarSearchPage() {
+export default function CarSearchSection() {
   const [selectedCategory, setSelectedCategory] = useState<string>('전체');
   const [selectedSeating, setSelectedSeating] = useState<string>('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
@@ -93,11 +94,8 @@ export default function CarSearchPage() {
     });
   }, [selectedCategory, selectedSeating, selectedPriceRange, selectedFeatures]);
 
-
-
-
-
   const displayedVehicles = filteredVehicles.slice(0, showCount);
+
   const hasMore = filteredVehicles.length > showCount;
 
   const handleFeatureToggle = (feature: string) => {
@@ -115,19 +113,17 @@ export default function CarSearchPage() {
     setSelectedFeatures([]);
     setShowCount(12);
     setCurrentStep(0);
-  };
+  }
+
+
+
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      {/* Hero Section */}
-      <section className="text-center mb-8">
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-          원하는 차량을 찾아보세요
-        </h1>
-        <p className="text-lg text-gray-600 mb-6">
-          단계별로 조건을 선택하여 최적의 차량을 찾으실 수 있습니다
-        </p>
-      </section>
+      <PageHeader
+        title="원하는 차량을 찾아보세요"
+        description="단계별로 조건을 선택하여 최적의 차량을 찾으실 수 있습니다"
+      />
 
       {/* 검색 필터 섹션 */}
       <SearchFilter
