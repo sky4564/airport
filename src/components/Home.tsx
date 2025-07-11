@@ -2,10 +2,8 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import InfoCard from "./ui/InfoCard";
+import { InfoCard, CTASection, SectionTitle } from "./ui";
 import HomeJsonLd from './seo/HomeJsonLd';
-import CTASection from './ui/CTASection';
-import SectionTitle from './ui/SectionTitle';
 
 
 export default function Home() {

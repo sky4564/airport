@@ -4,7 +4,7 @@ import { useState, useMemo } from 'react';
 import { VEHICLES } from '@/lib/vehicles';
 import SearchFilter from './SearchFilter';
 import SearchResults from './SearchResults';
-import PageHeader from '../ui/PageHeader';
+import { PageHeader } from '../ui';
 
 export default function CarSearchSection() {
   const [selectedCategory, setSelectedCategory] = useState<string>('전체');
@@ -113,7 +113,7 @@ export default function CarSearchSection() {
     setSelectedFeatures([]);
     setShowCount(12);
     setCurrentStep(0);
-  }
+  };
 
 
 

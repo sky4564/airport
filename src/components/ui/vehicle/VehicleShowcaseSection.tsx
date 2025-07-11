@@ -2,8 +2,8 @@
 
 import { useState } from 'react';
 import { VEHICLE_CATEGORIES, getVehiclesByCategory } from '@/lib/vehicles';
-import VehicleGrid from './VehicleGrid';
-import SectionTitle from './SectionTitle';
+import { VehicleGrid } from './';
+import { SectionTitle } from '../layout';
 
 export default function VehicleShowcaseSection() {
   const [selectedCategory, setSelectedCategory] = useState<string>('전체');
@@ -55,7 +55,6 @@ export default function VehicleShowcaseSection() {
             </button>
           </div>
         )}
-
       </div>
     </section>
   );

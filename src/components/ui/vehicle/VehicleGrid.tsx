@@ -1,5 +1,5 @@
 import { Vehicle } from '@/lib/vehicles';
-import VehicleCard from './VehicleCard';
+import { VehicleCard } from './';
 
 interface VehicleGridProps {
   vehicles: Vehicle[];

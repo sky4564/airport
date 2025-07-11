@@ -1,6 +1,9 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Vehicle } from '@/lib/vehicles';
+import { useVehicleModal } from '@/contexts/VehicleModalContext';
 
 interface VehicleCardProps {
   vehicle: Vehicle;
@@ -8,15 +11,23 @@ interface VehicleCardProps {
   compact?: boolean; // 컴팩트 모드 (VehicleShowcaseSection용)
 }
 
-export default function VehicleCard({
+export function VehicleCard({
   vehicle,
   showReservationButton = false,
   compact = false
 }: VehicleCardProps) {
+  const { openModal } = useVehicleModal();
+
+  const handleDetailClick = () => {
+    openModal(vehicle);
+  };
   return (
     <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:transform hover:scale-105 border border-gray-100">
       {/* 차량 이미지 */}
-      <div className="aspect-[4/3] bg-gradient-to-br from-blue-50 via-blue-100 to-blue-50 relative overflow-hidden">
+      <div
+        className="aspect-[4/3] bg-gradient-to-br from-blue-50 via-blue-100 to-blue-50 relative overflow-hidden cursor-pointer"
+        onClick={handleDetailClick}
+      >
         <Image
           src={vehicle.image}
           alt={vehicle.name}
@@ -50,7 +61,7 @@ export default function VehicleCard({
         </p>
 
         {/* 주요 특징 */}
-        <div className={`flex flex-wrap gap-1 ${showReservationButton ? "mb-4" : ""}`}>
+        <div className="flex flex-wrap gap-1 mb-4">
           {vehicle.features.slice(0, compact ? 2 : 3).map((feature, index) => (
             <span
               key={index}
@@ -65,6 +76,16 @@ export default function VehicleCard({
             </span>
           )}
         </div>
+
+        {/* 상세보기 버튼 (모달 버전) */}
+        {!showReservationButton && (
+          <button
+            onClick={handleDetailClick}
+            className="w-full bg-gray-100 text-gray-700 text-center py-3 rounded-lg hover:bg-gray-200 transition-colors font-semibold"
+          >
+            상세정보 보기
+          </button>
+        )}
 
         {/* 예약 버튼 (검색 결과에서만 표시) */}
         {showReservationButton && (

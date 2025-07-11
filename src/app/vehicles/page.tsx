@@ -1,7 +1,6 @@
 import { Metadata } from 'next'
-import VehicleShowcaseSection from '@/components/ui/VehicleShowcaseSection'
+import { VehicleShowcaseSection, CTASection } from '@/components/ui'
 import VehicleListingJsonLd from '@/components/seo/VehicleListingJsonLd'
-import CTASection from '@/components/ui/CTASection'
 
 export const metadata: Metadata = {
   title: '차량안내 - 차렌터카_인천공항점',

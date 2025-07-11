@@ -1,7 +1,5 @@
 import { Vehicle } from '@/lib/vehicles';
-import VehicleGrid from '../ui/VehicleGrid';
-import SectionTitle from '../ui/SectionTitle';
-import CTASection from '../ui/CTASection';
+import { VehicleGrid, SectionTitle, CTASection } from '../ui';
 
 interface SearchResultsProps {
   filteredVehicles: Vehicle[];

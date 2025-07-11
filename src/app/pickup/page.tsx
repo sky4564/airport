@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import PageHeader from '@/components/ui/PageHeader';
+import { PageHeader } from '@/components/ui';
 
 export const metadata = {
   title: '픽업 안내 | 인천공항 렌트카',
