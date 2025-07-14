@@ -155,7 +155,7 @@ export default function VehicleDetailModal({ vehicle, isOpen, onClose }: Vehicle
                     이 차량으로 예약하기
                   </Link>
                   <div className="text-center text-sm text-gray-500">
-                    예약 문의: <span className="font-semibold text-blue-600">010-1234-5678</span>
+                    예약 문의: <span className="font-semibold text-blue-600">032-427-5500</span>
                   </div>
                 </div>
               </div>

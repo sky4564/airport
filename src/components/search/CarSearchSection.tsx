@@ -81,8 +81,8 @@ export default function CarSearchSection() {
               return vehicle.features.some(f => f.includes('주차보조') || f.includes('주차지원') || f.includes('오토파킹'));
             case 'cruise_control':
               return vehicle.features.some(f => f.includes('크루즈컨트롤') || f.includes('정속주행'));
-            case 'hybrid':
-              return vehicle.features.some(f => f.includes('하이브리드'));
+            case 'smart_key':
+              return vehicle.features.some(f => f.includes('스마트키') || f.includes('키리스') || f.includes('버튼시동'));
             default:
               return false;
           }
@@ -114,9 +114,6 @@ export default function CarSearchSection() {
     setShowCount(12);
     setCurrentStep(0);
   };
-
-
-
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">

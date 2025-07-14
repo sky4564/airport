@@ -27,7 +27,7 @@ const SPECIAL_FEATURES = [
   { value: 'backup_camera', label: '📹 후방카메라' },
   { value: 'parking_assist', label: '🅿️ 주차보조' },
   { value: 'cruise_control', label: '🚗 크루즈컨트롤' },
-  { value: 'hybrid', label: '🌱 하이브리드' },
+  { value: 'smart_key', label: '🔒 스마트키' },
 ];
 
 const filterSteps = [
@@ -103,8 +103,8 @@ export default function SearchFilter({
                     autoNextStep();
                   }}
                   className={`p-4 rounded-2xl text-center transition-all duration-300 border-2 ${selectedCategory === category
-                      ? 'bg-blue-600 text-white border-blue-600 shadow-lg transform scale-105'
-                      : 'bg-white text-gray-700 border-gray-200 hover:border-blue-300 hover:shadow-md'
+                    ? 'bg-blue-600 text-white border-blue-600 shadow-lg transform scale-105'
+                    : 'bg-white text-gray-700 border-gray-200 hover:border-blue-300 hover:shadow-md'
                     }`}
                 >
                   <div className="text-2xl mb-2">
@@ -138,8 +138,8 @@ export default function SearchFilter({
                     autoNextStep();
                   }}
                   className={`p-4 rounded-2xl text-center transition-all duration-300 border-2 ${selectedSeating === option.value
-                      ? 'bg-green-600 text-white border-green-600 shadow-lg transform scale-105'
-                      : 'bg-white text-gray-700 border-gray-200 hover:border-green-300 hover:shadow-md'
+                    ? 'bg-green-600 text-white border-green-600 shadow-lg transform scale-105'
+                    : 'bg-white text-gray-700 border-gray-200 hover:border-green-300 hover:shadow-md'
                     }`}
                 >
                   <div className="text-2xl mb-2">
@@ -170,8 +170,8 @@ export default function SearchFilter({
                     autoNextStep();
                   }}
                   className={`p-4 rounded-2xl text-center transition-all duration-300 border-2 ${selectedPriceRange === range.value
-                      ? 'bg-purple-600 text-white border-purple-600 shadow-lg transform scale-105'
-                      : 'bg-white text-gray-700 border-gray-200 hover:border-purple-300 hover:shadow-md'
+                    ? 'bg-purple-600 text-white border-purple-600 shadow-lg transform scale-105'
+                    : 'bg-white text-gray-700 border-gray-200 hover:border-purple-300 hover:shadow-md'
                     }`}
                 >
                   <div className="text-2xl mb-2">
@@ -199,8 +199,8 @@ export default function SearchFilter({
                   key={feature.value}
                   onClick={() => onFeatureToggle(feature.value)}
                   className={`p-4 rounded-xl text-center transition-all duration-300 border-2 ${selectedFeatures.includes(feature.value)
-                      ? 'bg-orange-600 text-white border-orange-600 shadow-lg transform scale-105'
-                      : 'bg-white text-gray-700 border-gray-200 hover:border-orange-300 hover:shadow-md'
+                    ? 'bg-orange-600 text-white border-orange-600 shadow-lg transform scale-105'
+                    : 'bg-white text-gray-700 border-gray-200 hover:border-orange-300 hover:shadow-md'
                     }`}
                 >
                   <div className="font-medium">{feature.label}</div>
@@ -228,10 +228,10 @@ export default function SearchFilter({
               key={step.id}
               onClick={() => onStepChange(index)}
               className={`flex-1 text-center p-2 rounded-lg transition-all duration-300 ${index === currentStep
-                  ? 'bg-blue-100 text-blue-600 font-semibold'
-                  : index < currentStep
-                    ? 'bg-green-100 text-green-600'
-                    : 'bg-gray-100 text-gray-500'
+                ? 'bg-blue-100 text-blue-600 font-semibold'
+                : index < currentStep
+                  ? 'bg-green-100 text-green-600'
+                  : 'bg-gray-100 text-gray-500'
                 }`}
             >
               <div className="text-xs mb-1">Step {index + 1}</div>
@@ -272,8 +272,8 @@ export default function SearchFilter({
               onClick={prevStep}
               disabled={currentStep === 0}
               className={`p-4 transition-all duration-300 text-3xl ${currentStep === 0
-                  ? 'text-gray-400 cursor-not-allowed'
-                  : 'text-gray-600 hover:text-gray-800'
+                ? 'text-gray-400 cursor-not-allowed'
+                : 'text-gray-600 hover:text-gray-800'
                 }`}
             >
               ⬅️
