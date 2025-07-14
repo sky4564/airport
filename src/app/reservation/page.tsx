@@ -13,6 +13,7 @@ import VehicleJsonLd from '@/components/reservation/VehicleJsonLd';
 function ReservationFormWrapper() {
   return (
     <Suspense fallback={<div className="animate-pulse bg-gray-200 rounded-lg h-96"></div>}>
+      <TabSelector />
       <ReservationForm />
     </Suspense>
   );
@@ -41,7 +42,6 @@ export default function ReservationPage() {
           <HeroSection />
           {/* 우측: 폼+탭 */}
           <div className="bg-white rounded-lg shadow-lg p-6 md:p-8">
-            <TabSelector />
             <ReservationFormWrapper />
           </div>
         </div>
