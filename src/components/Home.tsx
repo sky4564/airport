@@ -93,8 +93,8 @@ export default function Home() {
       </section>
 
       <CTASection
-        phoneText="🔍 차량 찾아보기"
-        reservationText="📞 예약 문의하기"
+        phoneText="📞 예약 문의하기"
+        reservationText="🔍 차량 찾아보기"
         reservationLink="/search"
       />
     </div>

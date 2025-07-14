@@ -44,11 +44,12 @@ export default function CTASection({
           <Link
             href={reservationLink}
             className="bg-blue-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 transition-colors duration-200 border-2 border-blue-400"
+            style={{ color: 'white' }}
           >
             {reservationText}
           </Link>
         </div>
       </div>
-    </section>
+    </section >
   );
 } 
