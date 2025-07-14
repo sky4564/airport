@@ -35,8 +35,8 @@ const Footer = () => {
             <ul className="space-y-2 text-gray-200 leading-relaxed">
               <li>• 인천국제공항 (ICN)</li>
               <li>• 김포국제공항 (GMP)</li>
-              <li>• 서울 및 수도권</li>
-              <li className="text-sm text-gray-300">• Seoul Metropolitan Area</li>
+              <li>• 인천 및 수도권</li>
+              <li className="text-sm text-gray-300">• Incheon Metropolitan Area</li>
             </ul>
           </div>
         </div>
