@@ -21,6 +21,22 @@ export function VehicleCard({
   const handleDetailClick = () => {
     openModal(vehicle);
   };
+
+  // 옵션이 한 줄에 들어갈 수 있는 개수를 계산하는 함수
+  const getMaxFeaturesForOneLine = () => {
+    if (compact) {
+      // 컴팩트 모드에서는 더 적은 개수
+      return vehicle.features.length > 2 ? 1 : 2;
+    } else {
+      // 일반 모드에서는 조금 더 많은 개수
+      return vehicle.features.length > 3 ? 2 : 3;
+    }
+  };
+
+  const maxFeatures = getMaxFeaturesForOneLine();
+  const displayedFeatures = vehicle.features.slice(0, maxFeatures);
+  const remainingCount = vehicle.features.length - maxFeatures;
+
   return (
     <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:transform hover:scale-105 border border-gray-100">
       {/* 차량 이미지 */}
@@ -60,9 +76,9 @@ export function VehicleCard({
           {vehicle.price}
         </p>
 
-        {/* 주요 특징 */}
+        {/* 주요 특징 - 한 줄로 제한 */}
         <div className="flex flex-wrap gap-1 mb-4">
-          {vehicle.features.slice(0, compact ? 2 : 3).map((feature, index) => (
+          {displayedFeatures.map((feature, index) => (
             <span
               key={index}
               className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full"
@@ -70,9 +86,9 @@ export function VehicleCard({
               {feature}
             </span>
           ))}
-          {vehicle.features.length > (compact ? 2 : 3) && (
+          {remainingCount > 0 && (
             <span className="text-xs text-gray-400 px-2 py-1">
-              +{vehicle.features.length - (compact ? 2 : 3)}
+              +{remainingCount}
             </span>
           )}
         </div>
