@@ -10,8 +10,8 @@ export default function VehicleListingJsonLd() {
     "url": "https://yourwebsite.com/vehicles",
     "logo": "https://yourwebsite.com/logo.png",
     "image": "https://yourwebsite.com/images/hero-bg.jpg",
-    "telephone": "+82-10-1234-5678",
-    "email": "info@airportrentcar.com",
+    "telephone": "+82-32-427-5500",
+    "email": "charent@charentcar.com",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "인천국제공항",
@@ -116,7 +116,7 @@ export default function VehicleListingJsonLd() {
     "logo": "https://yourwebsite.com/logo.png",
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+82-10-1234-5678",
+      "telephone": "+82-32-427-5500",
       "contactType": "customer service",
       "availableLanguage": "Korean",
       "areaServed": "KR"

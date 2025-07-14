@@ -147,7 +147,8 @@ export default function VehicleDetailModal({ vehicle, isOpen, onClose }: Vehicle
                     href={`/reservation?vehicle=${vehicle.id}`}
                     className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-center py-4 rounded-xl hover:from-blue-700 hover:to-indigo-700 transition-all font-semibold text-lg block shadow-lg hover:shadow-xl transform hover:scale-105"
                     style={{
-                      boxShadow: '0 10px 20px rgba(59, 130, 246, 0.3), 0 6px 6px rgba(0, 0, 0, 0.1)'
+                      boxShadow: '0 10px 20px rgba(59, 130, 246, 0.3), 0 6px 6px rgba(0, 0, 0, 0.1)',
+                      color: 'white'
                     }}
                     onClick={onClose}
                   >

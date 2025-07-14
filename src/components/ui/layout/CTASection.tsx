@@ -15,7 +15,7 @@ export default function CTASection({
   title = "지금 바로 예약하세요",
   subtitle = "최고의 서비스로 여러분의 여행을 더욱 특별하게 만들어 드립니다.",
   phoneText = "📞 전화 예약",
-  phoneNumber = "010-1234-5678",
+  phoneNumber = "032-427-5500",
   reservationText = "💻 온라인 예약",
   reservationLink = "/reservation",
   className = "",

@@ -262,9 +262,9 @@ npm i -g vercel
 vercel
 
 # 환경 변수 설정 (Vercel 대시보드에서)
-EMAIL_USER=your-email@gmail.com
+EMAIL_USER=charent@charentcar.com
 EMAIL_PASS=your-app-password
-EMAIL_TO=recipient@gmail.com
+EMAIL_TO=charent@charentcar.com
 ```
 
 ### 수동 배포

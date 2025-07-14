@@ -77,9 +77,9 @@ UI/UX 디자인 가이드라인
 ### 필수 환경 변수 (`.env.local`)
 
 ```env
-EMAIL_USER=your-email@gmail.com
+EMAIL_USER=charent@charentcar.com
 EMAIL_PASS=your-app-password
-EMAIL_TO=recipient@gmail.com
+EMAIL_TO=charent@charentcar.com
 EMAIL_CC=additional@gmail.com (선택사항)
 EMAIL_BCC=secret@gmail.com (선택사항)
 ```

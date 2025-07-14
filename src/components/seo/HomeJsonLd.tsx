@@ -13,8 +13,8 @@ export default function HomeJsonLd() {
       "https://byungmin.me/images/hero-bg.jpg",
       "https://byungmin.me/images/airport-bg.jpg"
     ],
-    "telephone": "+82-10-1234-5678",
-    "email": "info@airportrentcar.com",
+    "telephone": "+82-010-8426-3821",
+    "email": "charent@charentcar.com",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "인천국제공항",
@@ -135,14 +135,14 @@ export default function HomeJsonLd() {
     "contactPoint": [
       {
         "@type": "ContactPoint",
-        "telephone": "+82-10-1234-5678",
+        "telephone": "+82-32-427-5500",
         "contactType": "customer service",
         "availableLanguage": "Korean",
         "areaServed": "KR"
       },
       {
         "@type": "ContactPoint",
-        "telephone": "+82-10-1234-5678",
+        "telephone": "+82-32-427-5500",
         "contactType": "reservations",
         "availableLanguage": "Korean",
         "areaServed": "KR"
@@ -178,7 +178,7 @@ export default function HomeJsonLd() {
         "name": "인천공항에서 렌터카를 어떻게 예약하나요?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "전화(010-1234-5678)로 예약하시거나 온라인 예약 시스템을 이용하실 수 있습니다. 24시간 예약 상담이 가능합니다."
+          "text": "전화(032-427-5500)로 예약하시거나 온라인 예약 시스템을 이용하실 수 있습니다. 24시간 예약 상담이 가능합니다."
         }
       },
       {

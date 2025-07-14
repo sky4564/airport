@@ -8,14 +8,14 @@
 
 ```env
 # 이메일 전송 설정
-EMAIL_USER=your-email@gmail.com
+EMAIL_USER=charent@charentcar.com
 EMAIL_PASS=your-app-password
-EMAIL_TO=recipient@gmail.com
+EMAIL_TO=charent@charentcar.com
 ```
 
 ## 2. 환경 변수 설명
 
-- `EMAIL_USER`: 이메일을 보낼 Gmail 계정
+- `EMAIL_USER`: 이메일을 보낼 Gmail 계정 (charent@charentcar.com)
 - `EMAIL_PASS`: Gmail 앱 비밀번호 (일반 비밀번호가 아님)
 - `EMAIL_TO`: 예약 문의를 받을 이메일 주소
 

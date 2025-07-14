@@ -38,7 +38,7 @@ Create a `.env.local` file in the root directory:
 DISABLE_ADMIN=false  # Set to true to disable admin access even in development
 
 # 이메일 설정 (필요시)
-EMAIL_USER=your-email@gmail.com
+EMAIL_USER=charent@charentcar.com
 EMAIL_PASS=your-app-password
 SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587

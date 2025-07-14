@@ -18,12 +18,13 @@ export default function ContactPage() {
           <div className="space-y-4">
             <div>
               <h3 className="text-lg font-medium mb-2 text-blue-600">전화번호</h3>
-              <p className="text-gray-800">02-1234-5678</p>
+              <p className="text-gray-800">대표번호: 032-427-5500</p>
+              <p className="text-gray-800">휴대전화: 010-8426-3821</p>
               <p className="text-sm text-gray-800">24시간 운영</p>
             </div>
             <div>
               <h3 className="text-lg font-medium mb-2 text-blue-600">이메일</h3>
-              <p className="text-gray-800">info@incheon-rentcar.com</p>
+              <p className="text-gray-800">charent@charentcar.com</p>
             </div>
             <div>
               <h3 className="text-lg font-medium mb-2 text-blue-600">운영시간</h3>
@@ -84,7 +85,7 @@ export default function ContactPage() {
       {/* 문의하기 버튼 */}
       <div className="mt-12 text-center">
         <a
-          href="tel:0212345678"
+          href="tel:032-427-5500"
           className="inline-block bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition-colors"
         >
           <span className="text-white font-bold">전화 문의하기</span>
