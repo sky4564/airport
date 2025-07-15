@@ -100,7 +100,7 @@ export default function DailyRentForm({ selectedVehicle, simplified = false }: D
         <h2 className="text-2xl font-bold text-gray-900 mb-4">예약 신청이 완료되었습니다!</h2>
         <p className="text-gray-600 mb-6">담당자가 빠른 시간 내에 연락드려 예약을 확정해드리겠습니다.</p>
         <div className="bg-blue-50 p-4 rounded-lg">
-          <p className="text-blue-800 font-semibold">문의 전화: 010-8426-3821</p>
+          <p className="text-blue-800 font-semibold">문의 전화: 032-427-5500</p>
           <p className="text-blue-600 text-sm mt-1">급하신 경우 직접 전화 주세요!</p>
         </div>
       </div>

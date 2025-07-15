@@ -22,7 +22,6 @@ const Footer = () => {
             <ul className="space-y-3 text-gray-200 font-semibold leading-relaxed">
               <li>대표번호: 032-427-5500</li>
               <li>휴대전화: 010-8426-3821</li>
-              <li>Phone: +82-32-427-5500</li>
               <li>이메일: charent@charentcar.com</li>
               <li>주소: 인천광역시 중구 공항로 272</li>
               <li className="text-sm text-gray-300">Address: 272 Gonghang-ro, Jung-gu, Incheon, Korea</li>

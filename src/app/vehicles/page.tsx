@@ -24,8 +24,8 @@ export default function VehiclesPage() {
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                <div className="text-2xl font-bold">36대</div>
-                <div className="text-sm text-blue-100">보유 차량</div>
+                <div className="text-2xl font-bold">36종</div>
+                <div className="text-sm text-blue-100">보유 차종</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
                 <div className="text-2xl font-bold">7종</div>
