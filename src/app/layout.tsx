@@ -57,6 +57,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://airportrent24.kr",
+    languages: {
+      'ko': 'https://공항렌트24.kr',
+      'ko-KR': 'https://공항렌트24.kr'
+    }
   },
   icons: {
     icon: "/favicon.ico",
