@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://byungmin.me' // 실제 도메인으로 변경하세요
+  const baseUrl = 'https://airportrent24.kr'
 
   return [
     {

@@ -3,7 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   // 이미지 최적화 설정
   images: {
-    domains: ['byungmin.me'],
+    domains: ['airportrent24.kr'],
     formats: ['image/avif', 'image/webp'],
   },
 

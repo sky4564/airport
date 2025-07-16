@@ -3,15 +3,15 @@ export default function HomeJsonLd() {
   const localBusiness = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "@id": "https://byungmin.me/#business",
+    "@id": "https://airportrent24.kr/#business",
     "name": "블루윙카 인천공항점",
     "alternateName": "블루윙카",
     "description": "블루윙카 인천공항점에서 24시간 공항 픽업 렌터카 서비스를 제공합니다. 다양한 차종과 합리적 요금으로 안전하고 편안한 여행을 시작하세요.",
-    "url": "https://byungmin.me",
-    "logo": "https://byungmin.me/favicon.ico",
+    "url": "https://airportrent24.kr",
+    "logo": "https://airportrent24.kr/favicon.ico",
     "image": [
-      "https://byungmin.me/images/hero-bg.jpg",
-      "https://byungmin.me/images/airport-bg.jpg"
+      "https://airportrent24.kr/images/hero-bg.jpg",
+      "https://airportrent24.kr/images/airport-bg.jpg"
     ],
     "telephone": "+82-010-8426-3821",
     "email": "charent@charentcar.com",
@@ -130,8 +130,8 @@ export default function HomeJsonLd() {
     "@type": "Organization",
     "name": "블루윙카 인천공항점",
     "alternateName": "블루윙카",
-    "url": "https://byungmin.me",
-    "logo": "https://byungmin.me/favicon.ico",
+    "url": "https://airportrent24.kr",
+    "logo": "https://airportrent24.kr/favicon.ico",
     "contactPoint": [
       {
         "@type": "ContactPoint",
@@ -160,10 +160,10 @@ export default function HomeJsonLd() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "블루윙카 인천공항점",
-    "url": "https://byungmin.me",
+    "url": "https://airportrent24.kr",
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://byungmin.me/vehicles?search={search_term_string}",
+      "target": "https://airportrent24.kr/vehicles?search={search_term_string}",
       "query-input": "required name=search_term_string"
     }
   };

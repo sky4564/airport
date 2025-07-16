@@ -47,7 +47,7 @@ Disallow: /tmp/
 Disallow: /temp/
 
 # 사이트맵 위치
-Sitemap: https://byungmin.me/sitemap.xml
+Sitemap: https://airportrent24.kr/sitemap.xml
 
 # 크롤링 딜레이 (네이버 권장)
 Crawl-delay: 1 
