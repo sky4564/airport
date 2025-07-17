@@ -197,9 +197,9 @@ export default function VehicleDetailModal({ vehicle, isOpen, onClose }: Vehicle
                   </div>
                 )}
 
-                {/* 주요 특징 - 옵션 변화를 강조하여 표시 */}
+                {/* 주요옵션 - 옵션 변화를 강조하여 표시 */}
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-3">주요 특징</h4>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-3">주요옵션</h4>
                   <div className="grid grid-cols-2 gap-3">
                     {organizedFeatures.map((feature, index) => {
                       let bgClass = "bg-white";
@@ -280,7 +280,7 @@ export default function VehicleDetailModal({ vehicle, isOpen, onClose }: Vehicle
                 {/* 예약 버튼 */}
                 <div className="space-y-3">
                   <Link
-                    href={`/reservation?vehicle=${safeCurrentVehicle.id}`}
+                    href={`/reservation?vehicle=${safeCurrentVehicle.id}${safeCurrentVehicle.type ? `&type_selected=${safeCurrentVehicle.type}` : ''}`}
                     className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-center py-4 rounded-xl hover:from-blue-700 hover:to-indigo-700 transition-all font-semibold text-lg block shadow-lg hover:shadow-xl transform hover:scale-105"
                     style={{
                       boxShadow: '0 10px 20px rgba(59, 130, 246, 0.3), 0 6px 6px rgba(0, 0, 0, 0.1)',

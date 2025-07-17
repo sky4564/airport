@@ -35,6 +35,10 @@ export default function DailyRentForm({ selectedVehicle, simplified = false }: D
   const timePickerRef = useRef<DatePicker>(null);
   const returnTimePickerRef = useRef<DatePicker>(null);
 
+  // URL에서 선택된 타입 정보 가져오기
+  const searchParams = new URLSearchParams(typeof window !== 'undefined' ? window.location.search : '');
+  const selectedType = searchParams.get('type_selected');
+
   const {
     register,
     handleSubmit,
@@ -51,9 +55,11 @@ export default function DailyRentForm({ selectedVehicle, simplified = false }: D
   useEffect(() => {
     if (selectedVehicle) {
       setValue('carType', selectedVehicle.category);
-      setValue('message', `선택한 차량: ${selectedVehicle.name} (${selectedVehicle.price})\n\n추가 요청사항이 있으시면 위 내용 아래에 작성해주세요.`);
+      const typeInfo = selectedType || selectedVehicle.type;
+      const vehicleDisplayName = typeInfo ? `${selectedVehicle.name} 타입 ${typeInfo}` : selectedVehicle.name;
+      setValue('message', `선택한 차량: ${vehicleDisplayName} (${selectedVehicle.price})\n\n추가 요청사항이 있으시면 위 내용 아래에 작성해주세요.`);
     }
-  }, [selectedVehicle, setValue]);
+  }, [selectedVehicle, selectedType, setValue]);
 
   const pickupDate = watch('pickupDate');
 
@@ -131,7 +137,14 @@ export default function DailyRentForm({ selectedVehicle, simplified = false }: D
               />
             </div>
             <div className="flex-1">
-              <h4 className="font-bold text-gray-900 text-base mb-1">{selectedVehicle.name}</h4>
+              <h4 className="font-bold text-gray-900 text-base mb-1">
+                {selectedVehicle.name}
+                {(selectedType || selectedVehicle.type) && (
+                  <span className="ml-2 text-sm text-blue-600 font-medium">
+                    타입 {selectedType || selectedVehicle.type}
+                  </span>
+                )}
+              </h4>
               <p className="text-blue-600 font-semibold text-sm mb-2">{selectedVehicle.price}</p>
               <div className="flex flex-wrap gap-1">
                 {selectedVehicle.features.slice(0, 3).map((feature, index) => (

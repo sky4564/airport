@@ -36,6 +36,10 @@ export default function DriverRentForm({ selectedVehicle }: DriverRentFormProps)
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const timePickerRef = useRef<DatePicker>(null);
+
+  // URL에서 선택된 타입 정보 가져오기
+  const searchParams = new URLSearchParams(typeof window !== 'undefined' ? window.location.search : '');
+  const selectedType = searchParams.get('type_selected');
   const returnTimePickerRef = useRef<DatePicker>(null);
 
   const PASSENGER_COUNTS = [
@@ -65,9 +69,11 @@ export default function DriverRentForm({ selectedVehicle }: DriverRentFormProps)
   useEffect(() => {
     if (selectedVehicle) {
       setValue('carType', selectedVehicle.category);
-      setValue('message', `선택한 차량: ${selectedVehicle.name} (기사포함 렌터카)\n\n추가 요청사항이 있으시면 위 내용 아래에 작성해주세요.`);
+      const typeInfo = selectedType || selectedVehicle.type;
+      const vehicleDisplayName = typeInfo ? `${selectedVehicle.name} 타입 ${typeInfo}` : selectedVehicle.name;
+      setValue('message', `선택한 차량: ${vehicleDisplayName} (기사포함 렌터카)\n\n추가 요청사항이 있으시면 위 내용 아래에 작성해주세요.`);
     }
-  }, [selectedVehicle, setValue]);
+  }, [selectedVehicle, selectedType, setValue]);
 
   const onSubmit = async (data: DriverRentFormData) => {
     setIsSubmitting(true);
@@ -142,8 +148,15 @@ export default function DriverRentForm({ selectedVehicle }: DriverRentFormProps)
               />
             </div>
             <div className="flex-1">
-              <h4 className="font-bold text-gray-900 text-base mb-1">{selectedVehicle.name}</h4>
-              <p className="text-blue-600 font-semibold text-sm mb-2">월간렌트카</p>
+              <h4 className="font-bold text-gray-900 text-base mb-1">
+                {selectedVehicle.name}
+                {(selectedType || selectedVehicle.type) && (
+                  <span className="ml-2 text-sm text-blue-600 font-medium">
+                    타입 {selectedType || selectedVehicle.type}
+                  </span>
+                )}
+              </h4>
+              <p className="text-blue-600 font-semibold text-sm mb-2">기사포함 렌트카</p>
               <div className="flex flex-wrap gap-1">
                 {selectedVehicle.features.slice(0, 3).map((feature: string, index: number) => (
                   <span key={index} className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full">

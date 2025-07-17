@@ -76,7 +76,7 @@ export function VehicleCard({
           {vehicle.price}
         </p>
 
-        {/* 주요 특징 - 한 줄로 제한 */}
+        {/* 주요옵션 - 한 줄로 제한 */}
         <div className="flex flex-wrap gap-1 mb-4">
           {displayedFeatures.map((feature, index) => (
             <span

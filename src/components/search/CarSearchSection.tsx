@@ -80,8 +80,8 @@ export default function CarSearchSection() {
               return vehicle.features.some(f => f.includes('네비게이션') || f.includes('내비') || f.includes('GPS'));
             case 'backup_camera':
               return vehicle.features.some(f => f.includes('후방카메라') || f.includes('백카메라') || f.includes('후방모니터'));
-            case 'parking_assist':
-              return vehicle.features.some(f => f.includes('주차보조') || f.includes('주차지원') || f.includes('오토파킹'));
+            case 'hipass':
+              return vehicle.features.some(f => f.includes('하이패스'));
             case 'cruise_control':
               return vehicle.features.some(f => f.includes('크루즈컨트롤') || f.includes('정속주행'));
             case 'smart_key':

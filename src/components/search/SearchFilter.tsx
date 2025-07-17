@@ -18,14 +18,14 @@ const PRICE_RANGES = [
   { value: 'premium', label: '20만원 이상' },
 ];
 
-// 특별 기능 옵션
+// 특별 기능 옵션 (CSV에 포함된 옵션만)
 const SPECIAL_FEATURES = [
   { value: 'ventilated_seats', label: '❄️ 통풍시트' },
   { value: 'sunroof', label: '🌞 선루프' },
   { value: 'heated_seats', label: '🔥 열선시트' },
   { value: 'navigation', label: '🗺️ 네비게이션' },
   { value: 'backup_camera', label: '📹 후방카메라' },
-  { value: 'parking_assist', label: '🅿️ 주차보조' },
+  { value: 'hipass', label: '🛣️ 하이패스' },
   { value: 'cruise_control', label: '🚗 크루즈컨트롤' },
   { value: 'smart_key', label: '🔒 스마트키' },
 ];
