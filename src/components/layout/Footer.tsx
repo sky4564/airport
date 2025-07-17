@@ -40,7 +40,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-gray-700 text-center">
-          <p className="text-gray-300 font-medium">&copy; {currentYear} 공항렌트24. All rights reserved.. :k</p>
+          <p className="text-gray-300 font-medium">&copy; {currentYear} 공항렌트24. All rights reserved.</p>
         </div>
       </div>
     </footer>
