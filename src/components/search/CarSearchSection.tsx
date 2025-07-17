@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { VEHICLES } from '@/lib/vehicles';
+import { getUniqueVehicles } from '@/lib/vehicles';
 import SearchFilter from './SearchFilter';
 import SearchResults from './SearchResults';
 import { PageHeader } from '../ui';
@@ -14,9 +14,12 @@ export default function CarSearchSection() {
   const [showCount, setShowCount] = useState<number>(12);
   const [currentStep, setCurrentStep] = useState<number>(0);
 
+  // 중복 제거된 차량 목록 사용
+  const uniqueVehicles = getUniqueVehicles();
+
   // 차량 필터링 로직
   const filteredVehicles = useMemo(() => {
-    return VEHICLES.filter(vehicle => {
+    return uniqueVehicles.filter(vehicle => {
       // 카테고리 필터
       if (selectedCategory !== '전체' && vehicle.category !== selectedCategory) {
         return false;
@@ -92,7 +95,7 @@ export default function CarSearchSection() {
 
       return true;
     });
-  }, [selectedCategory, selectedSeating, selectedPriceRange, selectedFeatures]);
+  }, [uniqueVehicles, selectedCategory, selectedSeating, selectedPriceRange, selectedFeatures]);
 
   const displayedVehicles = filteredVehicles.slice(0, showCount);
 
