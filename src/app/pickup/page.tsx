@@ -39,6 +39,7 @@ export default function PickupPage() {
       <PageHeader
         title="픽업 안내"
         description="인천공항 터미널별 픽업 위치와 절차를 안내해 드립니다. 편리한 공항 픽업 서비스로 여행을 시작하세요."
+        textColor="light"
       />
 
       <div className="space-y-12">

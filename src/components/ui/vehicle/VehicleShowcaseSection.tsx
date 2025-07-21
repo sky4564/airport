@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { VEHICLE_CATEGORIES, getVehiclesByCategory } from '@/lib/vehicles';
+import { VEHICLE_CATEGORIES, getUniqueVehicles } from '@/lib/vehicles';
 import { VehicleGrid } from './';
 import { SectionTitle } from '../layout';
 
@@ -9,7 +9,12 @@ export default function VehicleShowcaseSection() {
   const [selectedCategory, setSelectedCategory] = useState<string>('전체');
   const [showCount, setShowCount] = useState<number>(15);
 
-  const filteredVehicles = getVehiclesByCategory(selectedCategory);
+  // 중복 제거된 차량 목록을 가져온 후 카테고리 필터링
+  const uniqueVehicles = getUniqueVehicles();
+  const filteredVehicles = selectedCategory === '전체'
+    ? uniqueVehicles
+    : uniqueVehicles.filter(vehicle => vehicle.category === selectedCategory);
+
   const displayedVehicles = filteredVehicles.slice(0, showCount);
   const hasMore = filteredVehicles.length > showCount;
 
