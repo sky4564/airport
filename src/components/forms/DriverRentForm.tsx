@@ -8,11 +8,13 @@ import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 import Image from 'next/image';
 import { Vehicle, VEHICLE_CATEGORIES } from '@/lib/vehicles';
+import { ChannelTalkButton } from '@/components/ui';
 
 // 기사포함 렌터카 스키마
 const driverRentSchema = z.object({
   name: z.string().min(1, '이름을 입력해주세요'),
-  phone: z.string().regex(/^010-\d{4}-\d{4}$/, '올바른 전화번호 형식을 입력해주세요 (010-1234-5678)'),
+  phone: z.string().optional(),
+  kakaoId: z.string().optional(),
   email: z.string().email('올바른 이메일 형식을 입력해주세요').optional().or(z.literal('')),
   pickupDate: z.string().min(1, '픽업 날짜를 선택해주세요'),
   pickupTime: z.string().min(1, '픽업 시간을 선택해주세요'),
@@ -23,6 +25,19 @@ const driverRentSchema = z.object({
   passengerCount: z.string().min(1, '탑승 인원을 선택해주세요'),
   carType: z.string().min(1, '차종을 선택해주세요'),
   message: z.string().optional(),
+}).refine((data) => {
+  // 전화번호 또는 카카오톡 ID 중 하나는 반드시 입력해야 함
+  if (!data.phone && !data.kakaoId) {
+    return false;
+  }
+  // 전화번호가 있으면 형식 검증
+  if (data.phone && !/^010-\d{4}-\d{4}$/.test(data.phone)) {
+    return false;
+  }
+  return true;
+}, {
+  message: "전화번호 또는 카카오톡 ID 중 하나는 반드시 입력해주세요",
+  path: ["phone"]
 });
 
 type DriverRentFormData = z.infer<typeof driverRentSchema>;
@@ -170,6 +185,9 @@ export default function DriverRentForm({ selectedVehicle }: DriverRentFormProps)
       )}
 
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+        {/* 채널톡 문의 버튼 */}
+        <ChannelTalkButton />
+
         {/* 개인정보 입력 */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
@@ -185,16 +203,33 @@ export default function DriverRentForm({ selectedVehicle }: DriverRentFormProps)
           </div>
 
           <div>
-            <label htmlFor="phone" className="block text-base font-bold text-gray-800 mb-2">전화번호 *</label>
+            <label htmlFor="phone" className="block text-base font-bold text-gray-800 mb-2">전화번호 <span className="text-gray-500 font-normal">(선택사항)</span></label>
             <input
               type="tel"
               id="phone"
               {...register('phone')}
               className="mt-1 block w-full rounded-md border border-gray-400 shadow-sm focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50 placeholder-gray-400 text-gray-900 text-base py-3 px-4 bg-white"
-              placeholder="010-1234-5678"
+              placeholder="010-1234-5678 (선택사항)"
             />
             {errors.phone && <p className="mt-2 text-sm text-red-600 font-medium">{errors.phone.message}</p>}
           </div>
+        </div>
+
+        <div>
+          <label htmlFor="kakaoId" className="block text-base font-bold text-gray-800 mb-2">
+            카카오톡 ID <span className="text-gray-500 font-normal">(선택사항)</span>
+          </label>
+          <input
+            type="text"
+            id="kakaoId"
+            {...register('kakaoId')}
+            className="mt-1 block w-full rounded-md border border-gray-400 shadow-sm focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50 placeholder-gray-400 text-gray-900 text-base py-3 px-4 bg-white"
+            placeholder="카카오톡 ID (선택사항)"
+          />
+          {errors.kakaoId && <p className="mt-2 text-sm text-red-600 font-medium">{errors.kakaoId.message}</p>}
+          <p className="mt-2 text-sm text-blue-600" style={{ fontWeight: 'semibold' }}>
+            <span className="text-blue-600 font-medium"> ➡️ </span> 해외체류 또는 전화상담이 어려울 경우 카카오톡 ID를 통해 상담해드립니다.
+          </p>
         </div>
 
         <div>

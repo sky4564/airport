@@ -4,7 +4,7 @@ import nodemailer from 'nodemailer';
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { name, phone, email, pickupDate, pickupTime, returnDate, returnTime, carType, message } = body;
+    const { name, phone, kakaoId, email, pickupDate, pickupTime, returnDate, returnTime, carType, message } = body;
 
     // 환경 변수 확인
     const emailUser = process.env.EMAIL_USER;
@@ -47,11 +47,17 @@ export async function POST(request: NextRequest) {
               </tr>
               <tr>
                 <td style="padding: 8px 0; font-weight: bold; color: #374151;">전화번호:</td>
-                <td style="padding: 8px 0; color: #6b7280;">${phone}</td>
+                <td style="padding: 8px 0; color: #6b7280;">${phone || '미입력'}</td>
               </tr>
+              ${kakaoId ? `
+              <tr>
+                <td style="padding: 8px 0; font-weight: bold; color: #374151;">카카오톡 ID:</td>
+                <td style="padding: 8px 0; color: #6b7280;">${kakaoId}</td>
+              </tr>
+              ` : ''}
               <tr>
                 <td style="padding: 8px 0; font-weight: bold; color: #374151;">이메일:</td>
-                <td style="padding: 8px 0; color: #6b7280;">${email}</td>
+                <td style="padding: 8px 0; color: #6b7280;">${email || '미입력'}</td>
               </tr>
             </table>
           </div>
