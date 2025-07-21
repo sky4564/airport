@@ -19,7 +19,7 @@ export const VEHICLES: Vehicle[] = [
     category: '승합차',
     price: '일 30만원',
     image: '/images/cars/solati_van.png',
-    features: ['15인승', '통풍시트', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤']
+    features: ['15인승', '통풍시트', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '블랙박스']
   },
   {
     id: '2',
@@ -27,7 +27,7 @@ export const VEHICLES: Vehicle[] = [
     category: '승합차',
     price: '일 30만원',
     image: '/images/cars/solati2_van.png',
-    features: ['15인승', '통풍시트', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤']
+    features: ['15인승', '통풍시트', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '블랙박스']
   },
   {
     id: '3',
@@ -35,7 +35,7 @@ export const VEHICLES: Vehicle[] = [
     category: '승합차',
     price: '일 17만원',
     image: '/images/cars/staria_van.png',
-    features: ['11인승', '통풍시트', '선루프', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키']
+    features: ['11인승', '통풍시트', '선루프', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스']
   },
 
   {
@@ -44,7 +44,7 @@ export const VEHICLES: Vehicle[] = [
     category: '승합차',
     price: '일 13만원',
     image: '/images/cars/starex_van.png',
-    features: ['12인승', '열선시트', '네비게이션', '후방카메라', '하이패스']
+    features: ['12인승', '열선시트', '네비게이션', '후방카메라', '하이패스', '블랙박스']
   },
   {
     id: '6',
@@ -52,7 +52,7 @@ export const VEHICLES: Vehicle[] = [
     category: '승합차',
     price: '일 13만원',
     image: '/images/cars/starex_van.png',
-    features: ['12인승', '열선시트', '네비게이션', '후방카메라', '하이패스']
+    features: ['12인승', '열선시트', '네비게이션', '후방카메라', '하이패스', '블랙박스']
   },
   {
     id: '7',
@@ -60,7 +60,7 @@ export const VEHICLES: Vehicle[] = [
     category: '승합차',
     price: '일 13만원',
     image: '/images/cars/carnival_van.png',
-    features: ['7인승', '통풍시트', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키']
+    features: ['7인승', '통풍시트', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스']
   },
   {
     id: '8',
@@ -68,7 +68,7 @@ export const VEHICLES: Vehicle[] = [
     category: '승합차',
     price: '일 13만원',
     image: '/images/cars/carnival_van.png',
-    features: ['7인승', '통풍시트', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키']
+    features: ['7인승', '통풍시트', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스']
   },
   {
     id: '9',
@@ -76,7 +76,7 @@ export const VEHICLES: Vehicle[] = [
     category: '승합차',
     price: '일 13만원',
     image: '/images/cars/carnival_van.png',
-    features: ['7인승', '통풍시트', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키']
+    features: ['7인승', '통풍시트', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스']
   },
   {
     id: '10',
@@ -84,7 +84,7 @@ export const VEHICLES: Vehicle[] = [
     category: '승합차',
     price: '일 15만원',
     image: '/images/cars/carnival_gen4_van.png',
-    features: ['7인승', '통풍시트', '선루프', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키']
+    features: ['7인승', '통풍시트', '선루프', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스']
   },
 
   // 대형 (ID: 11-17)
@@ -96,7 +96,7 @@ export const VEHICLES: Vehicle[] = [
     category: '대형',
     price: '일 25만원',
     image: '/images/cars/benz_e250_large.png',
-    features: ['5인승', '5인승', '열선시트', '네비게이션', '후방카메라', '하이패스']
+    features: ['5인승', '통풍시트', '선루프', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스']
   },
   {
     id: '12',
@@ -106,7 +106,7 @@ export const VEHICLES: Vehicle[] = [
     category: '대형',
     price: '일 25만원',
     image: '/images/cars/benz_e250_large.png',
-    features: ['5인승', '5인승', '통풍시트', '선루프', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키']
+    features: ['5인승', '통풍시트', '선루프', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스']
   },
   {
     id: '13',
@@ -116,7 +116,7 @@ export const VEHICLES: Vehicle[] = [
     category: '대형',
     price: '일 25만원',
     image: '/images/cars/benz_e250_large.png',
-    features: ['5인승', '5인승', '통풍시트', '선루프', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키']
+    features: ['5인승', '통풍시트', '선루프', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스']
   },
   {
     id: '14',
@@ -126,7 +126,7 @@ export const VEHICLES: Vehicle[] = [
     category: '대형',
     price: '일 25만원',
     image: '/images/cars/benz_e250_large.png',
-    features: ['5인승', '5인승', '선루프', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키']
+    features: ['5인승', '선루프', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스']
   },
   {
     id: '15',
@@ -134,7 +134,7 @@ export const VEHICLES: Vehicle[] = [
     category: '대형',
     price: '일 50만원',
     image: '/images/cars/benz_s350_large.png',
-    features: ['5인승', '5인승', '통풍시트', '선루프', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키']
+    features: ['5인승', '통풍시트', '선루프', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스']
   },
   {
     id: '16',
@@ -142,7 +142,7 @@ export const VEHICLES: Vehicle[] = [
     category: '대형',
     price: '일 25만원',
     image: '/images/cars/genesis_g90_large.png',
-    features: ['5인승', '5인승', '통풍시트', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키']
+    features: ['5인승', '통풍시트', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스']
   },
   {
     id: '17',
@@ -150,17 +150,17 @@ export const VEHICLES: Vehicle[] = [
     category: '대형',
     price: '일 20만원',
     image: '/images/cars/genesis_g80_large.png',
-    features: ['5인승', '5인승', '통풍시트', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키']
+    features: ['5인승', '통풍시트', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스']
   },
 
-  // SUV (ID: 18-39)
+  // SUV (ID: 18-37)
   {
     id: '18',
     name: '스포티지 하이브리드',
     category: 'SUV',
     price: '일 15만원',
     image: '/images/cars/sportage_hybrid_suv.png',
-    features: ['5인승', '5인승', '통풍시트', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키']
+    features: ['5인승', '통풍시트', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스']
   },
   {
     id: '19',
@@ -170,7 +170,7 @@ export const VEHICLES: Vehicle[] = [
     category: 'SUV',
     price: '일 13만원',
     image: '/images/cars/sportage_hybrid_suv.png',
-    features: ['5인승', '5인승', '열선시트', '네비게이션', '후방카메라', '하이패스']
+    features: ['5인승', '열선시트', '네비게이션', '후방카메라', '하이패스', '블랙박스']
   },
   {
     id: '20',
@@ -180,7 +180,7 @@ export const VEHICLES: Vehicle[] = [
     category: 'SUV',
     price: '일 13만원',
     image: '/images/cars/sportage_hybrid_suv.png',
-    features: ['5인승', '5인승', '통풍시트', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키']
+    features: ['5인승', '통풍시트', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스']
   },
   {
     id: '21',
@@ -190,7 +190,7 @@ export const VEHICLES: Vehicle[] = [
     category: 'SUV',
     price: '일 11만원',
     image: '/images/cars/qm6_suv.png',
-    features: ['5인승', '5인승', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키']
+    features: ['5인승', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스']
   },
   {
     id: '22',
@@ -200,7 +200,7 @@ export const VEHICLES: Vehicle[] = [
     category: 'SUV',
     price: '일 11만원',
     image: '/images/cars/qm6_suv.png',
-    features: ['5인승', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키']
+    features: ['5인승', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스']
   },
   {
     id: '23',
@@ -210,7 +210,7 @@ export const VEHICLES: Vehicle[] = [
     category: 'SUV',
     price: '일 11만원',
     image: '/images/cars/qm6_suv.png',
-    features: ['5인승', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키']
+    features: ['5인승', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스']
   },
   {
     id: '24',
@@ -220,7 +220,7 @@ export const VEHICLES: Vehicle[] = [
     category: 'SUV',
     price: '일 11만원',
     image: '/images/cars/qm6_suv.png',
-    features: ['5인승', '통풍시트', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키']
+    features: ['5인승', '통풍시트', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스']
   },
   {
     id: '25',
@@ -230,7 +230,7 @@ export const VEHICLES: Vehicle[] = [
     category: 'SUV',
     price: '일 11만원',
     image: '/images/cars/qm6_suv.png',
-    features: ['5인승', '통풍시트', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키']
+    features: ['5인승', '통풍시트', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스']
   },
   {
     id: '26',
@@ -240,7 +240,7 @@ export const VEHICLES: Vehicle[] = [
     category: 'SUV',
     price: '일 11만원',
     image: '/images/cars/qm6_suv.png',
-    features: ['5인승', '통풍시트', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키']
+    features: ['5인승', '통풍시트', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스']
   },
   {
     id: '27',
@@ -250,7 +250,7 @@ export const VEHICLES: Vehicle[] = [
     category: 'SUV',
     price: '일 12만원',
     image: '/images/cars/sorento_suv.png',
-    features: ['5인승', '통풍시트', '선루프', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키']
+    features: ['5인승', '통풍시트', '선루프', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스']
   },
   {
     id: '28',
@@ -260,7 +260,7 @@ export const VEHICLES: Vehicle[] = [
     category: 'SUV',
     price: '일 12만원',
     image: '/images/cars/sorento_suv.png',
-    features: ['5인승', '열선시트', '네비게이션', '후방카메라', '하이패스']
+    features: ['5인승', '통풍시트', '선루프', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스']
   },
   {
     id: '29',
@@ -270,7 +270,7 @@ export const VEHICLES: Vehicle[] = [
     category: 'SUV',
     price: '일 15만원',
     image: '/images/cars/santafe_mx_suv.png',
-    features: ['5인승', '열선시트', '네비게이션', '후방카메라', '하이패스']
+    features: ['5인승', '열선시트', '네비게이션', '후방카메라', '하이패스', '블랙박스']
   },
   {
     id: '30',
@@ -280,7 +280,7 @@ export const VEHICLES: Vehicle[] = [
     category: 'SUV',
     price: '일 13만원',
     image: '/images/cars/santafe_tm_suv.png',
-    features: ['5인승', '통풍시트', '선루프', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키']
+    features: ['5인승', '통풍시트', '선루프', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스']
   },
   {
     id: '31',
@@ -290,7 +290,7 @@ export const VEHICLES: Vehicle[] = [
     category: 'SUV',
     price: '일 13만원',
     image: '/images/cars/santafe_tm_suv.png',
-    features: ['5인승', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키']
+    features: ['5인승', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스']
   },
   {
     id: '32',
@@ -300,81 +300,81 @@ export const VEHICLES: Vehicle[] = [
     category: 'SUV',
     price: '일 13만원',
     image: '/images/cars/santafe_tm_suv.png',
-    features: ['5인승', '통풍시트', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키']
+    features: ['5인승', '통풍시트', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스']
   },
   {
     id: '33',
-    name: '팰리세이드',
-    type: 'A',
-    baseModel: '팰리세이드',
-    category: 'SUV',
-    price: '일 15만원',
-    image: '/images/cars/palisade_suv.png',
-    features: ['5인승', '열선시트', '네비게이션', '후방카메라', '하이패스']
-  },
-  {
-    id: '34',
-    name: '팰리세이드',
-    type: 'A',
-    baseModel: '팰리세이드',
-    category: 'SUV',
-    price: '일 15만원',
-    image: '/images/cars/palisade_suv.png',
-    features: ['5인승', '열선시트', '네비게이션', '후방카메라', '하이패스']
-  },
-  {
-    id: '35',
     name: '팰리세이드',
     type: 'B',
     baseModel: '팰리세이드',
     category: 'SUV',
     price: '일 17만원',
     image: '/images/cars/palisade_2026_suv.png',
-    features: ['5인승', '통풍시트', '선루프', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키']
+    features: ['5인승', '통풍시트', '선루프', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스']
   },
   {
-    id: '36',
+    id: '34',
     name: '모하비 더 마스터',
     category: 'SUV',
     price: '일 15만원',
     image: '/images/cars/mohave_master_suv.png',
-    features: ['5인승', '열선시트', '네비게이션', '후방카메라', '하이패스']
+    features: ['5인승', '통풍시트', '선루프', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스']
   },
   {
-    id: '37',
+    id: '35',
     name: 'GV80',
     category: 'SUV',
     price: '일 25만원',
     image: '/images/cars/gv80_suv.png',
-    features: ['5인승', '통풍시트', '선루프', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키']
+    features: ['5인승', '통풍시트', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스']
   },
   {
-    id: '38',
+    id: '36',
     name: '베뉴',
     category: 'SUV',
     price: '일 8만원',
     image: '/images/cars/venue_suv.png',
-    features: ['5인승', '열선시트', '후방카메라', '하이패스']
+    features: ['5인승', '열선시트', '후방카메라', '하이패스', '블랙박스']
   },
   {
-    id: '39',
+    id: '37',
     name: '베뉴',
     category: 'SUV',
     price: '일 8만원',
     image: '/images/cars/venue_suv.png',
-    features: ['5인승', '열선시트', '후방카메라', '하이패스']
+    features: ['5인승', '열선시트', '후방카메라', '하이패스', '블랙박스']
   },
 
-  // 준대형 (ID: 40-50)
+  // 준대형 (ID: 38-48)
   {
-    id: '40',
+    id: '38',
     name: '그랜저',
     type: 'A',
     baseModel: '그랜저',
     category: '준대형',
     price: '일 12만원',
     image: '/images/cars/grandeur_ig_leblanc_midlarge.png',
-    features: ['5인승', '통풍시트', '선루프', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키']
+    features: ['5인승', '통풍시트', '선루프', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스']
+  },
+  {
+    id: '39',
+    name: '그랜저',
+    type: 'B',
+    baseModel: '그랜저',
+    category: '준대형',
+    price: '일 12만원',
+    image: '/images/cars/grandeur_ig_leblanc_midlarge.png',
+    features: ['5인승', '통풍시트', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스']
+  },
+  {
+    id: '40',
+    name: '그랜저',
+    type: 'B',
+    baseModel: '그랜저',
+    category: '준대형',
+    price: '일 12만원',
+    image: '/images/cars/grandeur_ig_leblanc_midlarge.png',
+    features: ['5인승', '통풍시트', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스']
   },
   {
     id: '41',
@@ -384,37 +384,37 @@ export const VEHICLES: Vehicle[] = [
     category: '준대형',
     price: '일 12만원',
     image: '/images/cars/grandeur_ig_leblanc_midlarge.png',
-    features: ['5인승', '통풍시트', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키']
+    features: ['5인승', '통풍시트', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스']
   },
   {
     id: '42',
-    name: '그랜저',
-    type: 'B',
-    baseModel: '그랜저',
-    category: '준대형',
-    price: '일 12만원',
-    image: '/images/cars/grandeur_ig_leblanc_midlarge.png',
-    features: ['5인승', '통풍시트', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키']
-  },
-  {
-    id: '43',
-    name: '그랜저',
-    type: 'B',
-    baseModel: '그랜저',
-    category: '준대형',
-    price: '일 12만원',
-    image: '/images/cars/grandeur_ig_leblanc_midlarge.png',
-    features: ['5인승', '통풍시트', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키']
-  },
-  {
-    id: '44',
     name: '그랜저',
     type: 'C',
     baseModel: '그랜저',
     category: '준대형',
     price: '일 12만원',
     image: '/images/cars/grandeur_ig_leblanc_midlarge.png',
-    features: ['5인승', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키']
+    features: ['5인승', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스']
+  },
+  {
+    id: '43',
+    name: '그랜저',
+    type: 'C',
+    baseModel: '그랜저',
+    category: '준대형',
+    price: '일 12만원',
+    image: '/images/cars/grandeur_ig_leblanc_midlarge.png',
+    features: ['5인승', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스']
+  },
+  {
+    id: '44',
+    name: '그랜저',
+    type: 'B',
+    baseModel: '그랜저',
+    category: '준대형',
+    price: '일 12만원',
+    image: '/images/cars/grandeur_ig_leblanc_midlarge.png',
+    features: ['5인승', '통풍시트', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스']
   },
   {
     id: '45',
@@ -424,7 +424,7 @@ export const VEHICLES: Vehicle[] = [
     category: '준대형',
     price: '일 12만원',
     image: '/images/cars/grandeur_ig_leblanc_midlarge.png',
-    features: ['5인승', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키']
+    features: ['5인승', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스']
   },
   {
     id: '46',
@@ -434,165 +434,161 @@ export const VEHICLES: Vehicle[] = [
     category: '준대형',
     price: '일 12만원',
     image: '/images/cars/grandeur_ig_leblanc_midlarge.png',
-    features: ['5인승', '통풍시트', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키']
+    features: ['5인승', '통풍시트', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스']
   },
   {
     id: '47',
-    name: '그랜저',
-    type: 'C',
-    baseModel: '그랜저',
-    category: '준대형',
-    price: '일 12만원',
-    image: '/images/cars/grandeur_ig_leblanc_midlarge.png',
-    features: ['5인승', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키']
-  },
-  {
-    id: '48',
-    name: '그랜저',
-    type: 'B',
-    baseModel: '그랜저',
-    category: '준대형',
-    price: '일 12만원',
-    image: '/images/cars/grandeur_ig_leblanc_midlarge.png',
-    features: ['5인승', '통풍시트', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키']
-  },
-  {
-    id: '49',
     name: '그랜저 GN7',
     type: 'A',
     baseModel: '그랜저 GN7',
     category: '준대형',
     price: '일 15만원',
     image: '/images/cars/grandeur_gn7_midlarge.png',
-    features: ['5인승', '통풍시트', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키']
+    features: ['5인승', '통풍시트', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스']
   },
   {
-    id: '50',
+    id: '48',
     name: '그랜저 GN7',
     type: 'B',
     baseModel: '그랜저 GN7',
     category: '준대형',
     price: '일 15만원',
     image: '/images/cars/grandeur_gn7_midlarge.png',
-    features: ['5인승', '통풍시트', '선루프', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키']
+    features: ['5인승', '통풍시트', '선루프', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스']
   },
 
-  // 중형 (ID: 51-58)
+  // 중형 (ID: 49-56)
+  {
+    id: '49',
+    name: 'K5',
+    category: '중형',
+    price: '일 10만원',
+    image: '/images/cars/k5_dl3_fullsize.png',
+    features: ['5인승', '열선시트', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스']
+  },
+  {
+    id: '50',
+    name: 'K5',
+    category: '중형',
+    price: '일 10만원',
+    image: '/images/cars/k5_dl3_fullsize.png',
+    features: ['5인승', '열선시트', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스']
+  },
   {
     id: '51',
     name: 'K5',
     category: '중형',
     price: '일 10만원',
     image: '/images/cars/k5_dl3_fullsize.png',
-    features: ['5인승', '열선시트', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키']
+    features: ['5인승', '열선시트', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스']
   },
   {
     id: '52',
-    name: 'K5',
-    category: '중형',
-    price: '일 10만원',
-    image: '/images/cars/k5_dl3_fullsize.png',
-    features: ['5인승', '열선시트', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키']
-  },
-  {
-    id: '53',
-    name: 'K5',
-    category: '중형',
-    price: '일 10만원',
-    image: '/images/cars/k5_dl3_fullsize.png',
-    features: ['5인승', '열선시트', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키']
-  },
-  {
-    id: '54',
     name: 'K5 2026',
     category: '중형',
     price: '일 11만원',
     image: '/images/cars/k5_dl3_2026_fullsize.png',
-    features: ['5인승', '통풍시트', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키']
+    features: ['5인승', '통풍시트', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스']
+  },
+  {
+    id: '53',
+    name: '쏘나타',
+    category: '중형',
+    price: '일 10만원',
+    image: '/images/cars/sonata_dn8_fullsize.png',
+    features: ['5인승', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스']
+  },
+  {
+    id: '54',
+    name: '쏘나타',
+    category: '중형',
+    price: '일 10만원',
+    image: '/images/cars/sonata_dn8_fullsize.png',
+    features: ['5인승', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스']
   },
   {
     id: '55',
-    name: '쏘나타',
-    category: '중형',
-    price: '일 10만원',
-    image: '/images/cars/sonata_dn8_fullsize.png',
-    features: ['5인승', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키']
-  },
-  {
-    id: '56',
-    name: '쏘나타',
-    category: '중형',
-    price: '일 10만원',
-    image: '/images/cars/sonata_dn8_fullsize.png',
-    features: ['5인승', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키']
-  },
-  {
-    id: '57',
     name: '쏘나타 디 엣지',
     category: '중형',
     price: '일 11만원',
     image: '/images/cars/sonata_edge_2026_fullsize.png',
-    features: ['5인승', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키']
+    features: ['5인승', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스']
   },
   {
-    id: '58',
+    id: '56',
     name: 'SM6',
     category: '중형',
     price: '일 9만원',
     image: '/images/cars/sm6_fullsize.png',
-    features: ['5인승', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키']
+    features: ['5인승', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스']
   },
 
-  // 준중형 (ID: 59-63)
+  // 준중형 (ID: 57-61)
+  {
+    id: '57',
+    name: '아반떼',
+    category: '준중형',
+    price: '일 8만원',
+    image: '/images/cars/avante_ad_midsize.png',
+    features: ['5인승', '열선시트', '네비게이션', '후방카메라', '스마트키', '블랙박스']
+  },
+  {
+    id: '58',
+    name: '아반떼',
+    category: '준중형',
+    price: '일 8만원',
+    image: '/images/cars/avante_ad_midsize.png',
+    features: ['5인승', '열선시트', '네비게이션', '후방카메라', '스마트키', '블랙박스']
+  },
   {
     id: '59',
-    name: '아반떼',
-    category: '준중형',
-    price: '일 8만원',
-    image: '/images/cars/avante_ad_midsize.png',
-    features: ['5인승', '열선시트', '네비게이션', '후방카메라', '스마트키']
-  },
-  {
-    id: '60',
-    name: '아반떼',
-    category: '준중형',
-    price: '일 8만원',
-    image: '/images/cars/avante_ad_midsize.png',
-    features: ['5인승', '열선시트', '네비게이션', '후방카메라', '스마트키']
-  },
-  {
-    id: '61',
     name: '아반떼 CN7',
     category: '준중형',
     price: '일 9만원',
     image: '/images/cars/avante_cn7_midsize.png',
-    features: ['5인승', '통풍시트', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키']
+    features: ['5인승', '통풍시트', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스']
   },
   {
-    id: '62',
+    id: '60',
     name: 'K3',
     category: '준중형',
     price: '일 8만원',
     image: '/images/cars/k3_midsize.png',
-    features: ['5인승', '열선시트', '후방카메라', '크루즈컨트롤', '스마트키']
+    features: ['5인승', '열선시트', '후방카메라', '크루즈컨트롤', '스마트키', '블랙박스']
   },
   {
-    id: '63',
+    id: '61',
     name: 'K3',
     category: '준중형',
     price: '일 8만원',
     image: '/images/cars/k3_midsize.png',
-    features: ['5인승', '열선시트', '후방카메라', '크루즈컨트롤', '스마트키']
+    features: ['5인승', '열선시트', '후방카메라', '크루즈컨트롤', '스마트키', '블랙박스']
   },
 
-  // 경차 (ID: 64-69)
+  // 경차 (ID: 62-67)
   {
-    id: '64',
+    id: '62',
     name: '레이',
     category: '경차',
     price: '일 7만원',
     image: '/images/cars/ray_compact.png',
-    features: ['4인승', '열선시트', '후방카메라', '스마트키']
+    features: ['4인승', '열선시트', '후방카메라', '스마트키', '블랙박스']
+  },
+  {
+    id: '63',
+    name: '모닝',
+    category: '경차',
+    price: '일 7만원',
+    image: '/images/cars/morning_compact.png',
+    features: ['4인승', '열선시트', '네비게이션', '후방카메라', '하이패스', '블랙박스']
+  },
+  {
+    id: '64',
+    name: '모닝',
+    category: '경차',
+    price: '일 7만원',
+    image: '/images/cars/morning_compact.png',
+    features: ['4인승', '열선시트', '네비게이션', '후방카메라', '하이패스', '블랙박스']
   },
   {
     id: '65',
@@ -600,39 +596,23 @@ export const VEHICLES: Vehicle[] = [
     category: '경차',
     price: '일 7만원',
     image: '/images/cars/morning_compact.png',
-    features: ['4인승', '열선시트', '네비게이션', '후방카메라', '하이패스']
+    features: ['4인승', '열선시트', '네비게이션', '후방카메라', '하이패스', '블랙박스']
   },
   {
     id: '66',
-    name: '모닝',
+    name: '스파크',
     category: '경차',
     price: '일 7만원',
-    image: '/images/cars/morning_compact.png',
-    features: ['4인승', '열선시트', '네비게이션', '후방카메라', '하이패스']
+    image: '/images/cars/spark_compact.png',
+    features: ['4인승', '열선시트', '네비게이션', '후방카메라', '하이패스', '블랙박스']
   },
   {
     id: '67',
-    name: '모닝',
-    category: '경차',
-    price: '일 7만원',
-    image: '/images/cars/morning_compact.png',
-    features: ['4인승', '열선시트', '네비게이션', '후방카메라', '하이패스']
-  },
-  {
-    id: '68',
     name: '스파크',
     category: '경차',
     price: '일 7만원',
     image: '/images/cars/spark_compact.png',
-    features: ['4인승', '열선시트', '네비게이션', '후방카메라', '하이패스']
-  },
-  {
-    id: '69',
-    name: '스파크',
-    category: '경차',
-    price: '일 7만원',
-    image: '/images/cars/spark_compact.png',
-    features: ['4인승', '열선시트', '네비게이션', '후방카메라', '하이패스']
+    features: ['4인승', '열선시트', '네비게이션', '후방카메라', '하이패스', '블랙박스']
   }
 ];
 
