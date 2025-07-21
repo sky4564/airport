@@ -123,6 +123,7 @@ export default function CarSearchSection() {
       <PageHeader
         title="원하는 차량을 찾아보세요"
         description="단계별로 조건을 선택하여 최적의 차량을 찾으실 수 있습니다"
+        textColor="dark"
       />
 
       {/* 검색 필터 섹션 */}
