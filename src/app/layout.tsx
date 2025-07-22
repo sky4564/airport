@@ -63,9 +63,9 @@ export const metadata: Metadata = {
     }
   },
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/favicon.ico",
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
   },
   other: {
     "naver-site-verification": "44e27d313bfad280c7e3cd768baf5f25fb5e9cc1",
