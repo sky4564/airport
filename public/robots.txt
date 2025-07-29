@@ -49,5 +49,8 @@ Disallow: /temp/
 # 사이트맵 위치
 Sitemap: https://airportrent24.kr/sitemap.xml
 
+# 선호 도메인 설정 (중복 콘텐츠 방지)
+Host: airportrent24.kr
+
 # 크롤링 딜레이 (네이버 권장)
 Crawl-delay: 1 

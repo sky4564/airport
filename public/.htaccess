@@ -1,0 +1,25 @@
+# 구 도메인에서 새 도메인으로 301 리다이렉트
+# byungmin.me 도메인에서 airportrent24.kr로 리다이렉트
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^(www\.)?byungmin\.me$ [NC]
+RewriteRule ^(.*)$ https://airportrent24.kr/$1 [R=301,L]
+
+# HTTPS 강제 적용
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# www 없는 도메인으로 리다이렉트
+RewriteCond %{HTTP_HOST} ^www\.airportrent24\.kr$ [NC]
+RewriteRule ^(.*)$ https://airportrent24.kr/$1 [R=301,L]
+
+# 브라우저 캐싱 설정
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+</IfModule> 

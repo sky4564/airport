@@ -36,6 +36,34 @@ const nextConfig: NextConfig = {
     ];
   },
 
+  // 구 도메인 리다이렉트 설정
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'byungmin.me',
+          },
+        ],
+        destination: 'https://airportrent24.kr/:path*',
+        permanent: true,
+      },
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'www.byungmin.me',
+          },
+        ],
+        destination: 'https://airportrent24.kr/:path*',
+        permanent: true,
+      },
+    ];
+  },
+
   // 네이버 검색등록을 위한 정적 파일 설정
   async rewrites() {
     return [

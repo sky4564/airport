@@ -1,6 +1,9 @@
 export const metadata = {
-  title: '연락처/찾아오기 | 인천공항 렌트카',
+  title: '연락처/찾아오기 - 공항렌트24',
   description: '인천공항 렌트카의 연락처와 오시는 길을 안내해 드립니다. 24시간 문의 가능합니다.',
+  alternates: {
+    canonical: 'https://airportrent24.kr/about'
+  }
 };
 
 export default function ContactPage() {

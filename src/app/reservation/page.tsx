@@ -21,11 +21,20 @@ function ReservationFormWrapper() {
 
 export default function ReservationPage() {
   useEffect(() => {
-    document.title = '예약 문의 | 인천공항 렌트카';
+    document.title = '예약 문의 - 공항렌트24';
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute('content', '인천공항 렌트카 예약 문의를 남겨주세요. 빠른 시일 내에 연락드리겠습니다.');
     }
+
+    // Canonical URL 설정
+    let canonicalLink = document.querySelector('link[rel="canonical"]');
+    if (!canonicalLink) {
+      canonicalLink = document.createElement('link');
+      canonicalLink.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonicalLink);
+    }
+    canonicalLink.setAttribute('href', 'https://airportrent24.kr/reservation');
   }, []);
 
   return (

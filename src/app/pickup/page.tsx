@@ -2,8 +2,11 @@ import Image from 'next/image';
 import { PageHeader } from '@/components/ui';
 
 export const metadata = {
-  title: '픽업 안내 | 인천공항 렌트카',
+  title: '픽업 안내 - 공항렌트24',
   description: '인천공항 터미널별 픽업 위치와 절차를 안내해 드립니다. 편리한 공항 픽업 서비스를 이용하세요.',
+  alternates: {
+    canonical: 'https://airportrent24.kr/pickup'
+  }
 };
 
 const terminals = [
