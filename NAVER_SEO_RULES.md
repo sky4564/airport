@@ -1,6 +1,45 @@
-# 검색엔진 최적화 기초
+# 🎯 NAVER SEO RULES
 
-## rule1 검색엔진 최적화의 목적
+> 📚 **네이버 검색 어드바이저 가이드 기반 SEO 최적화 규칙**
+>
+> 🤖 이 문서는 AI가 웹사이트 개발 시 네이버 검색 최적화를 위해 참고할 수 있도록 작성되었습니다.
+
+---
+
+## 📊 **문서 개요**
+
+| 섹션                          | 규칙 수  | 상태        | 설명                 |
+| ----------------------------- | -------- | ----------- | -------------------- |
+| 🔍 **검색엔진 최적화 기초**   | 8개      | ✅ 완료     | 기본 SEO 원칙과 설정 |
+| 🚀 **검색엔진 최적화 고급**   | 5개      | ✅ 완료     | 고급 SEO 기법        |
+| 📝 **콘텐츠 가이드라인**      | 2개      | ✅ 완료     | 콘텐츠 최적화 가이드 |
+| 🏷️ **HTML 마크업**            | 4개      | ✅ 완료     | HTML 구조 최적화     |
+| 🔗 **웹사이트 검색연동**      | 2개      | ✅ 완료     | 검색엔진 연동        |
+| 🏗️ **구조화된 데이터 마크업** | 15개     | ✅ 완료     | Schema.org 마크업    |
+| **📈 총계**                   | **36개** | **✅ 완료** | **전체 규칙 완성**   |
+
+---
+
+## 🔍 **검색엔진 최적화 기초**
+
+### 📋 **섹션 개요**
+
+> 기본적인 SEO 원칙과 웹사이트 설정 방법을 다룹니다.
+
+| 규칙  | 제목                   | 상태 | 중요도  |
+| ----- | ---------------------- | ---- | ------- |
+| rule1 | 검색엔진 최적화의 목적 | ✅   | 🔴 높음 |
+| rule2 | 웹사이트 생성          | ✅   | 🔴 높음 |
+| rule3 | 웹페이지 이동          | ✅   | 🟡 중간 |
+| rule4 | 웹사이트 이전          | ✅   | 🟡 중간 |
+| rule5 | 웹사이트 종료          | ✅   | 🟡 중간 |
+| rule6 | 방화벽 설정            | ✅   | 🟡 중간 |
+| rule7 | HTTP 프로토콜          | ✅   | 🟡 중간 |
+| rule8 | 검색로봇 확인          | ✅   | 🟡 중간 |
+
+---
+
+### 📌 **rule1 검색엔진 최적화의 목적**
 
 > 출처: [네이버 검색 어드바이저 SEO 기초 가이드](https://searchadvisor.naver.com/guide/seo-basic-intro)
 
@@ -1608,5 +1647,5220 @@ Address: 125.209.235.169
 4. **부하 분산**: 로드 밸런서 도입 검토
 
 이 HTTP 규약 가이드를 모든 웹사이트 운영에 체계적으로 적용하여 검색엔진 최적화를 완성할 것.
+
+---
+
+## 🚀 **검색엔진 최적화 고급**
+
+### 📋 **섹션 개요**
+
+> 고급 SEO 기법과 최신 웹 기술에 대한 최적화 방법을 다룹니다.
+
+| 규칙  | 제목                     | 상태 | 중요도  |
+| ----- | ------------------------ | ---- | ------- |
+| rule1 | 자바스크립트 검색 최적화 | ✅   | 🔴 높음 |
+| rule2 | URL 구조 최적화          | ✅   | 🔴 높음 |
+| rule3 | 색인 효율성 향상         | ✅   | 🟡 중간 |
+| rule4 | 검색 도움말              | ✅   | 🟡 중간 |
+| rule5 | 리소스 및 링크 관리      | ✅   | 🟡 중간 |
+
+---
+
+### 📌 **rule1 자바스크립트 검색 최적화**
+
+> 출처: [네이버 검색 어드바이저 자바스크립트 검색 최적화 가이드](https://searchadvisor.naver.com/guide/seo-advanced-javascript)
+
+### SPA 사이트 검색 최적화 개요
+
+#### 자바스크립트 기반 웹사이트 현황
+
+- **SPA 트렌드**: Angular, React, Vue.js 등 프레임워크 도입 증가
+- **네이버 지원**: SPA 기반 사이트의 수집 및 색인 지원
+- **리소스 요구**: 전통적인 HTML 페이지보다 몇 배 이상의 리소스 필요
+- **권장사항**: HTML 주요 영역은 서버에서 렌더링(SSR) 처리 권장
+
+#### 네이버 검색로봇 처리 방식
+
+- **자바스크립트 영향도 측정**: SPA 사이트의 구조 결정 과정 분석
+- **렌더링 서버 활용**: 수집된 자바스크립트를 렌더링 서버에 저장
+- **재방문 시 분석**: 확보된 스크립트로 HTML 렌더링 후 정확한 내용 분석
+
+### 자바스크립트 및 CSS 수집 허용
+
+#### robots.txt 설정 확인
+
+##### 잘못된 설정 예시
+
+```txt
+User-agent: *
+Allow: /your-html-url
+Disallow: /your-javascript-url
+Disallow: /your-css-url
+```
+
+##### 올바른 설정 예시
+
+```txt
+User-agent: *
+Allow: /your-javascript-url
+Allow: /your-css-url
+
+# 또는 별도로 지정하지 않음 (기본 허용)
+```
+
+#### 네이버 검색로봇 User-Agent
+
+- **특징적 문자열**: `Yeti` 등이 추가된 User-Agent 사용
+- **예시**: `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko; compatible; Yeti/1.1; +https://naver.me/spd) Chrome/W.X.Y.Z Safari/537.36`
+- **버전 변경**: 구체적 버전은 수시로 변경될 수 있음
+
+### Fragment URL 사용 금지
+
+#### Fragment URL 문제점
+
+##### 금지해야 할 URL 형태
+
+```
+https://www.mysite.com/page#subsection-1
+https://www.mysite.com/page#subsection-2
+https://www.mysite.com/#home
+https://www.mysite.com/#product
+https://www.mysite.com/path/to/#!/faq-1
+https://www.mysite.com/path/to/#!/faq-2
+```
+
+##### 권장하는 Permalink 형태
+
+```
+https://www.mysite.com/home
+https://www.mysite.com/product
+https://www.mysite.com/path/to/faq-1
+https://www.mysite.com/path/to/faq-2
+```
+
+#### Fragment 제거 이유
+
+- **네이버 처리**: fragment 부분을 제거하고 수집 진행
+- **동일 URL 처리**: `https://www.mysite.com/page#subsection-1` → `https://www.mysite.com/page`
+- **독립적 콘텐츠**: 각 URL이 독립적인 콘텐츠를 보장해야 함
+
+### 웹 브라우저 기반 해석(렌더링) 과정
+
+#### 5단계 처리 과정
+
+##### 1단계: 자바스크립트 포함 페이지 발견
+
+- **동적 HTML 처리**: 자바스크립트를 활용하여 동적으로 HTML 처리하는 페이지 발견
+- **리소스 체크**: 페이지에 포함된 자바스크립트 리소스 수집 여부 확인
+
+##### 2단계: 정적 HTML 우선 수집
+
+- **수집되지 않은 경우**: 자바스크립트가 수집되지 않으면 정적 HTML 내용 먼저 수집/분석
+- **색인 처리**: 정적 HTML 기반으로 색인 처리 진행
+
+##### 3단계: 자바스크립트 리소스 저장
+
+- **별도 수집**: HTML에 포함된 자바스크립트 리소스를 별도 수집 과정으로 처리
+- **렌더링 서버 저장**: 일정 기간 렌더링 서버에 저장
+- **주의사항**: timestamp나 hash 값을 URL에 넣어 최신성 강제 처리하는 경우 권장하지 않음
+
+##### 4단계: 재방문 시 렌더링
+
+- **확보된 스크립트**: 재방문 시 확보된 자바스크립트가 있으면 포함하여 HTML 렌더링
+- **정확한 분석**: 스크립트를 포함하여 보다 정확하게 내용 분석 시도
+
+##### 5단계: 색인 업데이트 결정
+
+- **콘텐츠 변경 확인**: 렌더링 결과 페이지의 주요 콘텐츠 내용 변경 여부 파악
+- **색인 업데이트**: 변경된 경우 색인 업데이트 여부 결정
+
+### SPA 사이트 검색 노출 관련
+
+#### 수집 우선순위 시스템
+
+- **제한적 리소스**: 검색로봇에게 할당되는 수집 리소스는 제한적
+- **알고리즘 선정**: 중요하다고 생각되는 URL을 선정한 후 수집 진행
+- **물리적 한계**: 문서 색인 규모에 대한 물리적인 한계 존재
+
+#### 검색 노출 보장
+
+- **수집 ≠ 색인**: 이미 수집되었더라도 색인 및 검색 노출을 보장하지 않음
+- **단순 판단 금지**: SPA 기반 사이트가 검색에 노출되지 않는다고 단순 판단 금지
+- **다양한 요인**: 검색 노출은 다양한 요인에 의해 결정됨
+
+### AI 작업 체크리스트
+
+#### robots.txt 설정 검증
+
+- [ ] 자바스크립트 파일 경로 허용 확인
+- [ ] CSS 파일 경로 허용 확인
+- [ ] 웹 문서와 수집 정책 일치 확인
+- [ ] 전체 수집 허용 설정 확인
+
+#### URL 구조 최적화
+
+- [ ] Fragment URL 사용 여부 확인
+- [ ] Permalink 구조로 변경 (필요시)
+- [ ] 각 URL의 독립적 콘텐츠 보장
+- [ ] SPA 라우팅 구조 검토
+
+#### 자바스크립트 최적화
+
+- [ ] 서버 사이드 렌더링(SSR) 적용 검토
+- [ ] 주요 HTML 영역 서버에서 렌더링
+- [ ] 자바스크립트 리소스 접근 가능 확인
+- [ ] timestamp/hash URL 사용 금지
+
+#### 렌더링 성능 최적화
+
+- [ ] 자바스크립트 파일 크기 최적화
+- [ ] CSS 파일 크기 최적화
+- [ ] 리소스 로딩 순서 최적화
+- [ ] 불필요한 스크립트 제거
+
+### 절대 금지사항
+
+#### robots.txt 관련
+
+1. **자바스크립트 파일 차단**: 웹 문서는 허용하되 자바스크립트 차단
+2. **CSS 파일 차단**: 웹 문서는 허용하되 CSS 차단
+3. **리소스 접근 불가**: 렌더링에 필요한 리소스 접근 차단
+
+#### URL 구조 관련
+
+4. **Fragment URL 사용**: `#` 기반 URL 구조 사용
+5. **Hashbang URL 사용**: `#!` 기반 URL 구조 사용
+6. **동일 콘텐츠 URL**: Fragment만 다른 동일 콘텐츠 URL
+
+#### 자바스크립트 관련
+
+7. **Timestamp URL**: 자바스크립트 URL에 timestamp 추가
+8. **Hash URL**: 자바스크립트 URL에 hash 값 추가
+9. **동적 리소스**: 매번 다른 URL의 자바스크립트 리소스
+
+### 검증 방법
+
+#### 기술적 검증
+
+1. **robots.txt 접근 테스트**: `curl https://example.com/robots.txt`
+2. **자바스크립트 파일 접근**: 브라우저에서 JS 파일 직접 접근 확인
+3. **CSS 파일 접근**: 브라우저에서 CSS 파일 직접 접근 확인
+4. **URL 구조 확인**: Fragment URL 사용 여부 확인
+
+#### 렌더링 테스트
+
+1. **자바스크립트 비활성화 테스트**: JS 비활성화 상태에서 콘텐츠 확인
+2. **서버 렌더링 확인**: 초기 HTML에 주요 콘텐츠 포함 여부 확인
+3. **동적 콘텐츠 로딩**: 자바스크립트 로딩 후 콘텐츠 변경 확인
+4. **성능 테스트**: 페이지 로딩 속도 및 리소스 사용량 확인
+
+#### 검색 노출 확인
+
+1. **site: 질의**: `site:example.com` 검색 결과 확인
+2. **웹마스터도구**: 색인 상태 및 오류 확인
+3. **수집 요청**: 웹마스터도구에서 수동 수집 요청
+4. **모니터링**: 정기적인 검색 노출 상태 모니터링
+
+### 코드 최적화 예시
+
+#### Next.js SSR 설정
+
+```typescript
+// pages/index.tsx
+export async function getServerSideProps() {
+  // 서버에서 데이터 가져오기
+  const data = await fetchData();
+
+  return {
+    props: {
+      data,
+    },
+  };
+}
+
+export default function HomePage({ data }) {
+  return (
+    <div>
+      {/* 주요 콘텐츠를 서버에서 렌더링 */}
+      <h1>{data.title}</h1>
+      <p>{data.description}</p>
+    </div>
+  );
+}
+```
+
+#### React SPA 최적화
+
+```jsx
+// App.js
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+function App() {
+  return (
+    <Router>
+      <Switch>
+        {/* Permalink 구조 사용 */}
+        <Route exact path="/" component={Home} />
+        <Route path="/products" component={Products} />
+        <Route path="/about" component={About} />
+        {/* Fragment URL 사용 금지 */}
+        {/* <Route path="/#home" component={Home} /> */}
+      </Switch>
+    </Router>
+  );
+}
+```
+
+#### robots.txt 최적화
+
+```txt
+# 자바스크립트 및 CSS 파일 허용
+User-agent: *
+Allow: /
+Allow: /static/js/
+Allow: /static/css/
+Disallow: /api/
+Disallow: /admin/
+
+# 사이트맵 위치
+Sitemap: https://example.com/sitemap.xml
+```
+
+이 자바스크립트 검색 최적화 가이드를 모든 SPA 사이트 작업에 체계적으로 적용하여 네이버 검색 최적화를 완성할 것.
+
+---
+
+## rule2 검색 친화적인 URL 구축하기
+
+> 출처: [네이버 검색 어드바이저 검색 친화적인 URL 구축 가이드](https://searchadvisor.naver.com/guide/seo-advanced-url)
+
+### URL 구조 이해
+
+#### URL 구성 요소
+
+##### 기본 URL 구조
+
+```
+https://search.naver.com/search.naver?query=naver&page=2&where=web#section
+```
+
+##### 구성 요소별 설명
+
+- **https**: 프로토콜
+
+  - **보안 강화**: https 프로토콜 사용 권장
+  - **SSL 인증서**: 보안 연결을 위한 SSL 인증서 필수
+
+- **search.naver.com**: 호스트
+
+  - **서버 의미**: 콘텐츠를 제공하는 서버
+  - **가독성**: 웹사이트 성격에 맞는 가독성 좋은 단어 선택
+
+- **.naver.com**: 도메인 이름
+
+  - **독립적 소유**: 사이트 콘텐츠 성격과 일치하는 독립적 도메인 권장
+  - **브랜드 일치**: 사이트 성격과 일치하는 도메인명
+
+- **/search.naver**: 경로, 파일명
+
+  - **웹서버 자원**: 웹서버 자원에 대한 경로 및 파일명
+  - **대소문자**: 웹서버 종류에 따라 대소문자 구분 가능
+  - **소문자 권장**: 통상적으로 소문자로 처리
+
+- **q=search, sort=desc**: 매개변수
+
+  - **추가 정보**: 웹서버에 보내는 추가 정보
+  - **키-값 쌍**: 하나의 키와 값으로 짝을 이룸
+  - **구분자**: 파라미터 여러 개면 &문자로 구분, 키와 값은 = 문자로 구분
+
+- **section**: 부분 식별자 (fragment)
+  - **특정 부분**: 동일한 웹 페이지 내의 특정 부분 지칭
+  - **예시**: 위키피디어 K-pop 문서의 "역사" 세부 주제
+
+### 검색 친화적인 URL 가이드라인
+
+#### 도메인 선택
+
+##### 권장 도메인
+
+- **최상위 도메인**: `.com, .net, .co.kr, .kr, .io`
+- **사용자 친숙**: 사용자에게 친숙한 최상위 도메인 사용
+- **브랜드 일치**: 사이트 성격에 맞는 도메인명
+
+##### 피해야 할 도메인
+
+- **웹 호스팅 서비스 도메인**: `mysite.web-hosting.com` (X)
+- **권장 도메인**: `www.mysite.com` (O)
+
+#### URL 구조 최적화
+
+##### 권장 URL 구조
+
+```
+https://www.mysite.com/guide/creator (O)
+```
+
+##### 피해야 할 URL 구조
+
+```
+https://www.mysite.com/1001125/1079/action.do?tab=guide&method=selectPage&menu_id=EMWPCnslWebInqL (X)
+```
+
+#### URL 파라미터 최소화
+
+##### 권장 사항
+
+- **파라미터 최소화**: URL 파라미터를 최소화하는 것을 권장
+- **의미 파악**: 사용자와 검색로봇이 쉽게 의미를 파악할 수 있는 URL
+- **가독성**: 이해하기 쉬운 구조로 구성
+
+##### 예시
+
+- **권장**: `https://www.mysite.com/guide/seo-basic-intro` (O)
+- **비권장**: `https://www.mysite.com/guide.php?page=seo-basic-intro&sort=default` (X)
+
+#### Fragment 사용 금지
+
+##### 독립된 URL 구축
+
+- **권장**: `https://www.mysite.com/start`, `https://www.mysite.com/diagnose` (O)
+- **비권장**: `https://www.mysite.com/?tab=guide#start`, `https://www.mysite.com/?tab=guide#diagnose` (X)
+
+##### 해시뱅(#!) 형식 금지
+
+- **문제점**: `https://www.mysite.com/path/to/#!/some-ajax-state` (X)
+- **검색엔진 인식**: `https://www.mysite.com/path/to/` 까지만 인식
+- **해결책**: 독립된 URL로 구축
+
+### 검색 친화적인 링크
+
+#### 표준 HTML 링크 사용
+
+##### 권장 링크 방식
+
+```html
+<a href="http://www.mysite.com">Link</a>
+```
+
+- **정확한 URL 확인**: 검색로봇이 어떤 URL인지 정확하게 확인 가능
+- **수집 대상**: 수집 대상 URL 후보군으로 처리
+
+##### 피해야 할 링크 방식
+
+```html
+<span onClick="javascript:goto(A)">Link</span>
+```
+
+- **URL 파악 불가**: 검색로봇이 정확한 URL을 파악할 수 없음
+- **수집 제한**: 이후의 다른 좋은 정보들을 찾아갈 수 없는 문제
+
+#### 동적 링크 사용 금지
+
+##### 문제가 되는 동적 링크
+
+- **세션/쿠키 기반**: 세션, 쿠키 등에 따라 링크 URL이 동적으로 변경
+- **경유 접근**: 특정 페이지를 직접 접근할 때와 다른 페이지를 경유해서 접근할 때 링크 URL이 변경
+- **정적 마크업 권장**: 가급적 링크는 정적으로 마크업 처리
+
+### AI 작업 체크리스트
+
+#### 도메인 선택 검증
+
+- [ ] 최상위 도메인 사용 확인 (.com, .net, .co.kr, .kr, .io)
+- [ ] 웹 호스팅 서비스 도메인 사용 금지
+- [ ] 사이트 성격과 일치하는 도메인명 선택
+- [ ] 브랜드 일치성 확인
+
+#### URL 구조 최적화
+
+- [ ] 이해하기 쉬운 URL 구조 구성
+- [ ] URL 파라미터 최소화
+- [ ] 소문자 사용 권장
+- [ ] 의미 있는 경로명 사용
+
+#### Fragment 사용 검증
+
+- [ ] Fragment(#) 사용 금지
+- [ ] 해시뱅(#!) 형식 사용 금지
+- [ ] 독립된 URL로 구축
+- [ ] 각 페이지의 독립적 콘텐츠 보장
+
+#### 링크 구조 최적화
+
+- [ ] 표준 HTML 링크 사용
+- [ ] JavaScript 링크 사용 금지
+- [ ] 동적 링크 사용 금지
+- [ ] 정적 마크업 처리
+
+### 절대 금지사항
+
+#### 도메인 관련
+
+1. **웹 호스팅 서비스 도메인 사용**: `mysite.web-hosting.com`
+2. **무의미한 도메인명**: 사이트 성격과 일치하지 않는 도메인
+3. **복잡한 서브도메인**: 사용자가 이해하기 어려운 복잡한 구조
+
+#### URL 구조 관련
+
+4. **복잡한 파라미터**: 이해하기 어려운 URL 파라미터 사용
+5. **Fragment 기반 URL**: `#` 기반 URL 구조 사용
+6. **해시뱅 URL**: `#!` 기반 URL 구조 사용
+7. **대소문자 혼용**: 일관성 없는 대소문자 사용
+
+#### 링크 관련
+
+8. **JavaScript 링크**: `onClick` 기반 링크 사용
+9. **동적 링크**: 세션/쿠키 기반 동적 링크
+10. **경유 접근 링크**: 접근 경로에 따라 다른 링크 URL
+
+### 검증 방법
+
+#### 도메인 검증
+
+1. **도메인 구조 확인**: 최상위 도메인 사용 여부 확인
+2. **브랜드 일치성**: 사이트 성격과 도메인명 일치 확인
+3. **가독성 테스트**: 사용자가 이해하기 쉬운 도메인명인지 확인
+
+#### URL 구조 검증
+
+1. **파라미터 분석**: URL 파라미터 복잡도 확인
+2. **Fragment 확인**: `#` 기반 URL 사용 여부 확인
+3. **가독성 테스트**: URL만 보고도 페이지 내용 예측 가능한지 확인
+4. **일관성 확인**: 전체 사이트의 URL 구조 일관성 확인
+
+#### 링크 구조 검증
+
+1. **HTML 링크 확인**: 표준 `<a href="">` 태그 사용 여부
+2. **JavaScript 링크 확인**: `onClick` 기반 링크 사용 여부
+3. **동적 링크 확인**: 세션/쿠키 기반 동적 링크 사용 여부
+4. **접근성 테스트**: 다양한 경로로 접근 시 링크 일관성 확인
+
+### 코드 최적화 예시
+
+#### Next.js URL 구조 최적화
+
+```typescript
+// pages/guide/[category]/[slug].tsx
+export default function GuidePage({ category, slug }) {
+  return (
+    <div>
+      <h1>{category} 가이드</h1>
+      <p>{slug}에 대한 상세 내용</p>
+    </div>
+  );
+}
+
+// URL 예시: /guide/seo-basic-intro
+```
+
+#### React Router 최적화
+
+```jsx
+// App.js
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+function App() {
+  return (
+    <Router>
+      <Switch>
+        {/* 검색 친화적인 URL 구조 */}
+        <Route exact path="/" component={Home} />
+        <Route path="/guide/:category" component={Guide} />
+        <Route path="/products/:id" component={Product} />
+        <Route path="/about" component={About} />
+
+        {/* 피해야 할 URL 구조 */}
+        {/* <Route path="/page?tab=guide&id=123" component={Guide} /> */}
+        {/* <Route path="/#section" component={Section} /> */}
+      </Switch>
+    </Router>
+  );
+}
+```
+
+#### HTML 링크 최적화
+
+```html
+<!-- 권장하는 링크 방식 -->
+<a href="/guide/seo-basic-intro">SEO 기초 가이드</a>
+<a href="/products/car-rental">렌터카 서비스</a>
+<a href="/about">회사 소개</a>
+
+<!-- 피해야 할 링크 방식 -->
+<span onClick="javascript:gotoPage('guide', 'seo-basic-intro')"
+  >SEO 기초 가이드</span
+>
+<div onClick="window.location.href='/guide/seo-basic-intro'">
+  SEO 기초 가이드
+</div>
+```
+
+#### URL 리다이렉트 설정
+
+```typescript
+// next.config.ts
+async redirects() {
+  return [
+    // 복잡한 URL을 간단한 URL로 리다이렉트
+    {
+      source: '/guide.php',
+      has: [
+        {
+          type: 'query',
+          key: 'page',
+          value: 'seo-basic-intro',
+        },
+      ],
+      destination: '/guide/seo-basic-intro',
+      permanent: true,
+    },
+    // Fragment URL을 독립된 URL로 리다이렉트
+    {
+      source: '/guide',
+      has: [
+        {
+          type: 'query',
+          key: 'tab',
+          value: 'start',
+        },
+      ],
+      destination: '/guide/start',
+      permanent: true,
+    },
+  ]
+}
+```
+
+이 검색 친화적인 URL 구축 가이드를 모든 웹사이트 작업에 체계적으로 적용하여 네이버 검색 최적화를 완성할 것.
+
+---
+
+## rule3 사이트의 색인 효율성 개선하기
+
+> 출처: [네이버 검색 어드바이저 사이트의 색인 효율성 개선 가이드](https://searchadvisor.naver.com/guide/seo-advanced-indexing)
+
+### 색인 효율성 개요
+
+#### 색인 과정 이해
+
+- **수집 → 색인**: 네이버 검색로봇이 웹 콘텐츠를 수집한 후 검색엔진에게 전달
+- **색인 후보**: 수집된 문서는 색인 후보에 포함
+- **불용문서 제외**: 모든 수집된 문서가 색인되지 않으며, 불필요하다고 판단되는 불용문서는 색인 대상에서 제외
+- **사이트 개선**: 색인 효율성을 개선하기 위해 사이트 개선을 통한 해결 권장
+
+### 불용문서의 대표적 케이스
+
+#### HTML 내용이 없는 경우
+
+##### 문제 상황
+
+- **순수 자바스크립트 활용**: HTML 마크업 없이 순수 자바스크립트로 웹 페이지 이동
+- **검색로봇 해석 불가**: 네이버 검색로봇이 제대로 해석할 수 없는 경우 발생
+- **색인 제외**: 내용이 없는 웹페이지로 간주하여 색인에서 제외
+
+##### 웹페이지 구성 요소
+
+- **HTML 마크업**: 웹페이지의 기본 구조
+- **CSS 및 Image 리소스**: 스타일링 및 이미지
+- **자바스크립트**: 동적 기능
+
+##### 네이버 검색로봇 처리 방식
+
+- **최신 브라우저 동일**: 최신 웹 브라우저와 최대한 동일한 모습(렌더링)으로 해석
+- **렌더링 처리**: 웹페이지 콘텐츠를 렌더링하여 처리
+
+##### 해결 방법
+
+- **HTTP 응답코드 사용**: 자바스크립트가 아닌 HTTP 응답코드 301 또는 302 방식으로 이동
+- **웹 페이지 이동 가이드**: 적절한 HTTP 응답코드 사용 권장
+
+#### 소프트 404 (혹은 소프트 데드)
+
+##### HTTP 응답코드의 중요성
+
+- **올바른 응답코드**: 사이트 구축 및 운영 시 오류 페이지의 올바른 HTTP 응답코드 유지
+- **사용자 안내**: 예외적 오류 상황에서 사용자에게 적절한 안내 페이지 제공
+- **케이스별 지정**: 각 상황별 적절한 HTTP 응답코드 지정
+
+##### 상황별 HTTP 응답코드
+
+###### 자료 없음, URL 잘못 입력, 옛날 URL
+
+- **응답코드**: 404 (Not Found)
+- **설명**: 요청한 리소스를 찾을 수 없음
+
+###### 로그인 사용자만 사용할 수 있는 페이지
+
+- **응답코드**: 403 (Forbidden)
+- **설명**: 접근 권한이 없음
+
+###### 사이트가 다른 도메인으로 이전
+
+- **응답코드**: 301 (Moved Permanently)
+- **설명**: 영구적으로 다른 위치로 이동
+
+###### 사이트 점검
+
+- **응답코드**: 503 (Service Unavailable)
+- **설명**: 일시적으로 서비스를 사용할 수 없음
+
+###### 웹 호스팅 기한 만료
+
+- **응답코드**: 503 (Service Unavailable)
+- **설명**: 사이트가 더 이상 운영되지 않음
+
+##### 잘못된 응답코드 사용의 문제점
+
+###### 200(OK) 응답코드 오용
+
+- **문제**: 오류 상황에서 200(OK) 응답코드 지정
+- **검색로봇 인식**: 정상적인 웹 콘텐츠로 인식하여 수집 후 색인대상으로 전달
+- **불용문서 검출**: 색인 과정에서 불용문서 케이스 검출되면 색인에서 제외
+- **검색 노출**: 간혹 불용문서로 인식하지 못해 검색에 노출되는 경우 발생
+- **사용자 경험**: 아무런 도움이 되지 않는 문서로 검색 사용자에게 부정적 영향
+- **사이트 신뢰성**: 사이트의 신뢰성에 좋지 않은 영향
+
+### AI 작업 체크리스트
+
+#### HTML 내용 검증
+
+- [ ] HTML 마크업 존재 확인
+- [ ] 순수 자바스크립트 페이지 이동 금지
+- [ ] HTTP 응답코드 301/302 사용 확인
+- [ ] 웹페이지 구성 요소 완성도 확인
+
+#### HTTP 응답코드 검증
+
+- [ ] 404 오류 페이지 적절한 응답코드 설정
+- [ ] 403 권한 제한 페이지 응답코드 설정
+- [ ] 301 리다이렉트 페이지 응답코드 설정
+- [ ] 503 서비스 점검 페이지 응답코드 설정
+
+#### 오류 페이지 최적화
+
+- [ ] 각 오류 상황별 적절한 HTTP 응답코드 지정
+- [ ] 사용자 친화적인 오류 페이지 제공
+- [ ] 검색로봇이 오류 상황을 정확히 인식할 수 있도록 설정
+- [ ] 불용문서로 인식되지 않도록 최적화
+
+#### 색인 효율성 모니터링
+
+- [ ] 웹마스터도구에서 색인 상태 확인
+- [ ] 불용문서 발생 여부 모니터링
+- [ ] 검색 노출 품질 확인
+- [ ] 정기적인 색인 효율성 점검
+
+### 절대 금지사항
+
+#### HTML 관련
+
+1. **HTML 마크업 없는 페이지**: 순수 자바스크립트만으로 구성된 페이지
+2. **빈 콘텐츠 페이지**: 실제 내용이 없는 웹페이지
+3. **렌더링 불가 페이지**: 검색로봇이 렌더링할 수 없는 페이지
+
+#### HTTP 응답코드 관련
+
+4. **오류 상황에서 200 응답**: 오류 페이지에서 200(OK) 응답코드 사용
+5. **부적절한 응답코드**: 상황에 맞지 않는 HTTP 응답코드 사용
+6. **응답코드 누락**: 오류 상황에서 HTTP 응답코드 미설정
+
+#### 색인 관련
+
+7. **불용문서 노출**: 검색에 도움이 되지 않는 문서 노출
+8. **중복 콘텐츠 색인**: 동일한 내용의 페이지 중복 색인
+9. **오류 페이지 색인**: 오류 상황을 정상 페이지로 색인
+
+### 검증 방법
+
+#### HTML 내용 검증
+
+1. **마크업 확인**: 페이지에 HTML 마크업 존재 여부 확인
+2. **콘텐츠 확인**: 실제 텍스트 콘텐츠 존재 여부 확인
+3. **렌더링 테스트**: 검색로봇이 렌더링할 수 있는지 확인
+4. **자바스크립트 의존성**: 순수 자바스크립트 의존 페이지 확인
+
+#### HTTP 응답코드 검증
+
+1. **응답코드 확인**: `curl -I` 명령어로 HTTP 응답코드 확인
+2. **오류 페이지 테스트**: 각 오류 상황별 응답코드 확인
+3. **리다이렉트 확인**: 301/302 리다이렉트 응답코드 확인
+4. **서비스 점검 확인**: 503 응답코드 설정 확인
+
+#### 색인 상태 확인
+
+1. **웹마스터도구**: 색인 상태 및 오류 확인
+2. **검색 결과 확인**: `site:도메인` 검색으로 색인된 페이지 확인
+3. **불용문서 확인**: 검색에 노출되면 안 되는 페이지 확인
+4. **정기 모니터링**: 색인 효율성 정기 점검
+
+### 코드 최적화 예시
+
+#### Next.js 오류 페이지 설정
+
+```typescript
+// pages/404.tsx
+export default function Custom404() {
+  return (
+    <div className="error-page">
+      <h1>페이지를 찾을 수 없습니다</h1>
+      <p>요청하신 페이지가 존재하지 않습니다.</p>
+    </div>
+  );
+}
+
+// pages/500.tsx
+export default function Custom500() {
+  return (
+    <div className="error-page">
+      <h1>서버 오류가 발생했습니다</h1>
+      <p>일시적인 문제가 발생했습니다. 잠시 후 다시 시도해주세요.</p>
+    </div>
+  );
+}
+```
+
+#### HTTP 응답코드 설정
+
+```typescript
+// pages/api/redirect.ts
+import { NextApiRequest, NextApiResponse } from "next";
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  // 301 영구 리다이렉트
+  res.setHeader("Location", "https://new-domain.com");
+  res.status(301).end();
+}
+
+// pages/api/maintenance.ts
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  // 503 서비스 점검
+  res.status(503).json({
+    error: "Service Unavailable",
+    message: "사이트 점검 중입니다.",
+  });
+}
+```
+
+#### robots.txt 설정
+
+```txt
+# 오류 페이지 크롤링 금지
+User-agent: *
+Disallow: /404
+Disallow: /500
+Disallow: /maintenance
+
+# 사이트맵 위치
+Sitemap: https://example.com/sitemap.xml
+```
+
+#### .htaccess 설정
+
+```apache
+# 404 오류 페이지 설정
+ErrorDocument 404 /404.html
+
+# 403 오류 페이지 설정
+ErrorDocument 403 /403.html
+
+# 500 오류 페이지 설정
+ErrorDocument 500 /500.html
+
+# 503 서비스 점검 페이지 설정
+ErrorDocument 503 /maintenance.html
+
+# 리다이렉트 설정
+Redirect 301 /old-page /new-page
+```
+
+#### HTML 구조 최적화
+
+```html
+<!-- 권장하는 HTML 구조 -->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>페이지 제목</title>
+  </head>
+  <body>
+    <h1>페이지 제목</h1>
+    <p>실제 텍스트 콘텐츠가 포함된 내용</p>
+    <div class="content">
+      <p>검색로봇이 이해할 수 있는 의미 있는 콘텐츠</p>
+    </div>
+  </body>
+</html>
+
+<!-- 피해야 할 HTML 구조 -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>페이지 제목</title>
+  </head>
+  <body>
+    <!-- 빈 콘텐츠 또는 순수 자바스크립트만 존재 -->
+    <script>
+      window.location.href = "/other-page";
+    </script>
+  </body>
+</html>
+```
+
+이 색인 효율성 개선 가이드를 모든 웹사이트 운영에 체계적으로 적용하여 네이버 검색 최적화를 완성할 것.
+
+---
+
+## rule4 SEO 기본 가이드
+
+> 출처: [네이버 검색 어드바이저 SEO 기본 가이드](https://searchadvisor.naver.com/guide/seo-help)
+
+### SEO 기본 가이드 개요
+
+#### SEO 목표
+
+- **사용자 중심**: 웹사이트 사용자에게 도움되는 방향으로 사이트와 사용자 환경 개선
+- **검색로봇 최적화**: 네이버 검색로봇도 사용자에 해당되며 SEO를 통해 사이트 콘텐츠를 더 잘 이해하도록 도움
+- **검색결과 개선**: SEO가 잘 된 콘텐츠는 네이버 검색로봇의 분석에 용이하며, 검색결과에 더 나은 콘텐츠 제공
+
+#### SEO 원칙
+
+- **사용자 중심**: 사용자에게 도움이 되는 콘텐츠 제공
+- **검색로봇 친화적**: 검색로봇이 이해하기 쉬운 구조
+- **고유성**: 각 페이지마다 고유한 제목과 설명
+- **명확성**: 페이지 주제를 명확하게 표현
+
+### 주요 SEO 요소별 가이드
+
+#### `<title>` 요소 최적화
+
+##### `<title>` 요소 찾을수 없음
+
+- **문제**: HTML 문서에 `<title>` 요소가 없는 경우
+- **해결**: HTML 문서 `<head>` 요소 안에 `<title>` 요소 추가
+- **요구사항**: 페이지 주제를 나타내는 정확하고 고유한 제목 텍스트 작성
+- **목적**: 네이버 검색로봇에게 페이지의 주제가 무엇인지 알려줌
+
+##### `<title>` 요소가 2개 이상 발견
+
+- **문제**: HTML 문서에 `<title>` 요소가 2개 이상 작성된 경우
+- **영향**: 검색로봇이 어떤 `<title>`이 페이지 콘텐츠 주제에 부합하는지 분석해야 함
+- **결과**: 검색로봇이 추가 작업을 해야하며 좋지 못한 페이지로 분류할 수 있음
+- **해결**: HTML 문서당 하나의 `<title>` 요소만 사용
+
+##### `<title>` 요소에 동일한 제목인 웹문서 다수 발견
+
+- **문제**: 사이트 내 여러 페이지들이 동일한 `<title>`을 가진 경우
+- **영향**: 검색로봇이 어떤 페이지가 `<title>`에 가장 적합한지 분석해야 함
+- **결과**: 콘텐츠 주제에 적합하지 않고, 어떤 페이지를 검색결과로 노출해야할지 명확하지 않음
+- **해결**: 각 페이지마다 고유한 `<title>` 요소 작성
+
+##### `<title>` 요소 텍스트 길이 확인필요
+
+- **문제**: `<title>` 요소를 매우 긴 텍스트로 작성
+- **목적**: 페이지 콘텐츠 제목을 나타냄
+- **해결**: 적절한 길이의 제목으로 작성
+
+#### `<meta name="description">` 최적화
+
+##### `<meta name="description">` 설명 누락
+
+- **목적**: 페이지 내용을 요약하여 제공
+- **위치**: HTML 문서 `<head>` 요소 안에 위치
+- **작성법**: 페이지의 요약 내용을 여러 문장으로 구성하여 작성
+- **용도**: 검색결과의 스니펫으로도 사용
+- **권장**: 각 페이지마다 요약 내용 입력
+
+##### `<meta name="description">` 태그에 동일 설명문 발견
+
+- **문제**: 여러 페이지에 동일한 meta description이 있는 경우
+- **영향**: 네이버 검색 로봇이 유의미하지 않은 내용으로 판단하거나 중복된 문서로 분류
+- **결과**: 노출에 영향을 받을 수 있음
+- **해결**: meta description도 고유한 요약 내용으로 작성
+
+#### HTML 구조 최적화
+
+##### `<H1>` 요소가 2개 이상 발견
+
+- **목적**: `<H1>` 요소는 페이지 콘텐츠를 나타내는 소제목으로 사용
+- **문제**: HTML 문서에서 2개 이상 발견되는 경우
+- **영향**: 네이버 검색로봇이 이해하기 어려운 구조가 됨
+- **해결**: HTML 문서당 하나의 `<H1>` 요소만 사용
+
+##### Alt 속성 누락
+
+- **목적**: 콘텐츠 이미지에 설명(Alt) 속성 제공
+- **효과**: 네이버 검색로봇이 이해하기 좋은 구조
+- **기능**: 페이지 콘텐츠와 이미지에 대한 주제를 잘 해석할 수 있음
+- **권장**: 모든 이미지에 적절한 Alt 속성 추가
+
+### AI 작업 체크리스트
+
+#### `<title>` 요소 검증
+
+- [ ] HTML 문서에 `<title>` 요소 존재 확인
+- [ ] `<title>` 요소가 1개만 존재하는지 확인
+- [ ] 각 페이지마다 고유한 `<title>` 작성 확인
+- [ ] `<title>` 텍스트 길이가 적절한지 확인
+- [ ] 페이지 주제를 정확하게 나타내는지 확인
+
+#### `<meta name="description">` 검증
+
+- [ ] HTML 문서에 meta description 태그 존재 확인
+- [ ] 각 페이지마다 고유한 meta description 작성 확인
+- [ ] 페이지 내용을 요약한 설명인지 확인
+- [ ] 여러 문장으로 구성되어 있는지 확인
+- [ ] 검색결과 스니펫으로 적합한지 확인
+
+#### HTML 구조 검증
+
+- [ ] `<H1>` 요소가 1개만 존재하는지 확인
+- [ ] 모든 이미지에 Alt 속성이 있는지 확인
+- [ ] Alt 속성이 이미지 내용을 정확히 설명하는지 확인
+- [ ] HTML 구조가 논리적으로 구성되어 있는지 확인
+
+#### 콘텐츠 품질 검증
+
+- [ ] 각 페이지의 주제가 명확한지 확인
+- [ ] 콘텐츠가 사용자에게 도움이 되는지 확인
+- [ ] 검색로봇이 이해하기 쉬운 구조인지 확인
+- [ ] 중복된 콘텐츠가 없는지 확인
+
+### 절대 금지사항
+
+#### `<title>` 요소 관련
+
+1. **`<title>` 요소 누락**: HTML 문서에 `<title>` 요소가 없는 경우
+2. **중복 `<title>` 요소**: HTML 문서에 `<title>` 요소가 2개 이상인 경우
+3. **동일한 `<title>` 사용**: 여러 페이지에 동일한 `<title>` 사용
+4. **과도하게 긴 `<title>`**: 매우 긴 텍스트로 `<title>` 작성
+
+#### `<meta name="description">` 관련
+
+5. **meta description 누락**: HTML 문서에 meta description 태그가 없는 경우
+6. **동일한 meta description**: 여러 페이지에 동일한 meta description 사용
+7. **부적절한 설명**: 페이지 내용과 관련 없는 meta description 작성
+
+#### HTML 구조 관련
+
+8. **중복 `<H1>` 요소**: HTML 문서에 `<H1>` 요소가 2개 이상인 경우
+9. **Alt 속성 누락**: 이미지에 Alt 속성이 없는 경우
+10. **부적절한 Alt 속성**: 이미지 내용과 관련 없는 Alt 속성 작성
+
+### 검증 방법
+
+#### `<title>` 요소 검증
+
+1. **존재 확인**: HTML 문서 `<head>` 요소 안에 `<title>` 요소 존재 확인
+2. **개수 확인**: `<title>` 요소가 1개만 존재하는지 확인
+3. **고유성 확인**: 각 페이지마다 고유한 `<title>` 작성 확인
+4. **길이 확인**: `<title>` 텍스트 길이가 적절한지 확인
+5. **주제 확인**: 페이지 주제를 정확하게 나타내는지 확인
+
+#### `<meta name="description">` 검증
+
+1. **존재 확인**: HTML 문서 `<head>` 요소 안에 meta description 태그 존재 확인
+2. **고유성 확인**: 각 페이지마다 고유한 meta description 작성 확인
+3. **내용 확인**: 페이지 내용을 요약한 설명인지 확인
+4. **구성 확인**: 여러 문장으로 구성되어 있는지 확인
+5. **적합성 확인**: 검색결과 스니펫으로 적합한지 확인
+
+#### HTML 구조 검증
+
+1. **`<H1>` 개수 확인**: HTML 문서에 `<H1>` 요소가 1개만 존재하는지 확인
+2. **Alt 속성 확인**: 모든 이미지에 Alt 속성이 있는지 확인
+3. **Alt 내용 확인**: Alt 속성이 이미지 내용을 정확히 설명하는지 확인
+4. **구조 확인**: HTML 구조가 논리적으로 구성되어 있는지 확인
+
+### 코드 최적화 예시
+
+#### Next.js 메타데이터 설정
+
+```typescript
+// pages/index.tsx
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "공항렌트24 - 인천공항 렌터카 서비스",
+  description:
+    "인천공항 렌터카 예약 서비스. 24시간 운영, 다양한 차종, 합리적인 가격으로 편리한 공항 렌터카 서비스를 제공합니다.",
+};
+
+export default function HomePage() {
+  return (
+    <div>
+      <h1>공항렌트24</h1>
+      <p>인천공항 렌터카 서비스</p>
+    </div>
+  );
+}
+```
+
+#### React 컴포넌트 최적화
+
+```jsx
+// components/VehicleCard.jsx
+export default function VehicleCard({ vehicle }) {
+  return (
+    <div className="vehicle-card">
+      <h2>{vehicle.name}</h2>
+      <img
+        src={vehicle.image}
+        alt={`${vehicle.name} 차량 이미지`} // Alt 속성 추가
+      />
+      <p>{vehicle.description}</p>
+    </div>
+  );
+}
+```
+
+#### HTML 구조 최적화
+
+```html
+<!-- 권장하는 HTML 구조 -->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>공항렌트24 - 인천공항 렌터카 서비스</title>
+    <meta
+      name="description"
+      content="인천공항 렌터카 예약 서비스. 24시간 운영, 다양한 차종, 합리적인 가격으로 편리한 공항 렌터카 서비스를 제공합니다."
+    />
+  </head>
+  <body>
+    <h1>공항렌트24</h1>
+    <!-- 하나의 H1 요소만 사용 -->
+    <main>
+      <h2>인천공항 렌터카 서비스</h2>
+      <p>편리한 공항 렌터카 서비스를 제공합니다.</p>
+      <img src="/images/car.jpg" alt="렌터카 차량 이미지" />
+      <!-- Alt 속성 추가 -->
+    </main>
+  </body>
+</html>
+
+<!-- 피해야 할 HTML 구조 -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- title 요소 누락 -->
+    <meta name="description" content="렌터카 서비스" />
+  </head>
+  <body>
+    <h1>공항렌트24</h1>
+    <h1>인천공항 렌터카</h1>
+    <!-- 중복된 H1 요소 -->
+    <img src="/images/car.jpg" />
+    <!-- Alt 속성 누락 -->
+  </body>
+</html>
+```
+
+#### 동적 메타데이터 설정
+
+```typescript
+// pages/vehicles/[id].tsx
+import { Metadata } from "next";
+
+export async function generateMetadata({ params }): Promise<Metadata> {
+  const vehicle = await getVehicle(params.id);
+
+  return {
+    title: `${vehicle.name} - 공항렌트24`,
+    description: `${vehicle.name} 렌터카 정보. ${vehicle.description}`,
+  };
+}
+
+export default function VehiclePage({ vehicle }) {
+  return (
+    <div>
+      <h1>{vehicle.name}</h1> {/* 하나의 H1 요소만 사용 */}
+      <img src={vehicle.image} alt={`${vehicle.name} 차량 상세 이미지`} />
+      <p>{vehicle.description}</p>
+    </div>
+  );
+}
+```
+
+#### 메타데이터 검증 함수
+
+```typescript
+// utils/seo-validation.ts
+export function validateSEO(html: string) {
+  const issues = [];
+
+  // title 요소 검증
+  const titleMatches = html.match(/<title[^>]*>(.*?)<\/title>/gi);
+  if (!titleMatches) {
+    issues.push("title 요소가 없습니다.");
+  } else if (titleMatches.length > 1) {
+    issues.push("title 요소가 2개 이상입니다.");
+  }
+
+  // meta description 검증
+  const descriptionMatches = html.match(/<meta[^>]*name="description"[^>]*>/gi);
+  if (!descriptionMatches) {
+    issues.push("meta description이 없습니다.");
+  }
+
+  // H1 요소 검증
+  const h1Matches = html.match(/<h1[^>]*>(.*?)<\/h1>/gi);
+  if (h1Matches && h1Matches.length > 1) {
+    issues.push("H1 요소가 2개 이상입니다.");
+  }
+
+  // Alt 속성 검증
+  const imgMatches = html.match(/<img[^>]*>/gi);
+  if (imgMatches) {
+    imgMatches.forEach((img, index) => {
+      if (!img.includes("alt=")) {
+        issues.push(`이미지 ${index + 1}에 Alt 속성이 없습니다.`);
+      }
+    });
+  }
+
+  return issues;
+}
+```
+
+이 SEO 기본 가이드를 모든 웹사이트 개발에 체계적으로 적용하여 네이버 검색 최적화를 완성할 것.
+
+---
+
+## rule5 리소스와 링크 관리
+
+> 출처: [네이버 검색 어드바이저 리소스와 링크 관리 가이드](https://searchadvisor.naver.com/guide/resource-and-link)
+
+### 리소스와 링크 관리 개요
+
+#### 최적화 목표
+
+- **원활한 수집**: 네이버 검색로봇의 원활한 사이트 수집을 위한 최적화
+- **완전한 렌더링**: 웹 페이지를 제대로 분석(렌더링)할 수 있도록 리소스 접근 보장
+- **정확한 노출**: 검색결과에 정확하게 노출되도록 최적화
+
+#### 현대적 웹 문서 특성
+
+- **단독 HTML 부족**: 단독 HTML만으로 구성되기보다는 추가적인 리소스(javascript 등) 로딩 요구
+- **필수 리소스**: 페이지 콘텐츠를 표현하고 해석하는데 필수적인 리소스 존재
+- **별도 URL 경로**: 리소스들이 별도의 URL 경로에 존재하는 경우 많음
+
+### 접근 제한된 리소스 문제
+
+#### 문제 상황
+
+- **robots.txt 차단**: 별도로 robots.txt 설정되어 있거나 IP 차단으로 접근 불가
+- **불완전한 분석**: 웹 페이지를 제대로 분석(렌더링)할 수 없음
+- **검색결과 영향**: 검색결과에 다르게 노출되거나 미노출될 수 있음
+
+#### robots.txt에 의해 접근 불가한 경우
+
+##### 문제 예시
+
+```
+A. https://www.your-site.com/
+B. https://www.your-site.com/resource/1
+C. https://www.your-site.com/temp/c
+
+robots.txt)
+User-agent: *
+Allow: /
+Disallow: /resource
+```
+
+##### 문제 상황 설명
+
+- **A URL 수집**: 네이버 검색로봇이 A URL을 접근하여 수집
+- **필수 리소스**: A URL HTML문서에는 리소스로써 B, C URL이 추가되어 있음
+- **robots.txt 차단**: `/resource`는 disallow되어 있음
+- **불완전한 해석**: C URL만 수집하는 경우가 있어, A URL 콘텐츠는 불완전한 상태로 해석
+
+##### 해결 방법
+
+1. **robots.txt 수정**: `disallow: /resource` 설정을 `allow`로 변경
+2. **페이지 수정**: B URL 없이 A URL 콘텐츠를 완전히 구성되도록 페이지 수정
+
+#### 네이버 검색로봇 IP 차단인 경우
+
+- **IP 확인**: 네이버 검색로봇 확인 방법 가이드를 통해 검색로봇 IP 확인
+- **차단 해제**: 확인된 IP에 대한 차단 해제
+
+### 링크 구조 최적화
+
+#### `<a>` 요소의 href 속성 최적화
+
+##### `<a>` 요소의 중요성
+
+- **수집 확장**: 네이버 검색로봇은 `<a>`에 href 속성으로 사이트 내 다른 페이지 URL을 발견하고 수집하여 확장
+- **정상적인 링크**: href 속성에 정상적인 URL이 있어야 새로운 페이지 URL을 발견할 수 있음
+
+##### 자바스크립트 호출 문제
+
+###### 나쁜 예
+
+```html
+<a href="createLink(1, news)">클릭</a>
+```
+
+###### 좋은 예
+
+```html
+<a href="https://www.your-site.com/news/1">클릭</a>
+```
+
+##### 문제점
+
+- **정상적인 링크 구성 불가**: javascript 호출 방식으로 입력한 경우
+- **새로운 페이지 URL 발견 불가**: 새로운 페이지 URL을 발견할 수 없음
+- **사이트 수집량 감소**: 사이트 수집량이 감소할 수 있음
+
+#### 프로토콜 일관성 유지
+
+##### 문제 상황
+
+- **프로토콜 불일치**: 보안 인증서가 적용된 HTTPS 사이트에서 동일 HOST이지만 프로토콜이 다른 리소스 링크 삽입
+- **혼재 상황**: HTTPS와 HTTP가 혼재되어 있는 경우
+
+##### 해결 방법
+
+- **프로토콜 통일**: URL 프로토콜과 동일한 리소스 URL로 변경
+- **HTTPS 권장**: 보안을 위해 HTTPS 프로토콜 사용 권장
+
+##### 예시
+
+```
+A. https://www.your-site.com/
+B. http://www.your-site.com/resource/1 → https://www.your-site.com/resource/1 변경
+```
+
+### AI 작업 체크리스트
+
+#### 리소스 접근성 검증
+
+- [ ] robots.txt에서 필수 리소스 경로 차단 여부 확인
+- [ ] IP 차단으로 인한 리소스 접근 불가 여부 확인
+- [ ] 필수 리소스가 별도 URL 경로에 있는지 확인
+- [ ] 리소스 접근 불가 시 페이지 렌더링 완성도 확인
+
+#### 링크 구조 검증
+
+- [ ] `<a>` 요소의 href 속성이 정상적인 URL인지 확인
+- [ ] 자바스크립트 호출 방식의 href 사용 여부 확인
+- [ ] 프로토콜 일관성 확인 (HTTP/HTTPS 혼재 여부)
+- [ ] 내부 링크의 정상 작동 확인
+
+#### 검색로봇 접근성 검증
+
+- [ ] 네이버 검색로봇 IP 차단 여부 확인
+- [ ] robots.txt 설정이 검색로봇 접근을 방해하지 않는지 확인
+- [ ] 필수 리소스에 대한 접근 권한 확인
+- [ ] 사이트 수집량 감소 여부 모니터링
+
+#### 렌더링 완성도 검증
+
+- [ ] 검색로봇이 페이지를 완전히 렌더링할 수 있는지 확인
+- [ ] 필수 리소스 누락으로 인한 렌더링 실패 여부 확인
+- [ ] 검색결과 노출 품질 확인
+- [ ] 정기적인 렌더링 테스트 수행
+
+### 절대 금지사항
+
+#### 리소스 접근 관련
+
+1. **필수 리소스 차단**: robots.txt에서 필수 리소스 경로 차단
+2. **IP 차단**: 네이버 검색로봇 IP 차단
+3. **접근 불가 리소스**: 검색로봇이 접근할 수 없는 필수 리소스
+4. **불완전한 페이지**: 필수 리소스 누락으로 인한 불완전한 페이지
+
+#### 링크 구조 관련
+
+5. **자바스크립트 href**: `<a>` 요소의 href 속성에 자바스크립트 호출 사용
+6. **프로토콜 혼재**: HTTPS 사이트에서 HTTP 리소스 링크 사용
+7. **비정상적인 링크**: 검색로봇이 인식할 수 없는 비정상적인 링크
+8. **접근 불가 링크**: 검색로봇이 접근할 수 없는 링크
+
+#### 검색로봇 접근 관련
+
+9. **robots.txt 오류**: 검색로봇 접근을 방해하는 robots.txt 설정
+10. **IP 차단**: 검색로봇 IP에 대한 차단 설정
+
+### 검증 방법
+
+#### 리소스 접근성 검증
+
+1. **robots.txt 확인**: 필수 리소스 경로가 차단되지 않았는지 확인
+2. **IP 차단 확인**: 네이버 검색로봇 IP 차단 여부 확인
+3. **리소스 접근 테스트**: 검색로봇 시뮬레이션으로 리소스 접근 테스트
+4. **렌더링 완성도 확인**: 필수 리소스 포함 시 페이지 렌더링 완성도 확인
+
+#### 링크 구조 검증
+
+1. **href 속성 확인**: `<a>` 요소의 href 속성이 정상적인 URL인지 확인
+2. **자바스크립트 호출 확인**: href에 자바스크립트 호출이 포함되지 않았는지 확인
+3. **프로토콜 일관성 확인**: HTTP/HTTPS 혼재 여부 확인
+4. **링크 접근성 확인**: 모든 링크가 정상적으로 접근 가능한지 확인
+
+#### 검색로봇 접근성 검증
+
+1. **User-Agent 확인**: 네이버 검색로봇 User-Agent 확인
+2. **IP 확인**: 네이버 검색로봇 IP 확인
+3. **접근 로그 확인**: 검색로봇 접근 로그 확인
+4. **수집량 모니터링**: 사이트 수집량 변화 모니터링
+
+### 코드 최적화 예시
+
+#### robots.txt 최적화
+
+```txt
+# 필수 리소스 접근 허용
+User-agent: *
+Allow: /
+Allow: /resource/
+Allow: /assets/
+Allow: /js/
+Allow: /css/
+Allow: /images/
+
+# 관리자 페이지 차단
+Disallow: /admin/
+Disallow: /private/
+
+# 사이트맵 위치
+Sitemap: https://example.com/sitemap.xml
+```
+
+#### HTML 링크 최적화
+
+```html
+<!-- 권장하는 링크 구조 -->
+<a href="https://example.com/news/1">뉴스 기사</a>
+<a href="https://example.com/products/car-rental">렌터카 서비스</a>
+<a href="https://example.com/about">회사 소개</a>
+
+<!-- 피해야 할 링크 구조 -->
+<a href="javascript:createLink(1, 'news')">뉴스 기사</a>
+<a href="javascript:void(0)" onclick="goToPage('products')">렌터카 서비스</a>
+<a href="#" onclick="showAbout()">회사 소개</a>
+```
+
+#### Next.js 링크 컴포넌트 최적화
+
+```typescript
+// components/OptimizedLink.tsx
+import Link from "next/link";
+
+interface OptimizedLinkProps {
+  href: string;
+  children: React.ReactNode;
+  className?: string;
+}
+
+export default function OptimizedLink({
+  href,
+  children,
+  className,
+}: OptimizedLinkProps) {
+  // 프로토콜 일관성 확인
+  const normalizedHref = href.startsWith("http")
+    ? href.replace("http://", "https://")
+    : href;
+
+  return (
+    <Link href={normalizedHref} className={className}>
+      {children}
+    </Link>
+  );
+}
+
+// 사용 예시
+export default function Navigation() {
+  return (
+    <nav>
+      <OptimizedLink href="/news/1">뉴스 기사</OptimizedLink>
+      <OptimizedLink href="/products/car-rental">렌터카 서비스</OptimizedLink>
+      <OptimizedLink href="/about">회사 소개</OptimizedLink>
+    </nav>
+  );
+}
+```
+
+#### 리소스 로딩 최적화
+
+```typescript
+// pages/_app.tsx
+import { useEffect } from "react";
+
+export default function App({ Component, pageProps }) {
+  useEffect(() => {
+    // 프로토콜 일관성 확인
+    const currentProtocol = window.location.protocol;
+    const links = document.querySelectorAll('a[href^="http"]');
+
+    links.forEach((link) => {
+      const href = link.getAttribute("href");
+      if (href && href.startsWith("http://") && currentProtocol === "https:") {
+        link.setAttribute("href", href.replace("http://", "https://"));
+      }
+    });
+  }, []);
+
+  return <Component {...pageProps} />;
+}
+```
+
+#### 검색로봇 접근성 검증
+
+```typescript
+// utils/robot-accessibility.ts
+export function checkRobotAccessibility() {
+  const issues = [];
+
+  // robots.txt 확인
+  fetch("/robots.txt")
+    .then((response) => {
+      if (!response.ok) {
+        issues.push("robots.txt 파일에 접근할 수 없습니다.");
+      }
+    })
+    .catch(() => {
+      issues.push("robots.txt 파일이 존재하지 않습니다.");
+    });
+
+  // 필수 리소스 접근 확인
+  const requiredResources = [
+    "/js/main.js",
+    "/css/style.css",
+    "/images/logo.png",
+  ];
+
+  requiredResources.forEach((resource) => {
+    fetch(resource)
+      .then((response) => {
+        if (!response.ok) {
+          issues.push(`${resource}에 접근할 수 없습니다.`);
+        }
+      })
+      .catch(() => {
+        issues.push(`${resource}가 존재하지 않습니다.`);
+      });
+  });
+
+  return issues;
+}
+```
+
+#### 프로토콜 일관성 검증
+
+```typescript
+// utils/protocol-consistency.ts
+export function checkProtocolConsistency() {
+  const issues = [];
+  const currentProtocol = window.location.protocol;
+
+  // 모든 링크 확인
+  const links = document.querySelectorAll('a[href^="http"]');
+
+  links.forEach((link) => {
+    const href = link.getAttribute("href");
+    if (href) {
+      const linkProtocol = href.split("://")[0];
+      if (linkProtocol !== currentProtocol.replace(":", "")) {
+        issues.push(`프로토콜 불일치: ${href}`);
+      }
+    }
+  });
+
+  // 이미지 리소스 확인
+  const images = document.querySelectorAll('img[src^="http"]');
+
+  images.forEach((img) => {
+    const src = img.getAttribute("src");
+    if (src) {
+      const imageProtocol = src.split("://")[0];
+      if (imageProtocol !== currentProtocol.replace(":", "")) {
+        issues.push(`이미지 프로토콜 불일치: ${src}`);
+      }
+    }
+  });
+
+  return issues;
+}
+```
+
+이 리소스와 링크 관리 가이드를 모든 웹사이트 운영에 체계적으로 적용하여 네이버 검색 최적화를 완성할 것.
+
+---
+
+## 🏗️ **구조화된 데이터 마크업**
+
+### 📋 **섹션 개요**
+
+> Schema.org 기반 구조화된 데이터 마크업을 통한 검색 최적화 방법을 다룹니다.
+
+| 규칙   | 제목                    | 상태 | 중요도  |
+| ------ | ----------------------- | ---- | ------- |
+| rule1  | 구조화된 데이터 소개    | ✅   | 🔴 높음 |
+| rule2  | 사이트 연관채널         | ✅   | 🔴 높음 |
+| rule3  | 채용정보                | ✅   | 🟡 중간 |
+| rule4  | 주소 (Address)          | ✅   | 🟡 중간 |
+| rule5  | 브레드크럼 (Breadcrumb) | ✅   | 🟡 중간 |
+| rule6  | FAQ                     | ✅   | 🟡 중간 |
+| rule7  | How-to                  | ✅   | 🟡 중간 |
+| rule8  | 캐러셀 (Carousel)       | ✅   | 🟡 중간 |
+| rule9  | 평점 (Rating)           | ✅   | 🟡 중간 |
+| rule10 | 레시피 (Recipe)         | ✅   | 🟡 중간 |
+| rule11 | 리뷰 (Review)           | ✅   | 🟡 중간 |
+| rule12 | 레스토랑 (Restaurant)   | ✅   | 🟡 중간 |
+| rule13 | TV 시리즈 (TV Series)   | ✅   | 🟡 중간 |
+| rule14 | 영화 (Movie)            | ✅   | 🟡 중간 |
+| rule15 | 소프트웨어 (Software)   | ✅   | 🟡 중간 |
+
+---
+
+### 📌 **rule1 구조화된 데이터 소개**
+
+> 출처: [네이버 검색 어드바이저 구조화된 데이터 소개 가이드](https://searchadvisor.naver.com/guide/structured-data-intro)
+
+### 네이버 검색과 구조화된 데이터
+
+#### 구조화된 데이터의 정의
+
+- **논리적 조직화**: 다양한 정보를 담고 있는 콘텐츠를 논리적으로 조직화하여 가공된 데이터
+- **관계형 데이터베이스**: 대표적인 구조화된 데이터의 예시
+- **검색엔진 해석**: 웹 문서의 콘텐츠가 조직화된 구조로 이루어져 있다면 해석에 큰 도움
+
+#### 웹 표준으로서의 발전
+
+- **schema.org**: 인터넷 커뮤니티 및 관련 업체의 노력으로 기초 작업 진행
+- **W3C 표준**: 2015년 웹 표준 기구인 W3C 내에서 공식적으로 편입
+- **활발한 표준화**: 현재까지 활발하게 표준화 활동 진행
+
+#### 네이버의 활용
+
+- **콘텐츠 특성 반영**: 구조화된 데이터를 활용해 콘텐츠 특성에 맞는 검색 결과 구성
+- **자동 수집**: 네이버 검색로봇이 구조화된 데이터를 자동 수집
+- **검색 반영**: 콘텐츠 특성에 맞게 정보를 구성하고 검색 반영에 활용
+
+> ⚠️ **중요**: 구조화된 데이터를 정상적으로 마크업했을 경우라도 검색결과에 반영된다고 보장하지 않습니다. 페이지 내 콘텐츠에 따라 가장 적합하다고 판단되는 것에 의해 다른 정보가 노출될 수 있습니다.
+
+### schema.org 구조
+
+#### 데이터 타입과 속성
+
+##### 데이터 타입 (Type)
+
+- **정의**: 웹 페이지나 콘텐츠의 특성에 따른 속성의 조합
+- **조합 가능**: 하나의 웹 페이지에는 2개 이상의 데이터 타입을 조합하여 구조화된 데이터 추가 가능
+- **확인 방법**: schema.org vocabulary에서 데이터 타입 목록 확인
+
+##### 속성 (Property)
+
+- **정의**: 웹 페이지 또는 콘텐츠의 세부 정보
+- **구성 요소**: 데이터 타입을 구성하는 요소
+- **예시**: 오디오 콘텐츠의 경우 재생 시간, 재생 횟수 등이 속성에 해당
+
+#### 언어 형식 선택
+
+##### 지원 형식
+
+- **Microdata**: HTML5 마이크로데이터 형식
+- **RDFa**: Resource Description Framework in Attributes
+- **JSON-LD**: JavaScript Object Notation for Linked Data
+
+##### 네이버 권장 형식
+
+- **Microdata**: 널리 사용하는 형식
+- **JSON-LD**: 구조화된 데이터 작성에 적합한 형식
+
+##### JSON-LD 예시
+
+```json
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "AudioObject",
+  "contentUrl": "http://media.freesound.org/data/0/previews/719__elmomo__12oclock_girona_preview.mp3",
+  "description": "Recorded on a terrace of Girona a sunday morning",
+  "duration": "T0M15S",
+  "encodingFormat": "mp3",
+  "name": "12oclock_girona.mp3"
+}
+</script>
+```
+
+### 공개된 테스트 도구
+
+#### 검증의 중요성
+
+- **정확성 확인**: 구조화된 데이터가 올바로 적용되었는지 확인
+- **오류 수정**: 검증을 통해 오류를 발견하고 수정
+- **품질 보장**: 검색 결과 품질 향상을 위한 필수 과정
+
+#### 권장 테스트 도구
+
+- **schema.org 테스팅 도구**: 구조화된 데이터 검증을 위한 공식 도구
+- **Google Rich Results Test**: Google에서 제공하는 구조화된 데이터 테스트 도구
+- **네이버 웹마스터도구**: 네이버에서 제공하는 검증 도구
+
+### AI 작업 체크리스트
+
+#### 구조화된 데이터 계획
+
+- [ ] 콘텐츠 유형에 맞는 데이터 타입 선택
+- [ ] 필요한 속성 목록 작성
+- [ ] 언어 형식 선택 (Microdata 또는 JSON-LD)
+- [ ] 구현 계획 수립
+
+#### 구조화된 데이터 구현
+
+- [ ] 선택한 데이터 타입에 맞는 마크업 구현
+- [ ] 필수 속성 포함 확인
+- [ ] 선택적 속성 추가 검토
+- [ ] JSON-LD 형식 사용 시 올바른 문법 확인
+
+#### 검증 및 테스트
+
+- [ ] schema.org 테스팅 도구로 검증
+- [ ] Google Rich Results Test로 검증
+- [ ] 네이버 웹마스터도구로 검증
+- [ ] 오류 발생 시 수정 후 재검증
+
+#### 모니터링 및 최적화
+
+- [ ] 검색 결과에서 구조화된 데이터 반영 확인
+- [ ] 사용자 피드백 수집
+- [ ] 정기적인 검증 수행
+- [ ] 필요시 구조화된 데이터 업데이트
+
+### 절대 금지사항
+
+#### 마크업 관련
+
+1. **잘못된 데이터 타입**: 콘텐츠와 맞지 않는 데이터 타입 사용
+2. **필수 속성 누락**: 데이터 타입에 필요한 필수 속성 누락
+3. **잘못된 속성 값**: 속성에 잘못된 값 입력
+4. **중복 마크업**: 동일한 콘텐츠에 중복된 구조화된 데이터 마크업
+
+#### 검증 관련
+
+5. **검증 생략**: 구조화된 데이터 검증 과정 생략
+6. **오류 무시**: 검증 도구에서 발견된 오류 무시
+7. **테스트 도구 미사용**: 공식 테스트 도구 사용하지 않음
+8. **정기 검증 생략**: 정기적인 구조화된 데이터 검증 생략
+
+#### 품질 관련
+
+9. **부정확한 정보**: 실제 콘텐츠와 다른 정보 마크업
+10. **과도한 마크업**: 필요 이상의 과도한 구조화된 데이터 마크업
+
+### 검증 방법
+
+#### schema.org 테스팅 도구
+
+1. **URL 입력**: 검증할 웹페이지 URL 입력
+2. **마크업 확인**: 구조화된 데이터 마크업 확인
+3. **오류 검출**: 마크업 오류 검출
+4. **수정 제안**: 오류 수정 방법 제안
+
+#### Google Rich Results Test
+
+1. **URL 또는 코드 입력**: 웹페이지 URL 또는 HTML 코드 입력
+2. **구조화된 데이터 확인**: 구조화된 데이터 마크업 확인
+3. **Rich Results 미리보기**: 검색 결과에서의 모습 미리보기
+4. **오류 및 경고 확인**: 발견된 오류 및 경고 확인
+
+#### 네이버 웹마스터도구
+
+1. **사이트 등록**: 네이버 웹마스터도구에 사이트 등록
+2. **구조화된 데이터 확인**: 등록된 사이트의 구조화된 데이터 확인
+3. **검색 반영 확인**: 검색 결과에서의 반영 상태 확인
+4. **정기 모니터링**: 정기적인 구조화된 데이터 상태 모니터링
+
+### 코드 최적화 예시
+
+#### JSON-LD 구조화된 데이터 예시
+
+```html
+<!-- 제품 정보 구조화된 데이터 -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "공항렌트24 렌터카 서비스",
+    "description": "인천공항 렌터카 예약 서비스",
+    "brand": {
+      "@type": "Brand",
+      "name": "공항렌트24"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "50000",
+      "priceCurrency": "KRW",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+</script>
+```
+
+#### Microdata 구조화된 데이터 예시
+
+```html
+<!-- 조직 정보 구조화된 데이터 -->
+<div itemscope itemtype="https://schema.org/Organization">
+  <h1 itemprop="name">공항렌트24</h1>
+  <p itemprop="description">인천공항 렌터카 서비스</p>
+  <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+    <span itemprop="streetAddress">인천공항로 272</span>
+    <span itemprop="addressLocality">인천</span>
+    <span itemprop="postalCode">22001</span>
+  </div>
+  <span itemprop="telephone">+82-32-123-4567</span>
+</div>
+```
+
+#### Next.js에서 구조화된 데이터 구현
+
+```typescript
+// components/StructuredData.tsx
+import Head from "next/head";
+
+interface StructuredDataProps {
+  data: any;
+}
+
+export default function StructuredData({ data }: StructuredDataProps) {
+  return (
+    <Head>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(data),
+        }}
+      />
+    </Head>
+  );
+}
+
+// 사용 예시
+const productData = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name: "공항렌트24 렌터카 서비스",
+  description: "인천공항 렌터카 예약 서비스",
+};
+
+export default function ProductPage() {
+  return (
+    <div>
+      <StructuredData data={productData} />
+      <h1>공항렌트24 렌터카 서비스</h1>
+      {/* 페이지 콘텐츠 */}
+    </div>
+  );
+}
+```
+
+#### 구조화된 데이터 검증 함수
+
+```typescript
+// utils/structured-data-validation.ts
+export function validateStructuredData(html: string) {
+  const issues = [];
+
+  // JSON-LD 검증
+  const jsonLdMatches = html.match(
+    /<script[^>]*type="application\/ld\+json"[^>]*>(.*?)<\/script>/gis
+  );
+  if (jsonLdMatches) {
+    jsonLdMatches.forEach((match, index) => {
+      try {
+        const jsonContent = match
+          .replace(/<script[^>]*>/, "")
+          .replace(/<\/script>/, "");
+        const parsed = JSON.parse(jsonContent);
+
+        // 필수 필드 확인
+        if (!parsed["@context"]) {
+          issues.push(`JSON-LD ${index + 1}: @context 필드 누락`);
+        }
+        if (!parsed["@type"]) {
+          issues.push(`JSON-LD ${index + 1}: @type 필드 누락`);
+        }
+      } catch (error) {
+        issues.push(`JSON-LD ${index + 1}: JSON 파싱 오류`);
+      }
+    });
+  }
+
+  // Microdata 검증
+  const microdataMatches = html.match(/itemtype="([^"]+)"/gi);
+  if (microdataMatches) {
+    microdataMatches.forEach((match, index) => {
+      const itemtype = match.match(/itemtype="([^"]+)"/i)?.[1];
+      if (!itemtype?.startsWith("https://schema.org/")) {
+        issues.push(`Microdata ${index + 1}: 잘못된 itemtype - ${itemtype}`);
+      }
+    });
+  }
+
+  return issues;
+}
+```
+
+이 구조화된 데이터 소개 가이드를 모든 웹사이트 개발에 체계적으로 적용하여 네이버 검색 최적화를 완성할 것.
+
+---
+
+## rule2 사이트 연관채널
+
+> 출처: [네이버 검색 어드바이저 사이트 연관채널 가이드](https://searchadvisor.naver.com/guide/structured-data-channel)
+
+### 사이트 연관 채널 개요
+
+#### 연관 채널의 정의
+
+- **사이트 연관성**: 사이트와 관련된 네이버 내의 서비스 및 SNS 채널을 구조화된 데이터로 적용
+- **신뢰도 기반**: 채널 정보는 사이트의 신뢰도에 따라서 PC 및 모바일 검색 결과에 노출
+- **자동화된 알고리즘**: 검색로봇의 수집을 기준으로 사이트-채널과의 연계성을 자동화된 알고리즘으로 찾음
+
+#### 연관 채널 수집 방식
+
+##### 자동 수집
+
+- **검색로봇 수집**: 검색로봇이 수집한 정보를 토대로 사이트와 관련된 채널의 정보를 자동으로 추출
+- **클러스터링**: 추출된 정보를 클러스터링하여 연관성 분석
+
+##### 구조화된 데이터 제출
+
+- **마크업 제출**: 사이트의 루트 페이지에 구조화 데이터를 통해서 마크업 상으로 채널 제출
+- **수동 제출**: 개발자가 직접 연관 채널 정보를 구조화된 데이터로 마크업
+
+#### 노출 기준
+
+##### 필수 조건
+
+- **고유한 사이트명**: 사이트명이 중의성이 없이 고유해야 함
+- **높은 신뢰도**: 정부기관 등 공공 정보로 누구에게나 정답으로 제공할 수 있는 신뢰도가 높은 사이트
+- **사용자 선호도**: 사용자 선호도가 높은 사이트
+
+##### 노출 제한
+
+- **선별적 노출**: 검색결과에 노출되는 모든 사이트에 연관채널이 부착되지는 않음
+- **알고리즘 판단**: 위의 기준을 통해서 노출 여부 결정
+
+### 지원하는 연관채널 도메인
+
+#### 네이버 서비스
+
+- **블로그**: blog.naver.com
+- **지식iN**: kin.naver.com
+- **스마트스토어**: smartstore.naver.com
+- **네이버TV**: tv.naver.com
+- **치지직**: chzzk.naver.com
+
+#### 웹 채널
+
+- **유튜브**: youtube.com
+- **페이스북**: facebook.com
+- **X(트위터)**: x.com, twitter.com
+- **인스타그램**: instagram.com
+- **카카오스토리**: story.kakao.com
+- **티스토리**: tistory.com
+
+> ⚠️ **참고**: 지원 채널은 제공사의 사정에 따라 변경될 수 있습니다.
+
+### 사이트 연관 채널 마크업
+
+#### 타입 및 속성
+
+##### 사용 타입
+
+- **Person**: 개인 또는 개인 브랜드 사이트
+- **Organization**: 기업 또는 조직 사이트
+
+##### 필수 속성
+
+| 속성   | 필수여부 | 설명                          |
+| ------ | -------- | ----------------------------- |
+| name   | 필수     | 사이트 이름                   |
+| url    | 필수     | 사이트 URL                    |
+| sameAs | 필수     | 사이트와 연관된 채널 URL 목록 |
+
+#### JSON-LD 형식 예제
+
+```json
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "name": "My Site Name",
+  "url": "http://www.mysite.com",
+  "sameAs": [
+    "https://www.facebook.com/myfacebook",
+    "http://blog.naver.com/myblog",
+    "http://smartstore.naver.com/mystore"
+  ]
+}
+</script>
+```
+
+#### Microdata 형식 예제
+
+```html
+<span itemscope="" itemtype="http://schema.org/Organization">
+  <link itemprop="url" href="http://www.mysite.com" />
+  <a itemprop="sameAs" href="https://www.facebook.com/myfacebook"></a>
+  <a itemprop="sameAs" href="http://blog.naver.com/myblog"></a>
+  <a itemprop="sameAs" href="http://smartstore.naver.com/mystore"></a>
+</span>
+```
+
+### AI 작업 체크리스트
+
+#### 연관 채널 계획
+
+- [ ] 사이트 유형에 맞는 타입 선택 (Person 또는 Organization)
+- [ ] 연관 채널 목록 작성
+- [ ] 지원되는 채널 도메인 확인
+- [ ] 채널 URL의 유효성 확인
+
+#### 구조화된 데이터 구현
+
+- [ ] 필수 속성 (name, url, sameAs) 포함 확인
+- [ ] JSON-LD 또는 Microdata 형식 선택
+- [ ] 올바른 문법으로 마크업 구현
+- [ ] 루트 페이지에 마크업 배치
+
+#### 검증 및 테스트
+
+- [ ] schema.org 테스팅 도구로 검증
+- [ ] 네이버 웹마스터도구에서 연관채널 확인
+- [ ] 검색 결과에서 연관채널 노출 확인
+- [ ] 채널 URL 접근 가능성 확인
+
+#### 모니터링 및 최적화
+
+- [ ] 연관채널 노출 상태 모니터링
+- [ ] 새로운 채널 추가 시 마크업 업데이트
+- [ ] 채널 URL 변경 시 마크업 수정
+- [ ] 정기적인 연관채널 상태 점검
+
+### 절대 금지사항
+
+#### 마크업 관련
+
+1. **필수 속성 누락**: name, url, sameAs 속성 중 하나라도 누락
+2. **잘못된 타입**: 사이트 유형과 맞지 않는 Person/Organization 타입 사용
+3. **잘못된 URL**: 유효하지 않은 채널 URL 입력
+4. **중복 마크업**: 동일한 연관채널 정보의 중복 마크업
+
+#### 채널 관련
+
+5. **지원되지 않는 채널**: 네이버에서 지원하지 않는 채널 URL 사용
+6. **접근 불가 채널**: 접근할 수 없는 채널 URL 사용
+7. **부정확한 연관성**: 사이트와 실제로 연관되지 않는 채널 마크업
+8. **과도한 채널**: 필요 이상의 과도한 채널 URL 마크업
+
+#### 검증 관련
+
+9. **검증 생략**: 연관채널 마크업 검증 과정 생략
+10. **정기 점검 생략**: 연관채널 상태의 정기적인 점검 생략
+
+### 검증 방법
+
+#### schema.org 테스팅 도구
+
+1. **URL 입력**: 연관채널 마크업이 포함된 웹페이지 URL 입력
+2. **마크업 확인**: Person 또는 Organization 타입 마크업 확인
+3. **속성 검증**: name, url, sameAs 속성의 정확성 확인
+4. **오류 수정**: 발견된 오류 수정 후 재검증
+
+#### 네이버 웹마스터도구
+
+1. **사이트 등록**: 네이버 웹마스터도구에 사이트 등록
+2. **연관채널 확인**: 등록된 사이트의 연관채널 상태 확인
+3. **노출 상태 확인**: 검색 결과에서의 연관채널 노출 상태 확인
+4. **정기 모니터링**: 연관채널 상태의 정기적인 모니터링
+
+#### 수동 검증
+
+1. **채널 URL 접근**: 마크업된 모든 채널 URL 접근 가능성 확인
+2. **연관성 확인**: 사이트와 채널 간의 실제 연관성 확인
+3. **노출 확인**: 검색 결과에서 연관채널 노출 여부 확인
+4. **사용자 피드백**: 사용자로부터 연관채널 관련 피드백 수집
+
+### 코드 최적화 예시
+
+#### Next.js에서 연관채널 마크업 구현
+
+```typescript
+// components/SiteChannelMarkup.tsx
+import Head from "next/head";
+
+interface ChannelMarkupProps {
+  siteName: string;
+  siteUrl: string;
+  channels: string[];
+  type: "Person" | "Organization";
+}
+
+export default function SiteChannelMarkup({
+  siteName,
+  siteUrl,
+  channels,
+  type,
+}: ChannelMarkupProps) {
+  const structuredData = {
+    "@context": "http://schema.org",
+    "@type": type,
+    name: siteName,
+    url: siteUrl,
+    sameAs: channels,
+  };
+
+  return (
+    <Head>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData),
+        }}
+      />
+    </Head>
+  );
+}
+
+// 사용 예시
+export default function HomePage() {
+  const channels = [
+    "https://www.facebook.com/airportrent24",
+    "http://blog.naver.com/airportrent24",
+    "http://smartstore.naver.com/airportrent24",
+    "https://www.instagram.com/airportrent24",
+  ];
+
+  return (
+    <div>
+      <SiteChannelMarkup
+        siteName="공항렌트24"
+        siteUrl="https://airportrent24.kr"
+        channels={channels}
+        type="Organization"
+      />
+      <h1>공항렌트24</h1>
+      {/* 페이지 콘텐츠 */}
+    </div>
+  );
+}
+```
+
+#### React 컴포넌트로 Microdata 구현
+
+```jsx
+// components/SiteChannelMicrodata.jsx
+export default function SiteChannelMicrodata({
+  siteName,
+  siteUrl,
+  channels,
+  type
+}) {
+  return (
+    <span itemScope itemtype={`http://schema.org/${type}`}>
+      <meta itemProp="name" content={siteName} />
+      <link itemProp="url" href={siteUrl} />
+      {channels.map((channel, index) => (
+        <a key={index} itemProp="sameAs" href={channel}></a>
+      ))}
+    </span>
+  )
+}
+
+// 사용 예시
+export default function HomePage() {
+  const channels = [
+    "https://www.facebook.com/airportrent24",
+    "http://blog.naver.com/airportrent24",
+    "http://smartstore.naver.com/airportrent24"
+  ]
+
+  return (
+    <div>
+      <SiteChannelMicrodata
+        siteName="공항렌트24"
+        siteUrl="https://airportrent24.kr"
+        channels={channels}
+        type="Organization"
+      />
+      <h1>공항렌트24</h1>
+      {/* 페이지 콘텐츠 */}
+    </div>
+  )
+}
+```
+
+#### 연관채널 검증 함수
+
+```typescript
+// utils/channel-validation.ts
+export function validateSiteChannels(html: string) {
+  const issues = [];
+
+  // JSON-LD 검증
+  const jsonLdMatches = html.match(
+    /<script[^>]*type="application\/ld\+json"[^>]*>(.*?)<\/script>/gis
+  );
+  if (jsonLdMatches) {
+    jsonLdMatches.forEach((match, index) => {
+      try {
+        const jsonContent = match
+          .replace(/<script[^>]*>/, "")
+          .replace(/<\/script>/, "");
+        const parsed = JSON.parse(jsonContent);
+
+        // Person 또는 Organization 타입 확인
+        if (
+          parsed["@type"] === "Person" ||
+          parsed["@type"] === "Organization"
+        ) {
+          // 필수 속성 확인
+          if (!parsed.name) {
+            issues.push(`JSON-LD ${index + 1}: name 속성 누락`);
+          }
+          if (!parsed.url) {
+            issues.push(`JSON-LD ${index + 1}: url 속성 누락`);
+          }
+          if (!parsed.sameAs || !Array.isArray(parsed.sameAs)) {
+            issues.push(
+              `JSON-LD ${index + 1}: sameAs 속성 누락 또는 배열이 아님`
+            );
+          } else {
+            // 채널 URL 유효성 확인
+            parsed.sameAs.forEach((channel: string, channelIndex: number) => {
+              if (!isValidChannelUrl(channel)) {
+                issues.push(
+                  `JSON-LD ${index + 1}: 채널 ${
+                    channelIndex + 1
+                  } - 유효하지 않은 URL: ${channel}`
+                );
+              }
+            });
+          }
+        }
+      } catch (error) {
+        issues.push(`JSON-LD ${index + 1}: JSON 파싱 오류`);
+      }
+    });
+  }
+
+  return issues;
+}
+
+function isValidChannelUrl(url: string): boolean {
+  const supportedDomains = [
+    "blog.naver.com",
+    "kin.naver.com",
+    "smartstore.naver.com",
+    "tv.naver.com",
+    "chzzk.naver.com",
+    "youtube.com",
+    "facebook.com",
+    "x.com",
+    "twitter.com",
+    "instagram.com",
+    "story.kakao.com",
+    "tistory.com",
+  ];
+
+  try {
+    const urlObj = new URL(url);
+    return supportedDomains.some((domain) => urlObj.hostname.includes(domain));
+  } catch {
+    return false;
+  }
+}
+```
+
+#### 연관채널 관리 컴포넌트
+
+```typescript
+// components/ChannelManager.tsx
+import { useState, useEffect } from "react";
+
+interface Channel {
+  id: string;
+  name: string;
+  url: string;
+  type: "naver" | "web";
+  active: boolean;
+}
+
+export default function ChannelManager() {
+  const [channels, setChannels] = useState<Channel[]>([]);
+  const [siteName, setSiteName] = useState("");
+  const [siteUrl, setSiteUrl] = useState("");
+  const [siteType, setSiteType] = useState<"Person" | "Organization">(
+    "Organization"
+  );
+
+  const addChannel = (channel: Omit<Channel, "id">) => {
+    const newChannel = { ...channel, id: Date.now().toString() };
+    setChannels([...channels, newChannel]);
+  };
+
+  const removeChannel = (id: string) => {
+    setChannels(channels.filter((channel) => channel.id !== id));
+  };
+
+  const generateMarkup = () => {
+    const activeChannels = channels.filter((channel) => channel.active);
+    const channelUrls = activeChannels.map((channel) => channel.url);
+
+    return {
+      "@context": "http://schema.org",
+      "@type": siteType,
+      name: siteName,
+      url: siteUrl,
+      sameAs: channelUrls,
+    };
+  };
+
+  return (
+    <div className="channel-manager">
+      <h2>연관채널 관리</h2>
+
+      <div className="site-info">
+        <input
+          type="text"
+          placeholder="사이트 이름"
+          value={siteName}
+          onChange={(e) => setSiteName(e.target.value)}
+        />
+        <input
+          type="url"
+          placeholder="사이트 URL"
+          value={siteUrl}
+          onChange={(e) => setSiteUrl(e.target.value)}
+        />
+        <select
+          value={siteType}
+          onChange={(e) =>
+            setSiteType(e.target.value as "Person" | "Organization")
+          }
+        >
+          <option value="Organization">Organization</option>
+          <option value="Person">Person</option>
+        </select>
+      </div>
+
+      <div className="channels">
+        <h3>연관채널 목록</h3>
+        {channels.map((channel) => (
+          <div key={channel.id} className="channel-item">
+            <input
+              type="checkbox"
+              checked={channel.active}
+              onChange={(e) => {
+                setChannels(
+                  channels.map((c) =>
+                    c.id === channel.id ? { ...c, active: e.target.checked } : c
+                  )
+                );
+              }}
+            />
+            <span>{channel.name}</span>
+            <span>{channel.url}</span>
+            <button onClick={() => removeChannel(channel.id)}>삭제</button>
+          </div>
+        ))}
+      </div>
+
+      <div className="markup-output">
+        <h3>생성된 마크업</h3>
+        <pre>{JSON.stringify(generateMarkup(), null, 2)}</pre>
+      </div>
+    </div>
+  );
+}
+```
+
+이 사이트 연관채널 가이드를 모든 웹사이트 개발에 체계적으로 적용하여 네이버 검색 최적화를 완성할 것.
+
+---
+
+## rule3 채용정보
+
+> 출처: [네이버 검색 어드바이저 채용정보 가이드](https://searchadvisor.naver.com/guide/structured-data-job)
+
+### 채용정보 검색 소개
+
+#### 네이버 채용정보 서비스
+
+- **구직자 지원**: 구직자들이 검색을 통해 쉽게 채용공고를 찾아볼 수 있도록 지원
+- **정보 수집**: 국내외 사이트로부터 관련정보를 모아 제공
+- **제휴 환영**: 채용정보 목록을 보유한 업체의 제휴 요청을 환영
+
+#### 제휴 프로세스
+
+##### 1단계: 제휴제안 신청
+
+- **제휴 희망 사이트**: 네이버
+- **제휴 구분**: 콘텐츠 및 서비스
+- **신청 방법**: 네이버 제휴제안 작성을 통해 신청
+- **협의 과정**: 사용자들에게 지속적이며 안정적으로 채용정보를 제공하고 있는 사이트의 제휴제안 건에 대해서 담당자를 통한 상세한 협의
+
+##### 2단계: 구조화된 데이터 마크업
+
+- **마크업 형태**: JSON-LD 형태의 구조화된 데이터
+- **구조화된 데이터**: 채용정보를 담고 있는 웹페이지에 구조화된 데이터로 마크업 작성
+- **명세서 확인**: 채용 검색을 위한 JSON-LD 형태의 구조화 데이터 명세서 확인
+
+##### 3단계: 수집요청 API 연동
+
+- **API 필요성**: 정확한 데이터 반영을 위해 수집요청 API 필요
+- **제휴 조건**: 협의가 완료되어 제휴가 체결된 사이트 및 사용자에 한하여 수집요청 API 연동 가능
+- **사전 조건**: 서치어드바이저에 사이트 소유확인을 먼저 진행해야 함
+- **연동 가이드**: 수집요청 API 명세 및 연동 가이드를 참고하여 채용정보가 담겨 있는 웹페이지의 수집요청 API 연동 시작
+
+##### 4단계: 검색 로봇 수집 허용
+
+- **robots.txt 설정**: robots.txt 설정하기 가이드를 참고하여 사이트의 robots.txt에 채용정보 웹페이지에 대하여 수집을 허용
+- **중복 노출**: 채용정보는 네이버 웹 검색 영역 및 통합검색의 채용정보(제공 예정) 영역에 중복되어 노출될 수 있음
+- **개인정보보호**: 개인 정보보호 등의 사유로 웹 검색에 채용정보를 노출하고 싶지 않다면 해당 웹페이지의 로봇 메타 태그에 noindex 설정
+- **협의 조정**: 통합검색 내의 채용정보 영역은 제휴 기반으로 노출되는 영역이므로, 로봇 메타 태그의 noindex 준수 여부는 협의에 따라 조정될 수 있음
+
+### JSON-LD 형태의 구조화 데이터 명세서
+
+#### 기본 구조
+
+```json
+{
+  "@context": "http://schema.org",
+  "@type": "JobPosting",
+  "title": "채용제목",
+  "datePosted": "YYYY-MM-DD",
+  "validThrough": "YYYY-MM-DD",
+  "employmentType": "채용형태로 별도 정의된 값 사용",
+  "experienceRequirements": "채용기준으로 별도 정의된 값 사용",
+  "jobLocation": [
+    {
+      "@type": "Place",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "나머지 주소",
+        "postalCode": "우편번호",
+        "addressLocality": "구(서울, 지방 광역시), 시,군(기타 지역) 정보",
+        "addressRegion": "도 정보(or 서울특별시, 지방 광역시)",
+        "addressCountry": "대한민국"
+      }
+    }
+  ],
+  "jobLocationType": "TELECOMMUTE",
+  "description": "업무설명으로 권장하는 데이터 형식을 사용",
+  "baseSalary": {
+    "@type": "MonetaryAmount",
+    "currency": "KRW",
+    "value": {
+      "@type": "QuantitativeValue",
+      "minValue": 1,
+      "maxValue": 2,
+      "value": 10000,
+      "unitText": "급여종류이며 별도 정의된 값으로 사용"
+    }
+  },
+  "workHours": "근무시간으로 별도 정의된 값 사용",
+  "educationRequirements": "학력으로 별도 정의된 값 사용",
+  "qualifications": "자격증 혹은 필수경력으로 별도 정의된 값 사용",
+  "hiringOrganization": {
+    "@type": "Organization",
+    "name": "회사이름",
+    "sameAs": "회사 홈페이지 URL",
+    "logo": "회사 로고 URL",
+    "description": "회사소개",
+    "hiringtype": "headhunting"
+  },
+  "identifier": {
+    "@type": "PropertyValue",
+    "propertyID": "Company Number",
+    "value": "사업자 번호"
+  }
+}
+```
+
+#### 날짜 속성 (datePosted, validThrough)
+
+##### 지원 형식
+
+- **권장 형식**: `yyyy-MM-dd` (ISO_LOCAL_DATE)
+- **기본 형식**: `yyyyMMdd` (BASIC_ISO_DATE)
+- **시간 포함**: `yyyy-MM-dd'T'HH:mm:ss` (ISO_LOCAL_DATE_TIME)
+- **시차 포함**: `yyyy-MM-dd'T'HH:mm:ss+HH:mm` (ISO_OFFSET_DATE_TIME)
+
+##### 사용 예시
+
+```json
+"datePosted": "2020-09-01",
+"validThrough": "2020-09-30"
+```
+
+##### 특별한 경우
+
+- **상시모집**: validThrough 값을 표기하지 않음
+- **채용시마감**: validThrough 값을 표기하지 않음
+- **null**: validThrough 값을 표기하지 않음
+
+#### employmentType 속성
+
+##### 한글명 (권장)
+
+- **정규직**: 정규직
+- **계약직**: 계약직
+- **아르바이트**: 아르바이트
+- **프리랜서**: 프리랜서
+- **인턴**: 인턴
+- **기타**: 기타
+
+##### 영문명
+
+- **FULL_TIME**: 정규직
+- **CONTRACTOR**: 계약직
+- **PART_TIME**: 아르바이트
+- **FREE_LANCER**: 프리랜서
+- **INTERN**: 인턴
+- **OTHER**: 기타
+
+##### 다중 선택 가능
+
+```json
+"employmentType": ["정규직", "인턴"]
+```
+
+#### jobLocationType 속성
+
+##### 재택근무 표기
+
+- **재택근무인 경우에만**: `"jobLocationType": "TELECOMMUTE"`
+
+#### hiringOrganization 속성
+
+##### 서치펌(헤드헌팅) 공고
+
+```json
+"hiringOrganization": {
+  "hiringtype": "headhunting"
+}
+```
+
+### 마크업 예제
+
+#### 최소 사항
+
+채용정보와 관련된 최소한의 정보에 대한 예제입니다. 아래 속성값이 누락되는 경우 검색에 노출되지 않을 수 있습니다.
+
+```json
+{
+  "@context": "http://schema.org",
+  "@type": "JobPosting",
+  "title": "네이버 검색 채용",
+  "datePosted": "2020-08-31",
+  "validThrough": "2020-09-30",
+  "employmentType": ["정규직", "인턴"],
+  "experienceRequirements": ["경력", "신입"],
+  "jobLocation": [
+    {
+      "@type": "Place",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "분당구 불정로 6",
+        "postalCode": "13561",
+        "addressLocality": "성남시",
+        "addressRegion": "경기도",
+        "addressCountry": "대한민국"
+      }
+    }
+  ],
+  "description": "네이버에서 경력사원을 모집합니다. \n 직종:개발자 \n 근무일수:주5일",
+  "hiringOrganization": {
+    "@type": "Organization",
+    "name": "네이버",
+    "sameAs": "navercorp.com"
+  },
+  "identifier": {
+    "@type": "PropertyValue",
+    "propertyID": "Company Number",
+    "value": "220-81-62517"
+  }
+}
+```
+
+#### 권장사항 - 급여, 근무시간 추가
+
+채용 검색을 위하여 네이버가 권장하는 마크업 정보로서 최소 사항에서 급여와 근무시간을 추가하는 것을 권장합니다.
+
+```json
+{
+  "@context": "http://schema.org",
+  "@type": "JobPosting",
+  "title": "네이버 검색 자연어 태깅 아르바이트 채용",
+  "datePosted": "2020-08-31",
+  "validThrough": "2020-09-30",
+  "employmentType": "아르바이트",
+  "experienceRequirements": "무관",
+  "jobLocation": [
+    {
+      "@type": "Place",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "분당구 불정로 6",
+        "postalCode": "13561",
+        "addressLocality": "성남시",
+        "addressRegion": "경기도",
+        "addressCountry": "대한민국"
+      }
+    }
+  ],
+  "description": "네이버에서 경력사원을 모집합니다. \n 직종:개발자 \n 근무일수:주5일",
+  "baseSalary": {
+    "@type": "MonetaryAmount",
+    "currency": "KRW",
+    "value": {
+      "@type": "QuantitativeValue",
+      "value": 8000,
+      "unitText": "HOUR"
+    }
+  },
+  "hiringOrganization": {
+    "@type": "Organization",
+    "name": "네이버",
+    "sameAs": "navercorp.com",
+    "logo": "https://logoproject.naver.com/img/img_story_renewal.png",
+    "description": "회사소개"
+  },
+  "identifier": {
+    "@type": "PropertyValue",
+    "propertyID": "Company Number",
+    "value": "220-81-62517"
+  }
+}
+```
+
+#### 모든 정보 제공
+
+아래와 같이 모든 정보를 제공하는 경우 네이버 검색에 가장 효과적으로 노출될 수 있습니다.
+
+```json
+{
+  "@context": "http://schema.org",
+  "@type": "JobPosting",
+  "title": "네이버 검색 자연어 태깅 아르바이트 채용",
+  "datePosted": "2020-08-31",
+  "validThrough": "2020-09-30",
+  "employmentType": "아르바이트",
+  "experienceRequirements": "무관",
+  "jobLocation": [
+    {
+      "@type": "Place",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "분당구 불정로 6",
+        "postalCode": "13561",
+        "addressLocality": "성남시",
+        "addressRegion": "경기도",
+        "addressCountry": "대한민국"
+      }
+    }
+  ],
+  "jobLocationType": "TELECOMMUTE",
+  "description": "네이버에서 경력사원을 모집합니다. \n 직종:개발자 \n 근무일수:주5일",
+  "baseSalary": {
+    "@type": "MonetaryAmount",
+    "currency": "KRW",
+    "value": {
+      "@type": "QuantitativeValue",
+      "value": 8000,
+      "unitText": "HOUR"
+    }
+  },
+  "workHours": "오전 - 오후",
+  "educationRequirements": "초대졸",
+  "qualifications": "워드프로세서 1급",
+  "hiringOrganization": {
+    "@type": "Organization",
+    "name": "네이버",
+    "sameAs": "navercorp.com",
+    "logo": "https://logoproject.naver.com/img/img_story_renewal.png",
+    "description": "회사소개",
+    "hiringtype": "headhunting"
+  },
+  "identifier": {
+    "@type": "PropertyValue",
+    "propertyID": "Company Number",
+    "value": "220-81-62517"
+  }
+}
+```
+
+### AI 작업 체크리스트
+
+#### 제휴 준비
+
+- [ ] 네이버 제휴제안 작성 및 신청
+- [ ] 사이트 소유확인 진행
+- [ ] 제휴 협의 완료
+- [ ] 수집요청 API 연동 준비
+
+#### 구조화된 데이터 구현
+
+- [ ] JSON-LD 형태의 구조화된 데이터 마크업 작성
+- [ ] 필수 속성 (title, datePosted, employmentType, jobLocation, description, hiringOrganization) 포함
+- [ ] 권장 속성 (baseSalary, workHours, educationRequirements, qualifications) 추가
+- [ ] 날짜 형식 (yyyy-MM-dd) 준수
+- [ ] 재택근무인 경우 jobLocationType: "TELECOMMUTE" 추가
+- [ ] 서치펌 공고인 경우 hiringtype: "headhunting" 추가
+
+#### 검증 및 테스트
+
+- [ ] JSON Formatter에서 오류 여부 확인
+- [ ] schema.org 테스팅 도구로 검증
+- [ ] 네이버 웹마스터도구에서 채용정보 확인
+- [ ] robots.txt 설정 확인
+- [ ] 검색 결과에서 채용정보 노출 확인
+
+#### 모니터링 및 최적화
+
+- [ ] 채용정보 노출 상태 모니터링
+- [ ] 새로운 채용공고 추가 시 마크업 업데이트
+- [ ] 채용공고 마감 시 validThrough 업데이트
+- [ ] 정기적인 채용정보 상태 점검
+
+### 절대 금지사항
+
+#### 제휴 관련
+
+1. **제휴 미완료**: 제휴가 완료되지 않은 상태에서 채용정보 마크업
+2. **사이트 소유확인 미완료**: 서치어드바이저에 사이트 소유확인을 완료하지 않은 상태
+3. **API 연동 미완료**: 수집요청 API 연동을 완료하지 않은 상태
+
+#### 마크업 관련
+
+4. **필수 속성 누락**: title, datePosted, employmentType, jobLocation, description, hiringOrganization 중 하나라도 누락
+5. **잘못된 날짜 형식**: ISO 8601 표준에 맞지 않는 날짜 형식 사용
+6. **잘못된 employmentType**: 정의되지 않은 채용형태 사용
+7. **잘못된 주소 형식**: PostalAddress 형식에 맞지 않는 주소 정보
+8. **중복 마크업**: 동일한 채용공고에 중복된 구조화된 데이터 마크업
+
+#### 검증 관련
+
+9. **검증 생략**: JSON Formatter 검증 과정 생략
+10. **robots.txt 미설정**: 채용정보 웹페이지에 대한 robots.txt 설정 누락
+11. **정기 점검 생략**: 채용정보 상태의 정기적인 점검 생략
+
+### 검증 방법
+
+#### JSON Formatter 검증
+
+1. **URL 접속**: https://jsonformatter.curiousconcept.com/ 접속
+2. **JSON 입력**: 구조화된 데이터 JSON 입력
+3. **오류 확인**: JSON 형식 오류 확인
+4. **수정 및 재검증**: 오류 발견 시 수정 후 재검증
+
+#### schema.org 테스팅 도구
+
+1. **URL 입력**: 채용정보 마크업이 포함된 웹페이지 URL 입력
+2. **JobPosting 타입 확인**: JobPosting 타입 마크업 확인
+3. **속성 검증**: 필수 속성의 정확성 확인
+4. **오류 수정**: 발견된 오류 수정 후 재검증
+
+#### 네이버 웹마스터도구
+
+1. **사이트 등록**: 네이버 웹마스터도구에 사이트 등록
+2. **채용정보 확인**: 등록된 사이트의 채용정보 상태 확인
+3. **노출 상태 확인**: 검색 결과에서의 채용정보 노출 상태 확인
+4. **정기 모니터링**: 채용정보 상태의 정기적인 모니터링
+
+### 코드 최적화 예시
+
+#### Next.js에서 채용정보 마크업 구현
+
+```typescript
+// components/JobPostingMarkup.tsx
+import Head from "next/head";
+
+interface JobPostingProps {
+  title: string;
+  datePosted: string;
+  validThrough?: string;
+  employmentType: string[];
+  experienceRequirements: string[];
+  jobLocation: {
+    streetAddress: string;
+    postalCode: string;
+    addressLocality: string;
+    addressRegion: string;
+    addressCountry: string;
+  };
+  description: string;
+  baseSalary?: {
+    minValue?: number;
+    maxValue?: number;
+    value?: number;
+    unitText: string;
+  };
+  workHours?: string;
+  educationRequirements?: string;
+  qualifications?: string;
+  hiringOrganization: {
+    name: string;
+    sameAs: string;
+    logo?: string;
+    description?: string;
+    hiringtype?: string;
+  };
+  identifier: {
+    value: string;
+  };
+  jobLocationType?: string;
+}
+
+export default function JobPostingMarkup(props: JobPostingProps) {
+  const structuredData = {
+    "@context": "http://schema.org",
+    "@type": "JobPosting",
+    title: props.title,
+    datePosted: props.datePosted,
+    validThrough: props.validThrough,
+    employmentType: props.employmentType,
+    experienceRequirements: props.experienceRequirements,
+    jobLocation: [
+      {
+        "@type": "Place",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: props.jobLocation.streetAddress,
+          postalCode: props.jobLocation.postalCode,
+          addressLocality: props.jobLocation.addressLocality,
+          addressRegion: props.jobLocation.addressRegion,
+          addressCountry: props.jobLocation.addressCountry,
+        },
+      },
+    ],
+    jobLocationType: props.jobLocationType,
+    description: props.description,
+    baseSalary: props.baseSalary
+      ? {
+          "@type": "MonetaryAmount",
+          currency: "KRW",
+          value: {
+            "@type": "QuantitativeValue",
+            ...props.baseSalary,
+          },
+        }
+      : undefined,
+    workHours: props.workHours,
+    educationRequirements: props.educationRequirements,
+    qualifications: props.qualifications,
+    hiringOrganization: {
+      "@type": "Organization",
+      name: props.hiringOrganization.name,
+      sameAs: props.hiringOrganization.sameAs,
+      logo: props.hiringOrganization.logo,
+      description: props.hiringOrganization.description,
+      hiringtype: props.hiringOrganization.hiringtype,
+    },
+    identifier: {
+      "@type": "PropertyValue",
+      propertyID: "Company Number",
+      value: props.identifier.value,
+    },
+  };
+
+  // undefined 값 제거
+  const cleanData = JSON.parse(JSON.stringify(structuredData), (key, value) =>
+    value === undefined ? undefined : value
+  );
+
+  return (
+    <Head>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(cleanData),
+        }}
+      />
+    </Head>
+  );
+}
+
+// 사용 예시
+export default function JobPostingPage() {
+  const jobData = {
+    title: "공항렌트24 웹 개발자 채용",
+    datePosted: "2024-01-15",
+    validThrough: "2024-02-15",
+    employmentType: ["정규직"],
+    experienceRequirements: ["경력"],
+    jobLocation: {
+      streetAddress: "인천공항로 272",
+      postalCode: "22001",
+      addressLocality: "인천",
+      addressRegion: "인천",
+      addressCountry: "대한민국",
+    },
+    description:
+      "공항렌트24에서 웹 개발자를 모집합니다. \n 직종: 웹 개발자 \n 근무일수: 주5일",
+    baseSalary: {
+      minValue: 30000000,
+      maxValue: 50000000,
+      unitText: "YEAR",
+    },
+    workHours: "오전 9시 - 오후 6시",
+    educationRequirements: "대졸",
+    qualifications: "웹 개발 경력 3년 이상",
+    hiringOrganization: {
+      name: "공항렌트24",
+      sameAs: "https://airportrent24.kr",
+      logo: "https://airportrent24.kr/logo.png",
+      description: "인천공항 렌터카 서비스",
+    },
+    identifier: {
+      value: "123-45-67890",
+    },
+  };
+
+  return (
+    <div>
+      <JobPostingMarkup {...jobData} />
+      <h1>공항렌트24 웹 개발자 채용</h1>
+      {/* 채용공고 콘텐츠 */}
+    </div>
+  );
+}
+```
+
+#### 채용정보 검증 함수
+
+```typescript
+// utils/job-posting-validation.ts
+export function validateJobPosting(html: string) {
+  const issues = [];
+
+  // JSON-LD 검증
+  const jsonLdMatches = html.match(
+    /<script[^>]*type="application\/ld\+json"[^>]*>(.*?)<\/script>/gis
+  );
+  if (jsonLdMatches) {
+    jsonLdMatches.forEach((match, index) => {
+      try {
+        const jsonContent = match
+          .replace(/<script[^>]*>/, "")
+          .replace(/<\/script>/, "");
+        const parsed = JSON.parse(jsonContent);
+
+        // JobPosting 타입 확인
+        if (parsed["@type"] === "JobPosting") {
+          // 필수 속성 확인
+          if (!parsed.title) {
+            issues.push(`JobPosting ${index + 1}: title 속성 누락`);
+          }
+          if (!parsed.datePosted) {
+            issues.push(`JobPosting ${index + 1}: datePosted 속성 누락`);
+          }
+          if (!parsed.employmentType) {
+            issues.push(`JobPosting ${index + 1}: employmentType 속성 누락`);
+          }
+          if (!parsed.jobLocation) {
+            issues.push(`JobPosting ${index + 1}: jobLocation 속성 누락`);
+          }
+          if (!parsed.description) {
+            issues.push(`JobPosting ${index + 1}: description 속성 누락`);
+          }
+          if (!parsed.hiringOrganization) {
+            issues.push(
+              `JobPosting ${index + 1}: hiringOrganization 속성 누락`
+            );
+          }
+
+          // 날짜 형식 검증
+          if (parsed.datePosted && !isValidDate(parsed.datePosted)) {
+            issues.push(
+              `JobPosting ${index + 1}: datePosted 날짜 형식 오류 - ${
+                parsed.datePosted
+              }`
+            );
+          }
+          if (parsed.validThrough && !isValidDate(parsed.validThrough)) {
+            issues.push(
+              `JobPosting ${index + 1}: validThrough 날짜 형식 오류 - ${
+                parsed.validThrough
+              }`
+            );
+          }
+
+          // employmentType 검증
+          if (parsed.employmentType) {
+            const validTypes = [
+              "정규직",
+              "계약직",
+              "아르바이트",
+              "프리랜서",
+              "인턴",
+              "기타",
+              "FULL_TIME",
+              "CONTRACTOR",
+              "PART_TIME",
+              "FREE_LANCER",
+              "INTERN",
+              "OTHER",
+            ];
+            const types = Array.isArray(parsed.employmentType)
+              ? parsed.employmentType
+              : [parsed.employmentType];
+            types.forEach((type) => {
+              if (!validTypes.includes(type)) {
+                issues.push(
+                  `JobPosting ${index + 1}: 잘못된 employmentType - ${type}`
+                );
+              }
+            });
+          }
+        }
+      } catch (error) {
+        issues.push(`JobPosting ${index + 1}: JSON 파싱 오류`);
+      }
+    });
+  }
+
+  return issues;
+}
+
+function isValidDate(dateString: string): boolean {
+  const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
+  if (!dateRegex.test(dateString)) {
+    return false;
+  }
+
+  const date = new Date(dateString);
+  return !isNaN(date.getTime());
+}
+```
+
+#### 채용정보 관리 컴포넌트
+
+```typescript
+// components/JobPostingManager.tsx
+import { useState } from "react";
+
+interface JobPosting {
+  id: string;
+  title: string;
+  datePosted: string;
+  validThrough?: string;
+  employmentType: string[];
+  experienceRequirements: string[];
+  jobLocation: {
+    streetAddress: string;
+    postalCode: string;
+    addressLocality: string;
+    addressRegion: string;
+    addressCountry: string;
+  };
+  description: string;
+  baseSalary?: {
+    minValue?: number;
+    maxValue?: number;
+    value?: number;
+    unitText: string;
+  };
+  workHours?: string;
+  educationRequirements?: string;
+  qualifications?: string;
+  hiringOrganization: {
+    name: string;
+    sameAs: string;
+    logo?: string;
+    description?: string;
+    hiringtype?: string;
+  };
+  identifier: {
+    value: string;
+  };
+  jobLocationType?: string;
+  active: boolean;
+}
+
+export default function JobPostingManager() {
+  const [jobPostings, setJobPostings] = useState<JobPosting[]>([]);
+  const [currentJob, setCurrentJob] = useState<Partial<JobPosting>>({});
+
+  const addJobPosting = (job: Omit<JobPosting, "id">) => {
+    const newJob = { ...job, id: Date.now().toString() };
+    setJobPostings([...jobPostings, newJob]);
+  };
+
+  const removeJobPosting = (id: string) => {
+    setJobPostings(jobPostings.filter((job) => job.id !== id));
+  };
+
+  const generateMarkup = (job: JobPosting) => {
+    return {
+      "@context": "http://schema.org",
+      "@type": "JobPosting",
+      title: job.title,
+      datePosted: job.datePosted,
+      validThrough: job.validThrough,
+      employmentType: job.employmentType,
+      experienceRequirements: job.experienceRequirements,
+      jobLocation: [
+        {
+          "@type": "Place",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: job.jobLocation.streetAddress,
+            postalCode: job.jobLocation.postalCode,
+            addressLocality: job.jobLocation.addressLocality,
+            addressRegion: job.jobLocation.addressRegion,
+            addressCountry: job.jobLocation.addressCountry,
+          },
+        },
+      ],
+      jobLocationType: job.jobLocationType,
+      description: job.description,
+      baseSalary: job.baseSalary
+        ? {
+            "@type": "MonetaryAmount",
+            currency: "KRW",
+            value: {
+              "@type": "QuantitativeValue",
+              ...job.baseSalary,
+            },
+          }
+        : undefined,
+      workHours: job.workHours,
+      educationRequirements: job.educationRequirements,
+      qualifications: job.qualifications,
+      hiringOrganization: {
+        "@type": "Organization",
+        name: job.hiringOrganization.name,
+        sameAs: job.hiringOrganization.sameAs,
+        logo: job.hiringOrganization.logo,
+        description: job.hiringOrganization.description,
+        hiringtype: job.hiringOrganization.hiringtype,
+      },
+      identifier: {
+        "@type": "PropertyValue",
+        propertyID: "Company Number",
+        value: job.identifier.value,
+      },
+    };
+  };
+
+  return (
+    <div className="job-posting-manager">
+      <h2>채용정보 관리</h2>
+
+      <div className="job-form">
+        <h3>새 채용공고 추가</h3>
+        <input
+          type="text"
+          placeholder="채용제목"
+          value={currentJob.title || ""}
+          onChange={(e) =>
+            setCurrentJob({ ...currentJob, title: e.target.value })
+          }
+        />
+        <input
+          type="date"
+          placeholder="게시일"
+          value={currentJob.datePosted || ""}
+          onChange={(e) =>
+            setCurrentJob({ ...currentJob, datePosted: e.target.value })
+          }
+        />
+        <input
+          type="date"
+          placeholder="마감일"
+          value={currentJob.validThrough || ""}
+          onChange={(e) =>
+            setCurrentJob({ ...currentJob, validThrough: e.target.value })
+          }
+        />
+        <select
+          multiple
+          value={currentJob.employmentType || []}
+          onChange={(e) => {
+            const selected = Array.from(
+              e.target.selectedOptions,
+              (option) => option.value
+            );
+            setCurrentJob({ ...currentJob, employmentType: selected });
+          }}
+        >
+          <option value="정규직">정규직</option>
+          <option value="계약직">계약직</option>
+          <option value="아르바이트">아르바이트</option>
+          <option value="프리랜서">프리랜서</option>
+          <option value="인턴">인턴</option>
+          <option value="기타">기타</option>
+        </select>
+        <textarea
+          placeholder="업무설명"
+          value={currentJob.description || ""}
+          onChange={(e) =>
+            setCurrentJob({ ...currentJob, description: e.target.value })
+          }
+        />
+        <button
+          onClick={() => {
+            if (
+              currentJob.title &&
+              currentJob.datePosted &&
+              currentJob.employmentType &&
+              currentJob.description
+            ) {
+              addJobPosting(currentJob as JobPosting);
+              setCurrentJob({});
+            }
+          }}
+        >
+          채용공고 추가
+        </button>
+      </div>
+
+      <div className="job-list">
+        <h3>채용공고 목록</h3>
+        {jobPostings.map((job) => (
+          <div key={job.id} className="job-item">
+            <input
+              type="checkbox"
+              checked={job.active}
+              onChange={(e) => {
+                setJobPostings(
+                  jobPostings.map((j) =>
+                    j.id === job.id ? { ...j, active: e.target.checked } : j
+                  )
+                );
+              }}
+            />
+            <span>{job.title}</span>
+            <span>{job.datePosted}</span>
+            <button onClick={() => removeJobPosting(job.id)}>삭제</button>
+          </div>
+        ))}
+      </div>
+
+      <div className="markup-output">
+        <h3>생성된 마크업</h3>
+        {jobPostings
+          .filter((job) => job.active)
+          .map((job) => (
+            <div key={job.id}>
+              <h4>{job.title}</h4>
+              <pre>{JSON.stringify(generateMarkup(job), null, 2)}</pre>
+            </div>
+          ))}
+      </div>
+    </div>
+  );
+}
+```
+
+이 채용정보 가이드를 모든 웹사이트 개발에 체계적으로 적용하여 네이버 검색 최적화를 완성할 것.
+
+---
+
+## rule4 주소 (Address)
+
+> 출처: [네이버 검색 어드바이저 주소(Address) 가이드](https://searchadvisor.naver.com/guide/structured-data-address)
+
+### 주소 (Address) 개요
+
+#### 주소 정보의 중요성
+
+- **검색결과 표시**: 검색결과에 표시되는 주소 정보
+- **사용자 경험**: 정확한 주소 정보로 사용자에게 신뢰성 제공
+- **로컬 SEO**: 지역 기반 검색에서 중요한 역할
+- **비즈니스 신뢰도**: 정확한 주소 정보로 비즈니스 신뢰도 향상
+
+#### 주소 마크업의 목적
+
+- **구조화된 정보**: 주소 정보를 구조화된 형태로 제공
+- **검색엔진 이해**: 검색엔진이 주소 정보를 정확히 이해하도록 지원
+- **사용자 편의**: 검색 결과에서 명확한 주소 정보 제공
+- **지역 검색 최적화**: 지역 기반 검색에서의 노출 향상
+
+### 주소 (Address) 마크업
+
+#### 기본 가이드라인
+
+##### 주소 정보 관리
+
+- **사이트 공통 주소**: 여러 페이지에 동일한 주소를 사용하지 않도록 주의
+- **요소별 적합성**: 각 요소별 적합한 내용을 중복 없이 입력
+- **상세하고 명확**: 최대한 자세하고 명확하게 입력
+
+##### 주소 정보 품질
+
+- **정확성**: 실제 주소와 일치하는 정확한 정보
+- **완전성**: 필요한 모든 주소 요소 포함
+- **일관성**: 사이트 전체에서 일관된 주소 형식 사용
+
+#### 타입 및 속성
+
+##### 사용 타입
+
+- **PostalAddress**: schema.org에서 정의한 주소 타입
+
+##### 속성 정의
+
+| 속성            | 필수여부 | 설명                                           |
+| --------------- | -------- | ---------------------------------------------- |
+| postalCode      | 필수아님 | 숫자 혹은 하이픈(-)으로 구성해 우편번호를 입력 |
+| addressRegion   | 필수아님 | 주소 중 가장 큰 지역명을 입력                  |
+| addressLocality | 필수아님 | Region 하위 지역을 입력                        |
+| streetAddress   | **필수** | 도로명 포함 상세 주소를 입력                   |
+
+##### 주소 구성 요소
+
+###### postalCode (우편번호)
+
+- **형식**: 숫자 또는 하이픈(-) 포함
+- **예시**: "13561", "123-45"
+- **특징**: 필수는 아니지만 권장
+
+###### addressRegion (지역명)
+
+- **내용**: 주소 중 가장 큰 지역명
+- **예시**: "경기", "서울", "부산"
+- **특징**: 시/도 단위의 지역명
+
+###### addressLocality (하위 지역)
+
+- **내용**: Region 하위 지역
+- **예시**: "성남시 분당구", "강남구"
+- **특징**: 구/군 단위의 상세 지역명
+
+###### streetAddress (상세 주소)
+
+- **내용**: 도로명 포함 상세 주소
+- **예시**: "정자일로 95", "테헤란로 152"
+- **특징**: **필수 속성**, 가장 상세한 주소 정보
+
+#### JSON-LD 형식 예제
+
+```json
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "NAVER 1784",
+  "address": {
+    "@type": "PostalAddress",
+    "postalCode": "13561",
+    "addressRegion": "경기",
+    "addressLocality": "성남시 분당구",
+    "streetAddress": "정자일로 95"
+  }
+}
+</script>
+```
+
+#### Microdata 형식 예제
+
+```html
+<div itemscope itemtype="https://schema.org/Organization">
+  <span itemprop="name">NAVER 1784</span>
+  <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+    <span itemprop="postalCode">13561</span>
+    <span itemprop="addressRegion">경기</span>
+    <span itemprop="addressLocality">성남시 분당구</span>
+    <span itemprop="streetAddress">정자일로 95</span>
+  </div>
+</div>
+```
+
+### AI 작업 체크리스트
+
+#### 주소 정보 수집
+
+- [ ] 정확한 주소 정보 수집
+- [ ] 우편번호 확인
+- [ ] 지역명 및 하위 지역명 확인
+- [ ] 도로명 및 상세 주소 확인
+
+#### 주소 마크업 구현
+
+- [ ] PostalAddress 타입 사용
+- [ ] 필수 속성 (streetAddress) 포함
+- [ ] 선택적 속성 (postalCode, addressRegion, addressLocality) 추가
+- [ ] JSON-LD 또는 Microdata 형식 선택
+- [ ] 올바른 문법으로 마크업 구현
+
+#### 검증 및 테스트
+
+- [ ] schema.org 테스팅 도구로 검증
+- [ ] 주소 정보의 정확성 확인
+- [ ] 검색 결과에서 주소 노출 확인
+- [ ] 지역 검색에서의 노출 확인
+
+#### 모니터링 및 최적화
+
+- [ ] 주소 정보 노출 상태 모니터링
+- [ ] 주소 변경 시 마크업 업데이트
+- [ ] 정기적인 주소 정보 점검
+- [ ] 사용자 피드백 수집
+
+### 절대 금지사항
+
+#### 주소 정보 관련
+
+1. **부정확한 주소**: 실제 주소와 다른 정보 마크업
+2. **불완전한 주소**: 필수 속성인 streetAddress 누락
+3. **중복 주소**: 동일한 주소 정보의 중복 마크업
+4. **잘못된 형식**: 우편번호나 주소 형식이 올바르지 않음
+
+#### 마크업 관련
+
+5. **잘못된 타입**: PostalAddress가 아닌 다른 타입 사용
+6. **필수 속성 누락**: streetAddress 속성 누락
+7. **잘못된 속성 값**: 주소와 관련 없는 값 입력
+8. **중복 마크업**: 동일한 주소에 중복된 구조화된 데이터 마크업
+
+#### 검증 관련
+
+9. **검증 생략**: 주소 마크업 검증 과정 생략
+10. **정기 점검 생략**: 주소 정보 상태의 정기적인 점검 생략
+11. **사용자 피드백 무시**: 주소 관련 사용자 피드백 무시
+
+### 검증 방법
+
+#### schema.org 테스팅 도구
+
+1. **URL 입력**: 주소 마크업이 포함된 웹페이지 URL 입력
+2. **PostalAddress 타입 확인**: PostalAddress 타입 마크업 확인
+3. **속성 검증**: 필수 속성의 정확성 확인
+4. **오류 수정**: 발견된 오류 수정 후 재검증
+
+#### 수동 검증
+
+1. **주소 정확성 확인**: 실제 주소와 마크업된 주소 비교
+2. **우편번호 확인**: 우편번호의 정확성 확인
+3. **지역명 확인**: 지역명의 정확성 확인
+4. **검색 결과 확인**: 검색 결과에서 주소 노출 확인
+
+#### 네이버 웹마스터도구
+
+1. **사이트 등록**: 네이버 웹마스터도구에 사이트 등록
+2. **주소 정보 확인**: 등록된 사이트의 주소 정보 확인
+3. **노출 상태 확인**: 검색 결과에서의 주소 노출 상태 확인
+4. **정기 모니터링**: 주소 정보 상태의 정기적인 모니터링
+
+### 코드 최적화 예시
+
+#### Next.js에서 주소 마크업 구현
+
+```typescript
+// components/AddressMarkup.tsx
+import Head from "next/head";
+
+interface AddressProps {
+  postalCode?: string;
+  addressRegion?: string;
+  addressLocality?: string;
+  streetAddress: string;
+  organizationName?: string;
+}
+
+export default function AddressMarkup(props: AddressProps) {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: props.organizationName || "공항렌트24",
+    address: {
+      "@type": "PostalAddress",
+      postalCode: props.postalCode,
+      addressRegion: props.addressRegion,
+      addressLocality: props.addressLocality,
+      streetAddress: props.streetAddress,
+    },
+  };
+
+  // undefined 값 제거
+  const cleanData = JSON.parse(JSON.stringify(structuredData), (key, value) =>
+    value === undefined ? undefined : value
+  );
+
+  return (
+    <Head>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(cleanData),
+        }}
+      />
+    </Head>
+  );
+}
+
+// 사용 예시
+export default function ContactPage() {
+  const addressData = {
+    postalCode: "22001",
+    addressRegion: "인천",
+    addressLocality: "중구",
+    streetAddress: "인천공항로 272",
+    organizationName: "공항렌트24",
+  };
+
+  return (
+    <div>
+      <AddressMarkup {...addressData} />
+      <h1>연락처</h1>
+      <p>주소: 인천공항로 272, 중구, 인천</p>
+      {/* 페이지 콘텐츠 */}
+    </div>
+  );
+}
+```
+
+#### React 컴포넌트로 Microdata 구현
+
+```jsx
+// components/AddressMicrodata.jsx
+export default function AddressMicrodata({
+  postalCode,
+  addressRegion,
+  addressLocality,
+  streetAddress,
+  organizationName = "공항렌트24"
+}) {
+  return (
+    <div itemScope itemtype="https://schema.org/Organization">
+      <span itemProp="name">{organizationName}</span>
+      <div itemProp="address" itemScope itemtype="https://schema.org/PostalAddress">
+        {postalCode && <span itemProp="postalCode">{postalCode}</span>}
+        {addressRegion && <span itemProp="addressRegion">{addressRegion}</span>}
+        {addressLocality && <span itemProp="addressLocality">{addressLocality}</span>}
+        <span itemProp="streetAddress">{streetAddress}</span>
+      </div>
+    </div>
+  )
+}
+
+// 사용 예시
+export default function ContactPage() {
+  return (
+    <div>
+      <AddressMicrodata
+        postalCode="22001"
+        addressRegion="인천"
+        addressLocality="중구"
+        streetAddress="인천공항로 272"
+        organizationName="공항렌트24"
+      />
+      <h1>연락처</h1>
+      <p>주소: 인천공항로 272, 중구, 인천</p>
+      {/* 페이지 콘텐츠 */}
+    </div>
+  )
+}
+```
+
+#### 주소 검증 함수
+
+```typescript
+// utils/address-validation.ts
+export function validateAddress(html: string) {
+  const issues = [];
+
+  // JSON-LD 검증
+  const jsonLdMatches = html.match(
+    /<script[^>]*type="application\/ld\+json"[^>]*>(.*?)<\/script>/gis
+  );
+  if (jsonLdMatches) {
+    jsonLdMatches.forEach((match, index) => {
+      try {
+        const jsonContent = match
+          .replace(/<script[^>]*>/, "")
+          .replace(/<\/script>/, "");
+        const parsed = JSON.parse(jsonContent);
+
+        // PostalAddress 타입 확인
+        if (parsed.address && parsed.address["@type"] === "PostalAddress") {
+          // 필수 속성 확인
+          if (!parsed.address.streetAddress) {
+            issues.push(`Address ${index + 1}: streetAddress 속성 누락`);
+          }
+
+          // 우편번호 형식 검증
+          if (
+            parsed.address.postalCode &&
+            !isValidPostalCode(parsed.address.postalCode)
+          ) {
+            issues.push(
+              `Address ${index + 1}: 잘못된 postalCode 형식 - ${
+                parsed.address.postalCode
+              }`
+            );
+          }
+
+          // 주소 정보 검증
+          if (
+            parsed.address.streetAddress &&
+            !isValidStreetAddress(parsed.address.streetAddress)
+          ) {
+            issues.push(
+              `Address ${index + 1}: 잘못된 streetAddress - ${
+                parsed.address.streetAddress
+              }`
+            );
+          }
+        }
+      } catch (error) {
+        issues.push(`Address ${index + 1}: JSON 파싱 오류`);
+      }
+    });
+  }
+
+  // Microdata 검증
+  const microdataMatches = html.match(
+    /itemtype="https:\/\/schema\.org\/PostalAddress"/gi
+  );
+  if (microdataMatches) {
+    microdataMatches.forEach((match, index) => {
+      // streetAddress 속성 확인
+      const streetAddressMatch = html.match(
+        /itemprop="streetAddress"[^>]*>([^<]+)</i
+      );
+      if (!streetAddressMatch) {
+        issues.push(`Microdata Address ${index + 1}: streetAddress 속성 누락`);
+      }
+    });
+  }
+
+  return issues;
+}
+
+function isValidPostalCode(postalCode: string): boolean {
+  // 숫자 또는 하이픈 포함 형식 검증
+  const postalCodeRegex = /^[\d-]+$/;
+  return postalCodeRegex.test(postalCode);
+}
+
+function isValidStreetAddress(streetAddress: string): boolean {
+  // 도로명 포함 여부 및 기본적인 주소 형식 검증
+  return (
+    (streetAddress.length > 0 && streetAddress.includes("로")) ||
+    streetAddress.includes("길")
+  );
+}
+```
+
+#### 주소 관리 컴포넌트
+
+```typescript
+// components/AddressManager.tsx
+import { useState } from "react";
+
+interface Address {
+  id: string;
+  postalCode?: string;
+  addressRegion?: string;
+  addressLocality?: string;
+  streetAddress: string;
+  organizationName: string;
+  active: boolean;
+}
+
+export default function AddressManager() {
+  const [addresses, setAddresses] = useState<Address[]>([]);
+  const [currentAddress, setCurrentAddress] = useState<Partial<Address>>({});
+
+  const addAddress = (address: Omit<Address, "id">) => {
+    const newAddress = { ...address, id: Date.now().toString() };
+    setAddresses([...addresses, newAddress]);
+  };
+
+  const removeAddress = (id: string) => {
+    setAddresses(addresses.filter((address) => address.id !== id));
+  };
+
+  const generateMarkup = (address: Address) => {
+    return {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: address.organizationName,
+      address: {
+        "@type": "PostalAddress",
+        postalCode: address.postalCode,
+        addressRegion: address.addressRegion,
+        addressLocality: address.addressLocality,
+        streetAddress: address.streetAddress,
+      },
+    };
+  };
+
+  return (
+    <div className="address-manager">
+      <h2>주소 관리</h2>
+
+      <div className="address-form">
+        <h3>새 주소 추가</h3>
+        <input
+          type="text"
+          placeholder="우편번호"
+          value={currentAddress.postalCode || ""}
+          onChange={(e) =>
+            setCurrentAddress({ ...currentAddress, postalCode: e.target.value })
+          }
+        />
+        <input
+          type="text"
+          placeholder="지역명 (예: 인천)"
+          value={currentAddress.addressRegion || ""}
+          onChange={(e) =>
+            setCurrentAddress({
+              ...currentAddress,
+              addressRegion: e.target.value,
+            })
+          }
+        />
+        <input
+          type="text"
+          placeholder="하위 지역 (예: 중구)"
+          value={currentAddress.addressLocality || ""}
+          onChange={(e) =>
+            setCurrentAddress({
+              ...currentAddress,
+              addressLocality: e.target.value,
+            })
+          }
+        />
+        <input
+          type="text"
+          placeholder="상세 주소 (필수)"
+          value={currentAddress.streetAddress || ""}
+          onChange={(e) =>
+            setCurrentAddress({
+              ...currentAddress,
+              streetAddress: e.target.value,
+            })
+          }
+        />
+        <input
+          type="text"
+          placeholder="조직명"
+          value={currentAddress.organizationName || ""}
+          onChange={(e) =>
+            setCurrentAddress({
+              ...currentAddress,
+              organizationName: e.target.value,
+            })
+          }
+        />
+        <button
+          onClick={() => {
+            if (
+              currentAddress.streetAddress &&
+              currentAddress.organizationName
+            ) {
+              addAddress(currentAddress as Address);
+              setCurrentAddress({});
+            }
+          }}
+        >
+          주소 추가
+        </button>
+      </div>
+
+      <div className="address-list">
+        <h3>주소 목록</h3>
+        {addresses.map((address) => (
+          <div key={address.id} className="address-item">
+            <input
+              type="checkbox"
+              checked={address.active}
+              onChange={(e) => {
+                setAddresses(
+                  addresses.map((a) =>
+                    a.id === address.id ? { ...a, active: e.target.checked } : a
+                  )
+                );
+              }}
+            />
+            <span>{address.organizationName}</span>
+            <span>{address.streetAddress}</span>
+            <button onClick={() => removeAddress(address.id)}>삭제</button>
+          </div>
+        ))}
+      </div>
+
+      <div className="markup-output">
+        <h3>생성된 마크업</h3>
+        {addresses
+          .filter((address) => address.active)
+          .map((address) => (
+            <div key={address.id}>
+              <h4>{address.organizationName}</h4>
+              <pre>{JSON.stringify(generateMarkup(address), null, 2)}</pre>
+            </div>
+          ))}
+      </div>
+    </div>
+  );
+}
+```
+
+#### 주소 자동 완성 기능
+
+```typescript
+// utils/address-autocomplete.ts
+interface AddressSuggestion {
+  postalCode: string;
+  addressRegion: string;
+  addressLocality: string;
+  streetAddress: string;
+}
+
+export async function getAddressSuggestions(
+  query: string
+): Promise<AddressSuggestion[]> {
+  // 실제 구현에서는 주소 검색 API 사용
+  // 예시: 도로명주소 API, 우편번호 API 등
+  const mockSuggestions: AddressSuggestion[] = [
+    {
+      postalCode: "22001",
+      addressRegion: "인천",
+      addressLocality: "중구",
+      streetAddress: "인천공항로 272",
+    },
+    {
+      postalCode: "22002",
+      addressRegion: "인천",
+      addressLocality: "중구",
+      streetAddress: "인천공항로 273",
+    },
+  ];
+
+  return mockSuggestions.filter(
+    (suggestion) =>
+      suggestion.streetAddress.includes(query) ||
+      suggestion.addressLocality.includes(query)
+  );
+}
+
+// 주소 자동 완성 컴포넌트
+export function AddressAutocomplete({
+  onSelect,
+}: {
+  onSelect: (address: AddressSuggestion) => void;
+}) {
+  const [query, setQuery] = useState("");
+  const [suggestions, setSuggestions] = useState<AddressSuggestion[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleInputChange = async (value: string) => {
+    setQuery(value);
+    if (value.length > 2) {
+      setIsLoading(true);
+      const results = await getAddressSuggestions(value);
+      setSuggestions(results);
+      setIsLoading(false);
+    } else {
+      setSuggestions([]);
+    }
+  };
+
+  return (
+    <div className="address-autocomplete">
+      <input
+        type="text"
+        placeholder="주소를 입력하세요"
+        value={query}
+        onChange={(e) => handleInputChange(e.target.value)}
+      />
+      {isLoading && <div>검색 중...</div>}
+      {suggestions.length > 0 && (
+        <ul className="suggestions">
+          {suggestions.map((suggestion, index) => (
+            <li key={index} onClick={() => onSelect(suggestion)}>
+              {suggestion.streetAddress}, {suggestion.addressLocality},{" "}
+              {suggestion.addressRegion}
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+```
+
+이 주소(Address) 가이드를 모든 웹사이트 개발에 체계적으로 적용하여 네이버 검색 최적화를 완성할 것.
+
+---
+
+## rule5 브레드크럼 (Breadcrumb)
+
+> 출처: [네이버 검색 어드바이저 브레드크럼 가이드](https://searchadvisor.naver.com/guide/structured-data-breadcrumb)
+
+### 브레드크럼 개요
+
+#### 브레드크럼의 정의
+
+- **네비게이션 구조**: 웹사이트의 계층 구조를 나타내는 네비게이션 요소
+- **사용자 경험**: 사용자가 현재 위치를 파악하고 상위 페이지로 이동할 수 있도록 지원
+- **검색엔진 이해**: 검색엔진이 웹사이트 구조를 이해하는데 도움
+
+#### 브레드크럼의 중요성
+
+- **사이트 구조 표현**: 웹사이트의 계층적 구조를 명확하게 표현
+- **SEO 최적화**: 검색 결과에서 사이트 구조 정보 제공
+- **사용자 편의성**: 직관적인 네비게이션 제공
+
+### 브레드크럼 마크업
+
+#### 기본 구조
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "홈",
+      "item": "https://example.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "카테고리",
+      "item": "https://example.com/category"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "현재 페이지",
+      "item": "https://example.com/category/page"
+    }
+  ]
+}
+```
+
+#### 필수 속성
+
+- **itemListElement**: 브레드크럼 항목들의 배열
+- **position**: 각 항목의 순서 (1부터 시작)
+- **name**: 각 항목의 표시 이름
+- **item**: 각 항목의 URL
+
+### AI 작업 체크리스트
+
+#### 브레드크럼 계획
+
+- [ ] 사이트 구조 분석
+- [ ] 브레드크럼 경로 정의
+- [ ] 각 페이지별 브레드크럼 구조 설계
+
+#### 브레드크럼 구현
+
+- [ ] BreadcrumbList 타입 사용
+- [ ] itemListElement 배열 구성
+- [ ] position 속성 순서대로 설정
+- [ ] name과 item 속성 정확히 입력
+
+#### 검증 및 테스트
+
+- [ ] schema.org 테스팅 도구로 검증
+- [ ] 실제 페이지에서 브레드크럼 동작 확인
+- [ ] 검색 결과에서 브레드크럼 노출 확인
+
+### 절대 금지사항
+
+1. **잘못된 순서**: position 속성의 순서가 실제 사이트 구조와 다름
+2. **부정확한 URL**: item 속성의 URL이 실제 페이지와 다름
+3. **중복 항목**: 동일한 항목이 여러 번 나타남
+4. **빈 항목**: name이나 item 속성이 비어있음
+
+---
+
+## rule6 FAQ
+
+> 출처: [네이버 검색 어드바이저 FAQ 가이드](https://searchadvisor.naver.com/guide/structured-data-faq)
+
+### FAQ 개요
+
+#### FAQ의 정의
+
+- **자주 묻는 질문**: 사용자들이 자주 묻는 질문과 답변
+- **사용자 지원**: 사용자 질문에 대한 즉각적인 답변 제공
+- **검색 최적화**: 검색 결과에서 FAQ 형태로 노출
+
+#### FAQ의 중요성
+
+- **사용자 경험 향상**: 빠른 답변으로 사용자 만족도 증가
+- **검색 노출**: 검색 결과에서 FAQ 형태로 노출되어 클릭률 향상
+- **콘텐츠 구조화**: 질문과 답변을 구조화된 형태로 제공
+
+### FAQ 마크업
+
+#### 기본 구조
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "질문 내용",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "답변 내용"
+      }
+    }
+  ]
+}
+```
+
+#### 필수 속성
+
+- **mainEntity**: FAQ 항목들의 배열
+- **name**: 질문 내용
+- **acceptedAnswer**: 답변 객체
+- **text**: 답변 내용
+
+### AI 작업 체크리스트
+
+#### FAQ 계획
+
+- [ ] 자주 묻는 질문 수집
+- [ ] 질문과 답변 정리
+- [ ] FAQ 페이지 구조 설계
+
+#### FAQ 구현
+
+- [ ] FAQPage 타입 사용
+- [ ] mainEntity 배열 구성
+- [ ] Question과 Answer 타입 사용
+- [ ] 질문과 답변 내용 정확히 입력
+
+#### 검증 및 테스트
+
+- [ ] schema.org 테스팅 도구로 검증
+- [ ] FAQ 페이지에서 구조 확인
+- [ ] 검색 결과에서 FAQ 노출 확인
+
+### 절대 금지사항
+
+1. **부정확한 질문**: 실제 사용자 질문과 다른 내용
+2. **불완전한 답변**: 질문에 대한 답변이 불완전함
+3. **중복 FAQ**: 동일한 질문과 답변이 반복됨
+4. **빈 내용**: 질문이나 답변이 비어있음
+
+---
+
+## rule7 How-to
+
+> 출처: [네이버 검색 어드바이저 How-to 가이드](https://searchadvisor.naver.com/guide/structured-data-howto)
+
+### How-to 개요
+
+#### How-to의 정의
+
+- **단계별 가이드**: 특정 작업을 수행하는 방법을 단계별로 설명
+- **사용자 교육**: 사용자가 특정 작업을 수행할 수 있도록 도움
+- **검색 최적화**: 검색 결과에서 단계별 가이드로 노출
+
+#### How-to의 중요성
+
+- **사용자 지원**: 복잡한 작업을 단계별로 안내
+- **검색 노출**: 검색 결과에서 How-to 형태로 노출
+- **콘텐츠 가치**: 실용적인 정보 제공
+
+### How-to 마크업
+
+#### 기본 구조
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "가이드 제목",
+  "description": "가이드 설명",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "1단계 제목",
+      "text": "1단계 설명",
+      "image": "1단계 이미지 URL"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "2단계 제목",
+      "text": "2단계 설명",
+      "image": "2단계 이미지 URL"
+    }
+  ]
+}
+```
+
+#### 필수 속성
+
+- **name**: How-to 가이드의 제목
+- **description**: 가이드에 대한 설명
+- **step**: 단계별 설명 배열
+- **name**: 각 단계의 제목
+- **text**: 각 단계의 설명
+
+### AI 작업 체크리스트
+
+#### How-to 계획
+
+- [ ] 단계별 가이드 내용 정리
+- [ ] 각 단계별 설명 작성
+- [ ] 필요한 이미지 준비
+
+#### How-to 구현
+
+- [ ] HowTo 타입 사용
+- [ ] step 배열 구성
+- [ ] HowToStep 타입 사용
+- [ ] 각 단계별 내용 정확히 입력
+
+#### 검증 및 테스트
+
+- [ ] schema.org 테스팅 도구로 검증
+- [ ] How-to 페이지에서 구조 확인
+- [ ] 검색 결과에서 How-to 노출 확인
+
+### 절대 금지사항
+
+1. **불완전한 단계**: 필요한 단계가 누락됨
+2. **잘못된 순서**: 단계의 순서가 논리적이지 않음
+3. **부정확한 설명**: 단계별 설명이 부정확함
+4. **빈 내용**: 단계 제목이나 설명이 비어있음
+
+---
+
+## rule8 캐러셀 (Carousel)
+
+> 출처: [네이버 검색 어드바이저 캐러셀 가이드](https://searchadvisor.naver.com/guide/structured-data-carousel)
+
+### 캐러셀 개요
+
+#### 캐러셀의 정의
+
+- **이미지 슬라이더**: 여러 이미지를 순차적으로 보여주는 UI 요소
+- **콘텐츠 전시**: 제품, 서비스, 이미지 등을 효과적으로 전시
+- **사용자 경험**: 시각적으로 매력적인 콘텐츠 제공
+
+#### 캐러셀의 중요성
+
+- **시각적 효과**: 여러 이미지를 효과적으로 전시
+- **사용자 참여**: 시각적 콘텐츠로 사용자 참여 유도
+- **검색 노출**: 검색 결과에서 이미지 캐러셀로 노출
+
+### 캐러셀 마크업
+
+#### 기본 구조
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "캐러셀 제목",
+  "description": "캐러셀 설명",
+  "numberOfItems": 3,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "ImageObject",
+        "contentUrl": "이미지1 URL",
+        "name": "이미지1 제목"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "ImageObject",
+        "contentUrl": "이미지2 URL",
+        "name": "이미지2 제목"
+      }
+    }
+  ]
+}
+```
+
+#### 필수 속성
+
+- **name**: 캐러셀의 제목
+- **numberOfItems**: 이미지 개수
+- **itemListElement**: 이미지 항목들의 배열
+- **position**: 각 이미지의 순서
+- **contentUrl**: 이미지 URL
+- **name**: 이미지 제목
+
+### AI 작업 체크리스트
+
+#### 캐러셀 계획
+
+- [ ] 캐러셀에 포함할 이미지 선정
+- [ ] 이미지 순서 결정
+- [ ] 각 이미지별 제목 작성
+
+#### 캐러셀 구현
+
+- [ ] ItemList 타입 사용
+- [ ] itemListElement 배열 구성
+- [ ] ListItem과 ImageObject 타입 사용
+- [ ] 각 이미지 정보 정확히 입력
+
+#### 검증 및 테스트
+
+- [ ] schema.org 테스팅 도구로 검증
+- [ ] 캐러셀 페이지에서 구조 확인
+- [ ] 검색 결과에서 캐러셀 노출 확인
+
+### 절대 금지사항
+
+1. **부정확한 이미지 URL**: contentUrl이 실제 이미지와 다름
+2. **중복 이미지**: 동일한 이미지가 여러 번 나타남
+3. **빈 제목**: 이미지 제목이 비어있음
+4. **잘못된 순서**: position 속성의 순서가 실제와 다름
+
+---
+
+## rule9 평점 (Rating)
+
+> 출처: [네이버 검색 어드바이저 평점 가이드](https://searchadvisor.naver.com/guide/structured-data-rating)
+
+### 평점 개요
+
+#### 평점의 정의
+
+- **사용자 평가**: 제품, 서비스, 콘텐츠에 대한 사용자 평가
+- **신뢰도 지표**: 제품이나 서비스의 품질을 나타내는 지표
+- **구매 결정**: 사용자의 구매 결정에 영향을 미치는 요소
+
+#### 평점의 중요성
+
+- **신뢰도 향상**: 높은 평점으로 신뢰도 향상
+- **검색 노출**: 검색 결과에서 평점 정보 노출
+- **사용자 만족도**: 사용자 만족도를 객관적으로 표현
+
+### 평점 마크업
+
+#### 기본 구조
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "제품명",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": 4.5,
+    "reviewCount": 100,
+    "bestRating": 5,
+    "worstRating": 1
+  }
+}
+```
+
+#### 필수 속성
+
+- **ratingValue**: 평균 평점
+- **reviewCount**: 리뷰 개수
+- **bestRating**: 최고 평점 (보통 5)
+- **worstRating**: 최저 평점 (보통 1)
+
+### AI 작업 체크리스트
+
+#### 평점 계획
+
+- [ ] 평점 시스템 구축
+- [ ] 평점 계산 로직 정의
+- [ ] 리뷰 수집 방법 결정
+
+#### 평점 구현
+
+- [ ] AggregateRating 타입 사용
+- [ ] ratingValue 정확히 계산
+- [ ] reviewCount 정확히 집계
+- [ ] bestRating과 worstRating 설정
+
+#### 검증 및 테스트
+
+- [ ] schema.org 테스팅 도구로 검증
+- [ ] 평점 계산 정확성 확인
+- [ ] 검색 결과에서 평점 노출 확인
+
+### 절대 금지사항
+
+1. **부정확한 평점**: 실제 평점과 다른 값 표시
+2. **과도한 평점**: 비현실적으로 높은 평점
+3. **부정확한 리뷰 수**: 실제 리뷰 수와 다른 값
+4. **조작된 평점**: 인위적으로 조작된 평점
+
+---
+
+## rule10 레시피 (Recipe)
+
+> 출처: [네이버 검색 어드바이저 레시피 가이드](https://searchadvisor.naver.com/guide/structured-data-recipe)
+
+### 레시피 개요
+
+#### 레시피의 정의
+
+- **요리 방법**: 특정 요리를 만드는 방법과 재료
+- **단계별 가이드**: 요리 과정을 단계별로 설명
+- **재료 정보**: 요리에 필요한 재료와 양
+
+#### 레시피의 중요성
+
+- **실용적 정보**: 실제 요리에 활용할 수 있는 정보
+- **검색 노출**: 검색 결과에서 레시피 형태로 노출
+- **사용자 만족**: 요리 애호가들에게 유용한 정보 제공
+
+### 레시피 마크업
+
+#### 기본 구조
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "Recipe",
+  "name": "요리명",
+  "description": "요리 설명",
+  "cookTime": "PT30M",
+  "prepTime": "PT15M",
+  "totalTime": "PT45M",
+  "recipeYield": "4인분",
+  "recipeIngredient": ["재료1", "재료2", "재료3"],
+  "recipeInstructions": [
+    {
+      "@type": "HowToStep",
+      "text": "1단계 설명"
+    },
+    {
+      "@type": "HowToStep",
+      "text": "2단계 설명"
+    }
+  ]
+}
+```
+
+#### 필수 속성
+
+- **name**: 요리명
+- **description**: 요리 설명
+- **recipeIngredient**: 재료 목록
+- **recipeInstructions**: 요리 단계
+
+### AI 작업 체크리스트
+
+#### 레시피 계획
+
+- [ ] 요리 레시피 내용 정리
+- [ ] 재료 목록 작성
+- [ ] 요리 단계별 설명 작성
+
+#### 레시피 구현
+
+- [ ] Recipe 타입 사용
+- [ ] recipeIngredient 배열 구성
+- [ ] recipeInstructions 배열 구성
+- [ ] HowToStep 타입 사용
+
+#### 검증 및 테스트
+
+- [ ] schema.org 테스팅 도구로 검증
+- [ ] 레시피 페이지에서 구조 확인
+- [ ] 검색 결과에서 레시피 노출 확인
+
+### 절대 금지사항
+
+1. **부정확한 재료**: 실제 요리와 다른 재료 정보
+2. **불완전한 단계**: 요리 과정의 중요한 단계 누락
+3. **잘못된 시간**: 조리 시간이 부정확함
+4. **빈 내용**: 요리명이나 설명이 비어있음
+
+---
+
+## rule11 리뷰 (Review)
+
+> 출처: [네이버 검색 어드바이저 리뷰 가이드](https://searchadvisor.naver.com/guide/structured-data-review)
+
+### 리뷰 개요
+
+#### 리뷰의 정의
+
+- **사용자 평가**: 제품, 서비스, 콘텐츠에 대한 사용자 평가
+- **경험 공유**: 실제 사용 경험을 바탕으로 한 평가
+- **구매 가이드**: 다른 사용자들의 구매 결정에 도움
+
+#### 리뷰의 중요성
+
+- **신뢰도 향상**: 실제 사용자 리뷰로 신뢰도 향상
+- **검색 노출**: 검색 결과에서 리뷰 정보 노출
+- **사용자 만족도**: 사용자 만족도를 객관적으로 표현
+
+### 리뷰 마크업
+
+#### 기본 구조
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "itemReviewed": {
+    "@type": "Product",
+    "name": "제품명"
+  },
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": 5,
+    "bestRating": 5
+  },
+  "author": {
+    "@type": "Person",
+    "name": "리뷰어 이름"
+  },
+  "reviewBody": "리뷰 내용"
+}
+```
+
+#### 필수 속성
+
+- **itemReviewed**: 리뷰 대상 제품/서비스
+- **reviewRating**: 리뷰 평점
+- **author**: 리뷰 작성자
+- **reviewBody**: 리뷰 내용
+
+### AI 작업 체크리스트
+
+#### 리뷰 계획
+
+- [ ] 리뷰 시스템 구축
+- [ ] 리뷰 작성 가이드라인 정의
+- [ ] 리뷰 검증 프로세스 설정
+
+#### 리뷰 구현
+
+- [ ] Review 타입 사용
+- [ ] itemReviewed 정보 입력
+- [ ] reviewRating 설정
+- [ ] author 정보 입력
+
+#### 검증 및 테스트
+
+- [ ] schema.org 테스팅 도구로 검증
+- [ ] 리뷰 내용 정확성 확인
+- [ ] 검색 결과에서 리뷰 노출 확인
+
+### 절대 금지사항
+
+1. **가짜 리뷰**: 실제 사용자가 작성하지 않은 리뷰
+2. **부정확한 평점**: 실제 경험과 다른 평점
+3. **스팸 리뷰**: 의미 없는 리뷰 내용
+4. **중복 리뷰**: 동일한 내용의 반복 리뷰
+
+---
+
+## rule12 레스토랑 (Restaurant)
+
+> 출처: [네이버 검색 어드바이저 레스토랑 가이드](https://searchadvisor.naver.com/guide/structured-data-restaurant)
+
+### 레스토랑 개요
+
+#### 레스토랑의 정의
+
+- **음식점 정보**: 레스토랑의 기본 정보와 서비스
+- **위치 정보**: 레스토랑의 위치와 연락처
+- **메뉴 정보**: 제공하는 음식과 가격
+
+#### 레스토랑의 중요성
+
+- **로컬 검색**: 지역 기반 검색에서 중요한 역할
+- **사용자 편의**: 레스토랑 정보를 쉽게 찾을 수 있음
+- **비즈니스 노출**: 레스토랑의 노출도 향상
+
+### 레스토랑 마크업
+
+#### 기본 구조
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "레스토랑명",
+  "description": "레스토랑 설명",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "주소",
+    "addressLocality": "도시",
+    "addressRegion": "지역"
+  },
+  "telephone": "전화번호",
+  "servesCuisine": "음식 종류",
+  "priceRange": "가격대"
+}
+```
+
+#### 필수 속성
+
+- **name**: 레스토랑명
+- **address**: 주소 정보
+- **telephone**: 전화번호
+- **servesCuisine**: 음식 종류
+
+### AI 작업 체크리스트
+
+#### 레스토랑 정보 수집
+
+- [ ] 레스토랑 기본 정보 수집
+- [ ] 주소 및 연락처 정보 확인
+- [ ] 메뉴 및 가격 정보 수집
+
+#### 레스토랑 구현
+
+- [ ] Restaurant 타입 사용
+- [ ] PostalAddress 타입 사용
+- [ ] 정확한 정보 입력
+- [ ] 필수 속성 포함
+
+#### 검증 및 테스트
+
+- [ ] schema.org 테스팅 도구로 검증
+- [ ] 레스토랑 정보 정확성 확인
+- [ ] 검색 결과에서 레스토랑 노출 확인
+
+### 절대 금지사항
+
+1. **부정확한 정보**: 실제 레스토랑 정보와 다른 내용
+2. **잘못된 주소**: 실제 위치와 다른 주소
+3. **부정확한 연락처**: 잘못된 전화번호
+4. **과도한 정보**: 필요 이상의 과도한 정보
+
+---
+
+## rule13 TV 시리즈 (TV Series)
+
+> 출처: [네이버 검색 어드바이저 TV 시리즈 가이드](https://searchadvisor.naver.com/guide/structured-data-tvseries)
+
+### TV 시리즈 개요
+
+#### TV 시리즈의 정의
+
+- **방송 콘텐츠**: TV에서 방영되는 시리즈물
+- **에피소드 구성**: 여러 에피소드로 구성된 콘텐츠
+- **방송 정보**: 방송 시간, 채널, 제작 정보
+
+#### TV 시리즈의 중요성
+
+- **콘텐츠 검색**: TV 콘텐츠 검색에서 중요한 역할
+- **시청자 편의**: 방송 정보를 쉽게 찾을 수 있음
+- **콘텐츠 노출**: TV 시리즈의 노출도 향상
+
+### TV 시리즈 마크업
+
+#### 기본 구조
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "TVSeries",
+  "name": "시리즈명",
+  "description": "시리즈 설명",
+  "numberOfSeasons": 3,
+  "numberOfEpisodes": 24,
+  "genre": "장르",
+  "actor": [
+    {
+      "@type": "Person",
+      "name": "배우명"
+    }
+  ]
+}
+```
+
+#### 필수 속성
+
+- **name**: 시리즈명
+- **description**: 시리즈 설명
+- **numberOfSeasons**: 시즌 수
+- **numberOfEpisodes**: 에피소드 수
+
+### AI 작업 체크리스트
+
+#### TV 시리즈 정보 수집
+
+- [ ] 시리즈 기본 정보 수집
+- [ ] 에피소드 정보 수집
+- [ ] 출연진 정보 수집
+
+#### TV 시리즈 구현
+
+- [ ] TVSeries 타입 사용
+- [ ] 정확한 정보 입력
+- [ ] 필수 속성 포함
+- [ ] Person 타입 사용
+
+#### 검증 및 테스트
+
+- [ ] schema.org 테스팅 도구로 검증
+- [ ] TV 시리즈 정보 정확성 확인
+- [ ] 검색 결과에서 TV 시리즈 노출 확인
+
+### 절대 금지사항
+
+1. **부정확한 정보**: 실제 시리즈 정보와 다른 내용
+2. **잘못된 에피소드 수**: 실제 에피소드 수와 다른 값
+3. **부정확한 출연진**: 실제 출연진과 다른 정보
+4. **과도한 정보**: 필요 이상의 과도한 정보
+
+---
+
+## rule14 영화 (Movie)
+
+> 출처: [네이버 검색 어드바이저 영화 가이드](https://searchadvisor.naver.com/guide/structured-data-movie)
+
+### 영화 개요
+
+#### 영화의 정의
+
+- **영화 콘텐츠**: 극장에서 상영되는 영화
+- **영화 정보**: 제목, 감독, 배우, 장르 등
+- **상영 정보**: 상영 시간, 극장, 평점 등
+
+#### 영화의 중요성
+
+- **영화 검색**: 영화 검색에서 중요한 역할
+- **관객 편의**: 영화 정보를 쉽게 찾을 수 있음
+- **영화 노출**: 영화의 노출도 향상
+
+### 영화 마크업
+
+#### 기본 구조
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "Movie",
+  "name": "영화 제목",
+  "description": "영화 설명",
+  "director": {
+    "@type": "Person",
+    "name": "감독명"
+  },
+  "actor": [
+    {
+      "@type": "Person",
+      "name": "배우명"
+    }
+  ],
+  "genre": "장르",
+  "duration": "PT120M"
+}
+```
+
+#### 필수 속성
+
+- **name**: 영화 제목
+- **description**: 영화 설명
+- **director**: 감독 정보
+- **actor**: 배우 정보
+
+### AI 작업 체크리스트
+
+#### 영화 정보 수집
+
+- [ ] 영화 기본 정보 수집
+- [ ] 감독 및 배우 정보 수집
+- [ ] 장르 및 상영 시간 정보 수집
+
+#### 영화 구현
+
+- [ ] Movie 타입 사용
+- [ ] Person 타입 사용
+- [ ] 정확한 정보 입력
+- [ ] 필수 속성 포함
+
+#### 검증 및 테스트
+
+- [ ] schema.org 테스팅 도구로 검증
+- [ ] 영화 정보 정확성 확인
+- [ ] 검색 결과에서 영화 노출 확인
+
+### 절대 금지사항
+
+1. **부정확한 정보**: 실제 영화 정보와 다른 내용
+2. **잘못된 출연진**: 실제 출연진과 다른 정보
+3. **부정확한 상영 시간**: 실제 상영 시간과 다른 값
+4. **과도한 정보**: 필요 이상의 과도한 정보
+
+---
+
+## rule15 소프트웨어 (Software)
+
+> 출처: [네이버 검색 어드바이저 소프트웨어 가이드](https://searchadvisor.naver.com/guide/structured-data-software)
+
+### 소프트웨어 개요
+
+#### 소프트웨어의 정의
+
+- **소프트웨어 제품**: 컴퓨터 프로그램이나 애플리케이션
+- **소프트웨어 정보**: 제품명, 버전, 개발사, 기능 등
+- **다운로드 정보**: 다운로드 링크, 가격, 평점 등
+
+#### 소프트웨어의 중요성
+
+- **소프트웨어 검색**: 소프트웨어 검색에서 중요한 역할
+- **사용자 편의**: 소프트웨어 정보를 쉽게 찾을 수 있음
+- **제품 노출**: 소프트웨어의 노출도 향상
+
+### 소프트웨어 마크업
+
+#### 기본 구조
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "소프트웨어명",
+  "description": "소프트웨어 설명",
+  "applicationCategory": "카테고리",
+  "operatingSystem": "운영체제",
+  "softwareVersion": "버전",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "KRW"
+  }
+}
+```
+
+#### 필수 속성
+
+- **name**: 소프트웨어명
+- **description**: 소프트웨어 설명
+- **applicationCategory**: 소프트웨어 카테고리
+- **operatingSystem**: 지원 운영체제
+
+### AI 작업 체크리스트
+
+#### 소프트웨어 정보 수집
+
+- [ ] 소프트웨어 기본 정보 수집
+- [ ] 기술 사양 정보 수집
+- [ ] 가격 및 라이선스 정보 수집
+
+#### 소프트웨어 구현
+
+- [ ] SoftwareApplication 타입 사용
+- [ ] Offer 타입 사용
+- [ ] 정확한 정보 입력
+- [ ] 필수 속성 포함
+
+#### 검증 및 테스트
+
+- [ ] schema.org 테스팅 도구로 검증
+- [ ] 소프트웨어 정보 정확성 확인
+- [ ] 검색 결과에서 소프트웨어 노출 확인
+
+### 절대 금지사항
+
+1. **부정확한 정보**: 실제 소프트웨어 정보와 다른 내용
+2. **잘못된 버전**: 실제 버전과 다른 정보
+3. **부정확한 가격**: 실제 가격과 다른 정보
+4. **과도한 정보**: 필요 이상의 과도한 정보
+
+이 구조화된 데이터 마크업 가이드들을 모든 웹사이트 개발에 체계적으로 적용하여 네이버 검색 최적화를 완성할 것.
+
+---
+
+## 📝 **콘텐츠 가이드라인**
+
+### 📋 **섹션 개요**
+
+> 콘텐츠 품질과 사용자 경험을 위한 가이드라인을 다룹니다.
+
+| 규칙  | 제목               | 상태 | 중요도  |
+| ----- | ------------------ | ---- | ------- |
+| rule1 | 콘텐츠 남용 방지   | ✅   | 🔴 높음 |
+| rule2 | 콘텐츠 기본 가이드 | ✅   | 🔴 높음 |
+
+---
+
+### 📌 **rule1 콘텐츠 남용 방지**
+
+> 출처: [네이버 검색 어드바이저 콘텐츠 남용 방지 가이드](https://searchadvisor.naver.com/guide/content-abusing)
+
+### 콘텐츠 남용 방지 개요
+
+#### 콘텐츠 남용의 정의
+
+- **부정적 SEO**: 검색엔진 최적화를 위해 콘텐츠를 남용하는 행위
+- **사용자 경험 저해**: 사용자에게 도움이 되지 않는 콘텐츠 제공
+- **검색 품질 저하**: 검색결과의 품질을 저하시키는 행위
+
+#### 콘텐츠 남용 유형
+
+- **키워드 스팸**: 과도한 키워드 반복
+- **숨겨진 텍스트**: 사용자에게 보이지 않는 텍스트
+- **중복 콘텐츠**: 동일한 내용의 반복
+- **자동 생성 콘텐츠**: 의미 없는 자동 생성 텍스트
+
+### AI 작업 체크리스트
+
+#### 콘텐츠 품질 검증
+
+- [ ] 키워드 밀도가 적절한지 확인
+- [ ] 숨겨진 텍스트가 없는지 확인
+- [ ] 중복 콘텐츠가 없는지 확인
+- [ ] 자동 생성 콘텐츠가 없는지 확인
+
+#### 사용자 중심 콘텐츠
+
+- [ ] 사용자에게 도움이 되는 콘텐츠인지 확인
+- [ ] 자연스러운 문장 구성인지 확인
+- [ ] 의미 있는 정보를 제공하는지 확인
+- [ ] 가독성이 좋은지 확인
+
+### 절대 금지사항
+
+1. **키워드 스팸**: 과도한 키워드 반복
+2. **숨겨진 텍스트**: CSS로 숨겨진 텍스트
+3. **중복 콘텐츠**: 동일한 내용의 반복
+4. **자동 생성 콘텐츠**: 의미 없는 자동 생성 텍스트
+5. **클로킹**: 검색로봇과 사용자에게 다른 콘텐츠 제공
+
+---
+
+## rule2 콘텐츠 기본 가이드
+
+> 출처: [네이버 검색 어드바이저 콘텐츠 기본 가이드](https://searchadvisor.naver.com/guide/content-basic)
+
+### 콘텐츠 기본 가이드 개요
+
+#### 좋은 콘텐츠의 조건
+
+- **사용자 중심**: 사용자에게 도움이 되는 정보 제공
+- **원본성**: 독창적이고 고유한 콘텐츠
+- **정확성**: 사실에 기반한 정확한 정보
+- **최신성**: 최신 정보로 업데이트된 콘텐츠
+
+#### 콘텐츠 작성 원칙
+
+- **명확성**: 명확하고 이해하기 쉬운 내용
+- **구조화**: 논리적인 구조로 구성
+- **가독성**: 읽기 쉬운 형태로 작성
+- **접근성**: 다양한 사용자가 접근 가능한 형태
+
+### AI 작업 체크리스트
+
+#### 콘텐츠 품질 관리
+
+- [ ] 원본 콘텐츠인지 확인
+- [ ] 정확한 정보인지 확인
+- [ ] 최신 정보인지 확인
+- [ ] 사용자에게 도움이 되는지 확인
+
+#### 콘텐츠 구조화
+
+- [ ] 논리적인 구조인지 확인
+- [ ] 적절한 제목과 소제목 사용
+- [ ] 읽기 쉬운 형태인지 확인
+- [ ] 접근성이 좋은지 확인
+
+### 절대 금지사항
+
+1. **복사 콘텐츠**: 다른 사이트에서 복사한 콘텐츠
+2. **부정확한 정보**: 사실에 기반하지 않은 정보
+3. **오래된 정보**: 최신성이 없는 오래된 정보
+4. **사용자에게 도움이 되지 않는 콘텐츠**: 의미 없는 정보
+
+---
+
+## 🏷️ **HTML 마크업**
+
+### 📋 **섹션 개요**
+
+> HTML 구조와 시맨틱 마크업을 통한 검색 최적화 방법을 다룹니다.
+
+| 규칙  | 제목               | 상태 | 중요도  |
+| ----- | ------------------ | ---- | ------- |
+| rule1 | HTML 구조 가이드   | ✅   | 🔴 높음 |
+| rule2 | HTML 콘텐츠 마크업 | ✅   | 🔴 높음 |
+| rule3 | 모바일 마크업      | ✅   | 🟡 중간 |
+| rule4 | 파비콘 마크업      | ✅   | 🟡 중간 |
+
+---
+
+### 📌 **rule1 HTML 구조 가이드**
+
+> 출처: [네이버 검색 어드바이저 HTML 구조 가이드](https://searchadvisor.naver.com/guide/markup-structure)
+
+### HTML 구조 가이드 개요
+
+#### 시맨틱 마크업의 중요성
+
+- **검색로봇 이해**: 검색로봇이 콘텐츠 구조를 이해하기 쉬움
+- **접근성 향상**: 스크린 리더 등 보조 기술 지원
+- **유지보수성**: 코드의 가독성과 유지보수성 향상
+
+#### 주요 시맨틱 태그
+
+- **`<header>`**: 페이지 또는 섹션의 헤더
+- **`<nav>`**: 네비게이션 메뉴
+- **`<main>`**: 페이지의 주요 콘텐츠
+- **`<section>`**: 주제별 콘텐츠 섹션
+- **`<article>`**: 독립적인 콘텐츠
+- **`<aside>`**: 부가적인 콘텐츠
+- **`<footer>`**: 페이지 또는 섹션의 푸터
+
+### AI 작업 체크리스트
+
+#### 시맨틱 마크업 검증
+
+- [ ] 적절한 시맨틱 태그 사용 확인
+- [ ] HTML 구조가 논리적인지 확인
+- [ ] 중첩 구조가 올바른지 확인
+- [ ] 접근성 표준을 준수하는지 확인
+
+#### HTML 구조 최적화
+
+- [ ] 불필요한 div 태그 최소화
+- [ ] 의미 있는 클래스명 사용
+- [ ] ID 속성의 고유성 확인
+- [ ] 폼 요소의 적절한 라벨링
+
+### 절대 금지사항
+
+1. **테이블 레이아웃**: 레이아웃용 테이블 사용
+2. **불필요한 중첩**: 과도한 div 중첩
+3. **의미 없는 태그**: 의미와 맞지 않는 태그 사용
+4. **접근성 무시**: 접근성 표준을 무시한 마크업
+
+---
+
+## rule2 HTML 콘텐츠 마크업
+
+> 출처: [네이버 검색 어드바이저 HTML 콘텐츠 마크업 가이드](https://searchadvisor.naver.com/guide/markup-content)
+
+### HTML 콘텐츠 마크업 개요
+
+#### 콘텐츠 마크업의 중요성
+
+- **검색로봇 이해**: 검색로봇이 콘텐츠를 정확히 이해
+- **구조화된 데이터**: 구조화된 데이터로 콘텐츠 표현
+- **검색 결과 개선**: 검색 결과에서 더 나은 정보 제공
+
+#### 주요 마크업 요소
+
+- **제목 태그**: `<h1>` ~ `<h6>` 태그의 적절한 사용
+- **단락 태그**: `<p>` 태그로 텍스트 구조화
+- **목록 태그**: `<ul>`, `<ol>`, `<li>` 태그 사용
+- **강조 태그**: `<strong>`, `<em>` 태그 사용
+- **링크 태그**: `<a>` 태그의 적절한 사용
+
+### AI 작업 체크리스트
+
+#### 콘텐츠 마크업 검증
+
+- [ ] 제목 태그의 계층 구조 확인
+- [ ] 단락 태그의 적절한 사용 확인
+- [ ] 목록 태그의 올바른 사용 확인
+- [ ] 강조 태그의 의미적 사용 확인
+
+#### 링크 마크업 검증
+
+- [ ] 링크 텍스트의 명확성 확인
+- [ ] title 속성의 적절한 사용 확인
+- [ ] rel 속성의 필요시 사용 확인
+- [ ] 링크의 접근성 확인
+
+### 절대 금지사항
+
+1. **제목 태그 오용**: 레이아웃용 제목 태그 사용
+2. **의미 없는 강조**: 의미와 맞지 않는 강조 태그 사용
+3. **빈 링크**: href 속성이 없는 링크
+4. **접근성 무시**: 접근성을 고려하지 않은 마크업
+
+---
+
+## rule3 모바일 마크업
+
+> 출처: [네이버 검색 어드바이저 모바일 마크업 가이드](https://searchadvisor.naver.com/guide/markup-mobile)
+
+### 모바일 마크업 개요
+
+#### 모바일 최적화의 중요성
+
+- **모바일 우선**: 모바일 사용자가 증가하는 추세
+- **반응형 디자인**: 다양한 화면 크기에 대응
+- **사용자 경험**: 모바일에서의 편리한 사용성
+
+#### 모바일 마크업 요소
+
+- **뷰포트 설정**: `<meta name="viewport">` 태그
+- **터치 친화적**: 터치 인터페이스에 최적화된 요소
+- **로딩 속도**: 빠른 로딩을 위한 최적화
+- **접근성**: 모바일에서의 접근성 고려
+
+### AI 작업 체크리스트
+
+#### 모바일 최적화 검증
+
+- [ ] 뷰포트 설정 확인
+- [ ] 터치 친화적 요소 사용 확인
+- [ ] 로딩 속도 최적화 확인
+- [ ] 모바일 접근성 확인
+
+#### 반응형 디자인 검증
+
+- [ ] 다양한 화면 크기 대응 확인
+- [ ] CSS 미디어 쿼리 사용 확인
+- [ ] 이미지 반응형 처리 확인
+- [ ] 폰트 크기 적절성 확인
+
+### 절대 금지사항
+
+1. **뷰포트 미설정**: 모바일 뷰포트 설정 누락
+2. **고정 레이아웃**: 모바일에 최적화되지 않은 고정 레이아웃
+3. **터치 불친화적**: 터치 인터페이스에 적합하지 않은 요소
+4. **느린 로딩**: 모바일에서 느린 로딩 속도
+
+---
+
+## rule4 파비콘 설정
+
+> 출처: [네이버 검색 어드바이저 파비콘 설정 가이드](https://searchadvisor.naver.com/guide/markup-favicon)
+
+### 파비콘 설정 개요
+
+#### 파비콘의 중요성
+
+- **브랜드 인식**: 브랜드 아이덴티티 표현
+- **사용자 경험**: 브라우저 탭에서 사이트 식별
+- **전문성**: 전문적인 웹사이트 이미지
+
+#### 파비콘 유형
+
+- **기본 파비콘**: 16x16, 32x32 크기
+- **애플 터치 아이콘**: iOS 기기용 아이콘
+- **안드로이드 아이콘**: 안드로이드 기기용 아이콘
+- **Windows 타일**: Windows 8/10 타일 아이콘
+
+### AI 작업 체크리스트
+
+#### 파비콘 설정 검증
+
+- [ ] 기본 파비콘 파일 존재 확인
+- [ ] HTML에 파비콘 링크 태그 확인
+- [ ] 다양한 크기의 파비콘 제공 확인
+- [ ] 모바일 기기용 아이콘 확인
+
+#### 파비콘 품질 검증
+
+- [ ] 파비콘 이미지 품질 확인
+- [ ] 브랜드 아이덴티티 반영 확인
+- [ ] 다양한 배경에서 가독성 확인
+- [ ] 파일 크기 최적화 확인
+
+### 절대 금지사항
+
+1. **파비콘 누락**: 파비콘 파일 또는 링크 태그 누락
+2. **낮은 품질**: 해상도가 낮거나 흐린 파비콘
+3. **부적절한 크기**: 표준 크기가 아닌 파비콘
+4. **과도한 파일 크기**: 최적화되지 않은 큰 파일
+
+---
+
+## 🔗 **웹사이트 검색연동**
+
+### 📋 **섹션 개요**
+
+> 검색엔진과의 연동을 통한 효율적인 콘텐츠 수집 방법을 다룹니다.
+
+| 규칙  | 제목      | 상태 | 중요도  |
+| ----- | --------- | ---- | ------- |
+| rule1 | 수집 요청 | ✅   | 🔴 높음 |
+| rule2 | 피드 제출 | ✅   | 🔴 높음 |
+
+---
+
+### 📌 **rule1 수집 요청**
+
+> 출처: [네이버 검색 어드바이저 수집 요청 가이드](https://searchadvisor.naver.com/guide/request-crawl)
+
+### 수집 요청 개요
+
+#### 수집 요청의 목적
+
+- **새 콘텐츠 알림**: 새로운 콘텐츠를 검색로봇에게 알림
+- **업데이트 알림**: 기존 콘텐츠의 업데이트를 알림
+- **수집 속도 향상**: 수동 수집 요청으로 빠른 색인
+
+#### 수집 요청 대상
+
+- **새로운 페이지**: 새로 생성된 페이지
+- **업데이트된 페이지**: 내용이 변경된 페이지
+- **중요한 페이지**: 사이트의 핵심 페이지
+- **이벤트 페이지**: 임시 이벤트 페이지
+
+### AI 작업 체크리스트
+
+#### 수집 요청 준비
+
+- [ ] 수집 요청할 페이지 목록 작성
+- [ ] 페이지의 완성도 확인
+- [ ] 메타데이터 최적화 확인
+- [ ] 콘텐츠 품질 확인
+
+#### 수집 요청 실행
+
+- [ ] 네이버 웹마스터도구 접속
+- [ ] 수집 요청 기능 사용
+- [ ] 요청 결과 모니터링
+- [ ] 색인 상태 확인
+
+### 절대 금지사항
+
+1. **미완성 페이지**: 완성되지 않은 페이지 수집 요청
+2. **중복 요청**: 동일한 페이지의 과도한 수집 요청
+3. **부적절한 콘텐츠**: 검색에 부적절한 콘텐츠 요청
+4. **스팸 요청**: 의미 없는 대량 수집 요청
+
+---
+
+## rule2 피드 제출
+
+> 출처: [네이버 검색 어드바이저 피드 제출 가이드](https://searchadvisor.naver.com/guide/request-feed)
+
+### 피드 제출 개요
+
+#### 피드 제출의 목적
+
+- **구조화된 데이터**: 구조화된 형태로 콘텐츠 제공
+- **빠른 색인**: 피드를 통한 빠른 색인 처리
+- **정확한 정보**: 정확한 메타데이터 제공
+
+#### 피드 유형
+
+- **XML 사이트맵**: 페이지 목록을 XML 형태로 제공
+- **RSS 피드**: 최신 콘텐츠 정보 제공
+- **Atom 피드**: RSS와 유사한 형태의 피드
+- **JSON 피드**: JSON 형태의 구조화된 데이터
+
+### AI 작업 체크리스트
+
+#### 피드 생성 검증
+
+- [ ] 피드 형식의 정확성 확인
+- [ ] 필수 필드 포함 확인
+- [ ] URL의 유효성 확인
+- [ ] 메타데이터의 정확성 확인
+
+#### 피드 제출 검증
+
+- [ ] 네이버 웹마스터도구에 피드 제출
+- [ ] 제출 결과 모니터링
+- [ ] 오류 발생 시 수정
+- [ ] 정기적인 피드 업데이트
+
+### 절대 금지사항
+
+1. **잘못된 형식**: 표준에 맞지 않는 피드 형식
+2. **부정확한 정보**: 잘못된 URL 또는 메타데이터
+3. **중복 제출**: 동일한 피드의 중복 제출
+4. **불완전한 피드**: 필수 정보가 누락된 피드
+
+---
+
+## 📚 **목차 및 빠른 네비게이션**
+
+### 🎯 **전체 섹션 목록**
+
+| 섹션                          | 규칙 수 | 바로가기                              |
+| ----------------------------- | ------- | ------------------------------------- |
+| 🔍 **검색엔진 최적화 기초**   | 8개     | [바로가기](#-검색엔진-최적화-기초)    |
+| 🚀 **검색엔진 최적화 고급**   | 5개     | [바로가기](#-검색엔진-최적화-고급)    |
+| 📝 **콘텐츠 가이드라인**      | 2개     | [바로가기](#-콘텐츠-가이드라인)       |
+| 🏷️ **HTML 마크업**            | 4개     | [바로가기](#️-html-마크업)            |
+| 🔗 **웹사이트 검색연동**      | 2개     | [바로가기](#-웹사이트-검색연동)       |
+| 🏗️ **구조화된 데이터 마크업** | 15개    | [바로가기](#️-구조화된-데이터-마크업) |
+
+### 📋 **주요 규칙 빠른 참조**
+
+#### 🔍 **검색엔진 최적화 기초**
+
+- [rule1: 검색엔진 최적화의 목적](#-rule1-검색엔진-최적화의-목적)
+- [rule2: 웹사이트 생성](#-rule2-웹사이트-생성)
+- [rule3: 웹페이지 이동](#-rule3-웹페이지-이동)
+- [rule4: 웹사이트 이전](#-rule4-웹사이트-이전)
+- [rule5: 웹사이트 종료](#-rule5-웹사이트-종료)
+- [rule6: 방화벽 설정](#-rule6-방화벽-설정)
+- [rule7: HTTP 프로토콜](#-rule7-http-프로토콜)
+- [rule8: 검색로봇 확인](#-rule8-검색로봇-확인)
+
+#### 🚀 **검색엔진 최적화 고급**
+
+- [rule1: 자바스크립트 검색 최적화](#-rule1-자바스크립트-검색-최적화)
+- [rule2: URL 구조 최적화](#-rule2-url-구조-최적화)
+- [rule3: 색인 효율성 향상](#-rule3-색인-효율성-향상)
+- [rule4: 검색 도움말](#-rule4-검색-도움말)
+- [rule5: 리소스 및 링크 관리](#-rule5-리소스-및-링크-관리)
+
+#### 📝 **콘텐츠 가이드라인**
+
+- [rule1: 콘텐츠 남용 방지](#-rule1-콘텐츠-남용-방지)
+- [rule2: 콘텐츠 기본 가이드](#-rule2-콘텐츠-기본-가이드)
+
+#### 🏷️ **HTML 마크업**
+
+- [rule1: HTML 구조 가이드](#-rule1-html-구조-가이드)
+- [rule2: HTML 콘텐츠 마크업](#-rule2-html-콘텐츠-마크업)
+- [rule3: 모바일 마크업](#-rule3-모바일-마크업)
+- [rule4: 파비콘 마크업](#-rule4-파비콘-마크업)
+
+#### 🔗 **웹사이트 검색연동**
+
+- [rule1: 수집 요청](#-rule1-수집-요청)
+- [rule2: 피드 제출](#-rule2-피드-제출)
+
+#### 🏗️ **구조화된 데이터 마크업**
+
+- [rule1: 구조화된 데이터 소개](#-rule1-구조화된-데이터-소개)
+- [rule2: 사이트 연관채널](#-rule2-사이트-연관채널)
+- [rule3: 채용정보](#-rule3-채용정보)
+- [rule4: 주소 (Address)](#-rule4-주소-address)
+- [rule5: 브레드크럼 (Breadcrumb)](#-rule5-브레드크럼-breadcrumb)
+- [rule6: FAQ](#-rule6-faq)
+- [rule7: How-to](#-rule7-how-to)
+- [rule8: 캐러셀 (Carousel)](#-rule8-캐러셀-carousel)
+- [rule9: 평점 (Rating)](#-rule9-평점-rating)
+- [rule10: 레시피 (Recipe)](#-rule10-레시피-recipe)
+- [rule11: 리뷰 (Review)](#-rule11-리뷰-review)
+- [rule12: 레스토랑 (Restaurant)](#-rule12-레스토랑-restaurant)
+- [rule13: TV 시리즈 (TV Series)](#-rule13-tv-시리즈-tv-series)
+- [rule14: 영화 (Movie)](#-rule14-영화-movie)
+- [rule15: 소프트웨어 (Software)](#-rule15-소프트웨어-software)
+
+---
+
+## 🎉 **문서 완성**
+
+> ✅ **총 36개의 규칙이 완성되었습니다!**
+>
+> 이 문서는 네이버 검색 어드바이저 가이드를 기반으로 작성되었으며,
+> AI가 웹사이트 개발 시 네이버 검색 최적화를 위해 참고할 수 있도록 구성되었습니다.
+>
+> 각 규칙은 **AI 작업 체크리스트**, **절대 금지사항**, **검증 방법**을 포함하여
+> 실제 웹사이트 개발 및 운영에 바로 적용할 수 있습니다.
 
 ---
