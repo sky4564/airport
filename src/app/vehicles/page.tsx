@@ -5,9 +5,18 @@ import VehicleListingJsonLd from '@/components/seo/VehicleListingJsonLd'
 export const metadata: Metadata = {
   title: '차량안내 - 공항렌트24',
   description: '보유 차량을 확인하고 예약하세요. 경차부터 대형차, SUV, 승합차까지 합리적인 가격으로 제공합니다.',
-  keywords: '차량안내, 렌터카 종류, 인천공항 렌트카',
+  keywords: '차량안내, 렌터카 종류, 인천공항 렌트카, 공항렌트24',
   alternates: {
     canonical: 'https://airportrent24.kr/vehicles'
+  },
+  openGraph: {
+    title: '차량안내 - 공항렌트24',
+    description: '보유 차량을 확인하고 예약하세요. 경차부터 대형차, SUV, 승합차까지 합리적인 가격으로 제공합니다.',
+    url: 'https://airportrent24.kr/vehicles',
+  },
+  twitter: {
+    title: '차량안내 - 공항렌트24',
+    description: '보유 차량을 확인하고 예약하세요. 경차부터 대형차, SUV, 승합차까지 합리적인 가격으로 제공합니다.',
   }
 }
 

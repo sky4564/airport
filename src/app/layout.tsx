@@ -28,13 +28,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "ko_KR",
     url: "https://airportrent24.kr",
-    siteName: "공항렌트24 | Airport Rent 24",
+    siteName: "공항렌트24",
     images: [
       {
         url: "/images/homepage.jpg",
         width: 1200,
         height: 630,
-        alt: "공항렌트24 인천공항 렌터카 서비스 | Incheon Airport Car Rental Service",
+        alt: "공항렌트24 인천공항 렌터카 서비스",
       },
     ],
   },

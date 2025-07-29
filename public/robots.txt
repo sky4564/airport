@@ -3,54 +3,23 @@
 # 네이버 검색로봇 (Yeti) 전용 설정
 User-agent: Yeti
 Allow: /
-Allow: /vehicles
-Allow: /about
-Allow: /pickup
-Allow: /reservation
-Allow: /images/cars/
-Allow: /images/terminals/
-Allow: /favicon.ico
 Disallow: /api/
 Disallow: /admin/
 Disallow: /dashboard/
 Disallow: /_next/
 Disallow: /reservation/confirmation/
-
-# 구글 및 기타 검색엔진
-User-agent: Googlebot
-Allow: /
-Disallow: /api/
-Disallow: /admin/
-Disallow: /dashboard/
-Disallow: /_next/
 
 # 모든 검색엔진 기본 설정
 User-agent: *
 Allow: /
-Allow: /vehicles
-Allow: /about
-Allow: /pickup
-Allow: /reservation
-Allow: /images/cars/
-Allow: /images/terminals/
-Allow: /favicon.ico
-
-# 크롤링 금지 영역
 Disallow: /api/
 Disallow: /admin/
 Disallow: /dashboard/
 Disallow: /_next/
 Disallow: /reservation/confirmation/
-Disallow: /*?test*
-Disallow: /*?debug*
-Disallow: /tmp/
-Disallow: /temp/
 
 # 사이트맵 위치
 Sitemap: https://airportrent24.kr/sitemap.xml
 
 # 선호 도메인 설정 (중복 콘텐츠 방지)
-Host: airportrent24.kr
-
-# 크롤링 딜레이 (네이버 권장)
-Crawl-delay: 1 
+Host: airportrent24.kr 
