@@ -4,6 +4,11 @@ export default function VehicleJsonLd() {
     "@type": "Product",
     "name": "인천공항 렌트카 서비스",
     "description": "인천공항에서 다양한 차종의 렌트카 서비스를 제공합니다. 소형차부터 대형차까지 합리적인 요금으로 안전하고 편안한 여행을 도와드립니다.",
+    "image": [
+      "https://airportrent24.kr/images/homepage.jpg",
+      "https://airportrent24.kr/images/hero-bg.jpg",
+      "https://airportrent24.kr/images/airport-bg.jpg"
+    ],
     "brand": {
       "@type": "Brand",
       "name": "인천공항 렌트카"
@@ -13,8 +18,39 @@ export default function VehicleJsonLd() {
       "@type": "Offer",
       "priceCurrency": "KRW",
       "price": "50000",
-      "priceValidUntil": "2024-12-31",
+      "priceValidUntil": "2025-12-31",
       "availability": "https://schema.org/InStock",
+      "shippingDetails": {
+        "@type": "OfferShippingDetails",
+        "shippingRate": {
+          "@type": "MonetaryAmount",
+          "value": "0",
+          "currency": "KRW"
+        },
+        "deliveryTime": {
+          "@type": "ShippingDeliveryTime",
+          "handlingTime": {
+            "@type": "QuantitativeValue",
+            "minValue": 0,
+            "maxValue": 1,
+            "unitCode": "DAY"
+          },
+          "transitTime": {
+            "@type": "QuantitativeValue",
+            "minValue": 0,
+            "maxValue": 0,
+            "unitCode": "DAY"
+          }
+        }
+      },
+      "hasMerchantReturnPolicy": {
+        "@type": "MerchantReturnPolicy",
+        "applicableCountry": "KR",
+        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+        "merchantReturnDays": 1,
+        "returnMethod": "https://schema.org/ReturnInStore",
+        "returnFees": "https://schema.org/ReturnFeesCustomerResponsibility"
+      },
       "seller": {
         "@type": "LocalBusiness",
         "name": "인천공항 렌트카",
@@ -24,7 +60,7 @@ export default function VehicleJsonLd() {
           "addressRegion": "인천광역시",
           "addressCountry": "KR"
         },
-        "telephone": "+82-32-123-4567"
+        "telephone": "+82-010-8426-3821"
       }
     },
     "aggregateRating": {

@@ -4,11 +4,11 @@ export default function HomeJsonLd() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "@id": "https://airportrent24.kr/#business",
-    "name": "블루윙카 인천공항점",
-    "alternateName": "블루윙카",
-    "description": "블루윙카 인천공항점에서 24시간 공항 픽업 렌터카 서비스를 제공합니다. 다양한 차종과 합리적 요금으로 안전하고 편안한 여행을 시작하세요.",
+    "name": "공항렌트24",
+    "alternateName": "공항렌트24 인천공항점",
+    "description": "공항렌트24에서 24시간 공항 픽업 렌터카 서비스를 제공합니다. 다양한 차종과 합리적 요금으로 안전하고 편안한 여행을 시작하세요.",
     "url": "https://airportrent24.kr",
-    "logo": "https://airportrent24.kr/favicon.ico",
+    "logo": "https://airportrent24.kr/favicon.png",
     "image": [
       "https://airportrent24.kr/images/hero-bg.jpg",
       "https://airportrent24.kr/images/airport-bg.jpg"
@@ -128,10 +128,10 @@ export default function HomeJsonLd() {
   const organization = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "블루윙카 인천공항점",
-    "alternateName": "블루윙카",
+    "name": "공항렌트24",
+    "alternateName": "공항렌트24 인천공항점",
     "url": "https://airportrent24.kr",
-    "logo": "https://airportrent24.kr/favicon.ico",
+    "logo": "https://airportrent24.kr/favicon.png",
     "contactPoint": [
       {
         "@type": "ContactPoint",
@@ -159,7 +159,7 @@ export default function HomeJsonLd() {
   const website = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "블루윙카 인천공항점",
+    "name": "공항렌트24",
     "url": "https://airportrent24.kr",
     "potentialAction": {
       "@type": "SearchAction",

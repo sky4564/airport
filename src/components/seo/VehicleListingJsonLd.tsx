@@ -5,11 +5,11 @@ export default function VehicleListingJsonLd() {
   const carRentalService = {
     "@context": "https://schema.org",
     "@type": "AutomotiveRentalService",
-    "name": "차렌터카_인천공항점",
+    "name": "공항렌트24",
     "description": "인천공항에서 다양한 차종의 렌터카 서비스를 제공합니다. 경차부터 대형차, SUV, 승합차까지 합리적인 가격으로 안전하고 편안한 여행을 도와드립니다.",
-    "url": "https://yourwebsite.com/vehicles",
-    "logo": "https://yourwebsite.com/logo.png",
-    "image": "https://yourwebsite.com/images/hero-bg.jpg",
+    "url": "https://airportrent24.kr/vehicles",
+    "logo": "https://airportrent24.kr/favicon.png",
+    "image": "https://airportrent24.kr/images/hero-bg.jpg",
     "telephone": "+82-32-427-5500",
     "email": "charent@charentcar.com",
     "address": {
@@ -34,7 +34,7 @@ export default function VehicleListingJsonLd() {
     "serviceType": "자동차 렌탈",
     "brand": {
       "@type": "Brand",
-      "name": "차렌터카_인천공항점"
+      "name": "공항렌트24"
     },
     "aggregateRating": {
       "@type": "AggregateRating",
@@ -110,10 +110,10 @@ export default function VehicleListingJsonLd() {
   const organization = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "차렌터카_인천공항점",
-    "alternateName": "차렌터카 인천공항점",
-    "url": "https://yourwebsite.com",
-    "logo": "https://yourwebsite.com/logo.png",
+    "name": "공항렌트24",
+    "alternateName": "공항렌트24 인천공항점",
+    "url": "https://airportrent24.kr",
+    "logo": "https://airportrent24.kr/favicon.png",
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+82-32-427-5500",
@@ -132,11 +132,11 @@ export default function VehicleListingJsonLd() {
   const website = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "차렌터카_인천공항점",
-    "url": "https://yourwebsite.com",
+    "name": "공항렌트24",
+    "url": "https://airportrent24.kr",
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://yourwebsite.com/vehicles?search={search_term_string}",
+      "target": "https://airportrent24.kr/vehicles?search={search_term_string}",
       "query-input": "required name=search_term_string"
     }
   };
@@ -150,13 +150,13 @@ export default function VehicleListingJsonLd() {
         "@type": "ListItem",
         "position": 1,
         "name": "홈",
-        "item": "https://yourwebsite.com"
+        "item": "https://airportrent24.kr"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "차량안내",
-        "item": "https://yourwebsite.com/vehicles"
+        "item": "https://airportrent24.kr/vehicles"
       }
     ]
   };
