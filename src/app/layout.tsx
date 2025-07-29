@@ -19,12 +19,12 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://airportrent24.kr'),
-  title: "공항렌트24 | 인천공항 렌터카 24시간 픽업 서비스 | Incheon Airport Car Rental",
-  description: "공항렌트24에서 제공하는 24시간 인천공항 픽업 렌터카 서비스. 다양한 차종, 합리적 요금, 보험 포함으로 안전하고 편안한 여행을 시작하세요. 24-hour Incheon Airport car rental pickup service with various vehicles and competitive rates.",
-  keywords: "공항렌트24, 인천공항 렌터카, 공항 픽업 서비스, 24시간 렌터카, 인천공항 차량 대여, 렌트카, 인천공항 렌트카, 공항렌터카, 차량대여, 렌터카 예약, Incheon Airport car rental, airport pickup service, 24 hour car rental, ICN airport car rental, Korea car rental, airport car hire, rental car Incheon, car rental pickup service",
+  title: "공항렌트24 - 인천공항 렌터카 24시간 픽업 서비스",
+  description: "인천공항에서 24시간 픽업 가능한 렌터카 서비스. 경차부터 대형차까지 다양한 차종을 합리적인 요금으로 제공합니다.",
+  keywords: "공항렌트24, 인천공항 렌터카, 공항 픽업 서비스, 24시간 렌터카, 인천공항 차량 대여",
   openGraph: {
-    title: "공항렌트24 | 인천공항 렌터카 24시간 픽업 서비스 | Incheon Airport Car Rental",
-    description: "24시간 공항 픽업 서비스와 다양한 차종을 제공하는 공항렌트24 | 24-hour airport pickup service with various vehicles at Incheon Airport",
+    title: "공항렌트24 - 인천공항 렌터카 24시간 픽업 서비스",
+    description: "인천공항에서 24시간 픽업 가능한 렌터카 서비스. 경차부터 대형차까지 다양한 차종을 합리적인 요금으로 제공합니다.",
     type: "website",
     locale: "ko_KR",
     url: "https://airportrent24.kr",
@@ -40,8 +40,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "공항렌트24 | 인천공항 렌터카 24시간 픽업 서비스 | Incheon Airport Car Rental",
-    description: "24시간 공항 픽업 서비스와 다양한 차종을 제공하는 공항렌트24 | 24-hour airport pickup service with various vehicles",
+    title: "공항렌트24 - 인천공항 렌터카 24시간 픽업 서비스",
+    description: "인천공항에서 24시간 픽업 가능한 렌터카 서비스. 경차부터 대형차까지 다양한 차종을 합리적인 요금으로 제공합니다.",
     images: ["/images/homepage.jpg"],
   },
   robots: {
