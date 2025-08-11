@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <h3 className="text-lg font-bold mb-2 text-white">공항렌트24</h3>
             <h4 className="text-sm font-semibold mb-4 text-gray-300">Airport Rent 24</h4>
@@ -38,7 +38,24 @@ const Footer = () => {
               <li className="text-sm text-gray-300">• Incheon Metropolitan Area</li>
             </ul>
           </div>
+
+          {/* 사업자 정보 컬럼 추가 */}
+          <div>
+            <h3 className="text-lg font-bold mb-2 text-white">사업자 정보</h3>
+            <h4 className="text-sm font-semibold mb-4 text-gray-300">Business Info</h4>
+            <div className="space-y-2 text-gray-200 text-sm leading-relaxed">
+              <p>상호: (주)차렌터카</p>
+              <p>대표: 차승훈</p>
+              <p>개인정보관리책임자: 차승훈</p>
+              <p>전화: 032-427-5500</p>
+              <p>이메일: charentcar@naver.com</p>
+              <p className="text-xs">주소: 인천광역시 연수구<br />경원대로534번길 11(선학동)</p>
+              <p className="text-xs">사업자등록번호: 8888101709</p>
+              <p className="text-xs">통신판매: 제 2021-인천연수구-0492</p>
+            </div>
+          </div>
         </div>
+
         <div className="mt-8 pt-8 border-t border-gray-700 text-center">
           <p className="text-gray-300 font-medium">&copy; {currentYear} 공항렌트24. All rights reserved.</p>
         </div>
