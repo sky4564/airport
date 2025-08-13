@@ -13,9 +13,9 @@ const SEATING_OPTIONS = [
 // 가격대 옵션
 const PRICE_RANGES = [
   { value: 'all', label: '전체' },
-  { value: 'budget', label: '10만원 이하' },
-  { value: 'mid', label: '10만원 - 20만원' },
-  { value: 'premium', label: '20만원 이상' },
+  { value: 'budget', label: '~10만원' },
+  { value: 'mid', label: '10~20만원' },
+  { value: 'premium', label: '20만원~' },
 ];
 
 // 특별 기능 옵션 (CSV에 포함된 옵션만)
@@ -23,10 +23,10 @@ const SPECIAL_FEATURES = [
   { value: 'ventilated_seats', label: '❄️ 통풍시트' },
   { value: 'sunroof', label: '🌞 선루프' },
   { value: 'heated_seats', label: '🔥 열선시트' },
-  { value: 'navigation', label: '🗺️ 네비게이션' },
-  { value: 'backup_camera', label: '📹 후방카메라' },
+  { value: 'navigation', label: '🗺️ 네비' },
+  { value: 'backup_camera', label: '📹 후방캠' },
   { value: 'hipass', label: '🛣️ 하이패스' },
-  { value: 'cruise_control', label: '🚗 크루즈컨트롤' },
+  { value: 'cruise_control', label: '🚗 크루즈' },
   { value: 'smart_key', label: '🔒 스마트키' },
 ];
 
@@ -94,7 +94,7 @@ export default function SearchFilter({
       case 0: // 차종 선택
         return (
           <div className="space-y-6">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4">
               {VEHICLE_CATEGORIES.map((category) => (
                 <button
                   key={category}
@@ -102,12 +102,12 @@ export default function SearchFilter({
                     onCategoryChange(category);
                     autoNextStep();
                   }}
-                  className={`p-4 rounded-2xl text-center transition-all duration-300 border-2 ${selectedCategory === category
+                  className={`p-3 sm:p-4 rounded-2xl text-center transition-all duration-300 border-2 ${selectedCategory === category
                     ? 'bg-blue-600 text-white border-blue-600 shadow-lg transform scale-105'
                     : 'bg-white text-gray-700 border-gray-200 hover:border-blue-300 hover:shadow-md'
                     }`}
                 >
-                  <div className="text-2xl mb-2">
+                  <div className="text-xl sm:text-2xl mb-1 sm:mb-2">
                     {category === '전체' ? '🚗' :
                       category === '승합차' ? '🚐' :
                         category === '대형' ? '🏰' :
@@ -116,7 +116,7 @@ export default function SearchFilter({
                               category === '중형' ? '🚗' :
                                 category === '준중형' ? '🚓' : '🚕'}
                   </div>
-                  <div className="font-semibold">{category}</div>
+                  <div className="font-semibold text-sm sm:text-base whitespace-nowrap overflow-hidden text-ellipsis">{category}</div>
                 </button>
               ))}
             </div>
@@ -129,7 +129,7 @@ export default function SearchFilter({
       case 1: // 승차인원
         return (
           <div className="space-y-6">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
               {SEATING_OPTIONS.map((option) => (
                 <button
                   key={option.value}
@@ -137,18 +137,18 @@ export default function SearchFilter({
                     onSeatingChange(option.value);
                     autoNextStep();
                   }}
-                  className={`p-4 rounded-2xl text-center transition-all duration-300 border-2 ${selectedSeating === option.value
+                  className={`p-3 sm:p-4 rounded-2xl text-center transition-all duration-300 border-2 ${selectedSeating === option.value
                     ? 'bg-green-600 text-white border-green-600 shadow-lg transform scale-105'
                     : 'bg-white text-gray-700 border-gray-200 hover:border-green-300 hover:shadow-md'
                     }`}
                 >
-                  <div className="text-2xl mb-2">
+                  <div className="text-xl sm:text-2xl mb-1 sm:mb-2">
                     {option.value === 'all' ? '👥' :
                       option.value === '5' ? '👨‍👩‍👧‍👦' :
                         option.value === '7' ? '👨‍👩‍👧‍👦👶👶' :
                           '🚌'}
                   </div>
-                  <div className="font-semibold">{option.label}</div>
+                  <div className="font-semibold text-sm sm:text-base whitespace-nowrap overflow-hidden text-ellipsis">{option.label}</div>
                 </button>
               ))}
             </div>
@@ -161,7 +161,7 @@ export default function SearchFilter({
       case 2: // 가격대
         return (
           <div className="space-y-6">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
               {PRICE_RANGES.map((range) => (
                 <button
                   key={range.value}
@@ -169,18 +169,18 @@ export default function SearchFilter({
                     onPriceRangeChange(range.value);
                     autoNextStep();
                   }}
-                  className={`p-4 rounded-2xl text-center transition-all duration-300 border-2 ${selectedPriceRange === range.value
+                  className={`p-3 sm:p-4 rounded-2xl text-center transition-all duration-300 border-2 ${selectedPriceRange === range.value
                     ? 'bg-purple-600 text-white border-purple-600 shadow-lg transform scale-105'
                     : 'bg-white text-gray-700 border-gray-200 hover:border-purple-300 hover:shadow-md'
                     }`}
                 >
-                  <div className="text-2xl mb-2">
+                  <div className="text-xl sm:text-2xl mb-1 sm:mb-2">
                     {range.value === 'all' ? '💰' :
                       range.value === 'budget' ? '🪙' :
                         range.value === 'mid' ? '💵' :
                           '💎'}
                   </div>
-                  <div className="font-semibold">{range.label}</div>
+                  <div className="font-semibold text-sm sm:text-base whitespace-nowrap overflow-hidden text-ellipsis">{range.label}</div>
                 </button>
               ))}
             </div>
@@ -193,17 +193,17 @@ export default function SearchFilter({
       case 3: // 특별 기능
         return (
           <div className="space-y-6">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4">
               {SPECIAL_FEATURES.map((feature) => (
                 <button
                   key={feature.value}
                   onClick={() => onFeatureToggle(feature.value)}
-                  className={`p-4 rounded-xl text-center transition-all duration-300 border-2 ${selectedFeatures.includes(feature.value)
+                  className={`p-3 sm:p-4 rounded-xl text-center transition-all duration-300 border-2 ${selectedFeatures.includes(feature.value)
                     ? 'bg-orange-600 text-white border-orange-600 shadow-lg transform scale-105'
                     : 'bg-white text-gray-700 border-gray-200 hover:border-orange-300 hover:shadow-md'
                     }`}
                 >
-                  <div className="font-medium">{feature.label}</div>
+                  <div className="font-medium text-sm sm:text-base whitespace-nowrap overflow-hidden text-ellipsis">{feature.label}</div>
                 </button>
               ))}
             </div>
@@ -222,7 +222,7 @@ export default function SearchFilter({
     <section className="bg-white rounded-2xl shadow-xl p-8 mb-8">
       {/* 진행 상황 표시 */}
       <div className="mb-8">
-        <div className="flex justify-between items-center mb-4">
+        <div className="flex justify-between items-center mb-4 gap-1 sm:gap-2">
           {filterSteps.map((step, index) => (
             <button
               key={step.id}
@@ -235,7 +235,7 @@ export default function SearchFilter({
                 }`}
             >
               <div className="text-xs mb-1">Step {index + 1}</div>
-              <div className="text-sm">{step.title}</div>
+              <div className="text-xs sm:text-sm whitespace-nowrap overflow-hidden text-ellipsis px-1">{step.title}</div>
             </button>
           ))}
         </div>
@@ -322,28 +322,28 @@ export default function SearchFilter({
 
       {/* 선택된 필터 요약 */}
       <div className="mt-8 pt-6 border-t border-gray-200">
-        <h3 className="text-lg font-semibold text-gray-900 mb-4 text-center">선택한 조건</h3>
+        <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-4 text-center">선택한 조건</h3>
         <div className="flex flex-wrap justify-center gap-2">
           {selectedCategory !== '전체' && (
-            <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">
+            <span className="px-2 sm:px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs sm:text-sm whitespace-nowrap">
               차종: {selectedCategory}
             </span>
           )}
           {selectedSeating !== 'all' && (
-            <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">
+            <span className="px-2 sm:px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs sm:text-sm whitespace-nowrap">
               승차인원: {SEATING_OPTIONS.find(opt => opt.value === selectedSeating)?.label}
             </span>
           )}
           {selectedPriceRange !== 'all' && (
-            <span className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm">
+            <span className="px-2 sm:px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs sm:text-sm whitespace-nowrap">
               가격대: {PRICE_RANGES.find(range => range.value === selectedPriceRange)?.label}
             </span>
           )}
           {selectedFeatures.map(feature => (
-            <span key={feature} className="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-sm">
+            <span key={feature} className="px-2 sm:px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-xs sm:text-sm whitespace-nowrap">
               {SPECIAL_FEATURES.find(f => f.value === feature)?.label}
             </span>
-          ))}
+          ))})
         </div>
       </div>
     </section>
