@@ -86,6 +86,14 @@ export const VEHICLES: Vehicle[] = [
     image: '/images/cars/carnival_gen4_van.png',
     features: ['7인승', '통풍시트', '선루프', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스']
   },
+  {
+    id: '68',
+    name: '2026 카니발',
+    category: '승합차',
+    price: '일 17만원',
+    image: '/images/cars/2026_carnival.png',
+    features: ['7인승', '통풍시트', '선루프', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스', '디지털클러스터', '무선충전']
+  },
 
   // 대형 (ID: 11-17)
   {
@@ -151,6 +159,14 @@ export const VEHICLES: Vehicle[] = [
     price: '일 20만원',
     image: '/images/cars/genesis_g80_large.png',
     features: ['5인승', '통풍시트', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스']
+  },
+  {
+    id: '70',
+    name: '벤츠 E200',
+    category: '대형',
+    price: '일 25만원',
+    image: '/images/cars/benz_e200_large.png',
+    features: ['5인승', '통풍시트', '선루프', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스']
   },
 
   // SUV (ID: 18-37)
@@ -261,6 +277,14 @@ export const VEHICLES: Vehicle[] = [
     price: '일 12만원',
     image: '/images/cars/sorento_suv.png',
     features: ['5인승', '통풍시트', '선루프', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스']
+  },
+  {
+    id: '69',
+    name: '2026 쏘렌토',
+    category: 'SUV',
+    price: '일 15만원',
+    image: '/images/cars/2026_sorento.png',
+    features: ['5인승', '통풍시트', '선루프', '열선시트', '네비게이션', '후방카메라', '하이패스', '크루즈컨트롤', '스마트키', '블랙박스', '디지털클러스터', '무선충전']
   },
   {
     id: '29',
