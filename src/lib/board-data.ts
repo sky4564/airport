@@ -1,7 +1,7 @@
 import { BoardPost, CreateBoardPost, UpdateBoardPost, BoardSearchParams, BoardListResponse } from '@/types/board';
 
 // 임시 데이터 저장소 (실제 운영에서는 데이터베이스 사용)
-let boardPosts: BoardPost[] = [
+const boardPosts: BoardPost[] = [
   {
     id: '1',
     title: '공항렌트24 서비스 오픈 안내',
